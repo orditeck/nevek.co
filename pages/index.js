@@ -1,4 +1,3 @@
-import '../styles/main.scss'
 import { Welcome, LogoSlider, Services } from '../components/'
 import { Engagement, StrategeNumerique, Faq } from '../layouts/'
 
