@@ -1,0 +1,41 @@
+footer#site-footer {
+  background: $color-dark-liver;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5rem 0 0;
+  box-sizing: border-box;
+  color: #FFF;
+  text-align: center;
+
+  a {
+    color: #FFF;
+    font-weight: 500;
+    display: inline-block;
+  }
+
+  h1 {
+    margin-top: 1rem;
+
+    @include breakpoint(sm) {
+      margin-top: 0;
+    }
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint(sm) {
+      flex-wrap: wrap;
+    }
+
+    article {
+      margin: 0 1rem;
+
+      strong {
+        display: block;
+      }
+    }
+  }
+}

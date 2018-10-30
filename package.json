@@ -1,0 +1,27 @@
+{
+  "name": "nevek.co",
+  "version": "0.1.0",
+  "description": "Nevek.co Website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start",
+    "deploy": "next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"nevek.co\" >> out/CNAME && git add out/ && git commit -m \"Deploy to gh-pages\" && git subtree push --prefix out origin gh-pages",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Keven Lefebvre <keven@nevek.co>",
+  "license": "MIT",
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "classnames": "^2.2.6",
+    "next": "^7.0.2",
+    "next-compose-plugins": "^2.1.1",
+    "node-sass": "^4.9.4",
+    "normalize.css": "^8.0.0",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "swiper": "^4.4.1"
+  }
+}

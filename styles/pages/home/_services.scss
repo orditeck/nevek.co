@@ -1,0 +1,231 @@
+section.services {
+  background: #FFF;
+  padding: 0 0 5rem 0;
+  border-bottom: 5px solid darken($color-mustard, 25%);
+
+  .container {
+
+    @include breakpoint(md) {
+      width: 95%;
+    }
+
+    > h1 {
+      text-align: center;
+      padding: 5rem 0;
+      margin: 0;
+      position: relative;
+      $length: 50px;
+      $space-between: 20px;
+    }
+
+    section:first-of-type {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+
+      article {
+        $bg: #f2f3f2;
+        position: relative;
+        width: 32%;
+        padding: 2rem 2rem;
+        box-sizing: border-box;
+        border-top: 3px solid #FFF;
+        background: $bg;
+        cursor: pointer;
+        transition:
+                background 500ms ease,
+                padding 500ms ease,
+                width 500ms ease 500ms;
+
+        @include breakpoint(md) {
+          padding: 1rem;
+        }
+
+        @include breakpoint(sm) {
+          width: 100%;
+        }
+
+        h1 {
+          @extend h5;
+          width: 0;
+          transition: width 500ms ease 350ms;
+          text-align: center;
+        }
+
+        p {
+          margin-bottom: 4rem;
+          max-height: 1000px;
+          transition:
+                  max-height 500ms ease,
+                  margin 500ms ease;
+        }
+
+        .btn {
+          position: absolute;
+          left: 2rem;
+          bottom: 1rem;
+          color: #FFF;
+          transition:
+                  background 500ms ease,
+                  opacity 500ms ease;
+        }
+
+        &:nth-of-type(1){
+          border-top-color: $color-green-sheen;
+          .btn { background-color: $color-green-sheen; }
+        }
+
+        &:nth-of-type(2){
+          border-top-color: $color-lapis-lazuli;
+          .btn { background-color: $color-lapis-lazuli; }
+        }
+
+        &:nth-of-type(3){
+          border-top-color: $color-sunset-orange;
+          .btn { background-color: $color-sunset-orange; }
+        }
+
+        &:hover {
+          background: lighten($bg, 3%);
+
+          &:nth-of-type(1){
+            border-top-color: darken($color-green-sheen, 10%);
+            .btn {
+              background-color: darken($color-green-sheen, 10%);
+            }
+          }
+
+          &:nth-of-type(2){
+            border-top-color: darken($color-lapis-lazuli, 10%);
+            .btn { background-color: darken($color-lapis-lazuli, 10%); }
+          }
+
+          &:nth-of-type(3){
+            border-top-color: darken($color-sunset-orange, 10%);
+            .btn { background-color: darken($color-sunset-orange, 10%); }
+          }
+        }
+      }
+    }
+
+    section.service {
+      display: none;
+      max-width: 700px;
+      margin: 0 auto;
+
+      &.active {
+        display: block;
+      }
+
+      &.closing {
+        opacity: 0;
+        max-height: 0;
+
+        @keyframes closing {
+          0%   {
+            opacity: 1;
+            max-height: 1000px;
+          }
+          100% {
+            opacity: 0;
+            max-height: 0;
+          }
+        }
+
+        animation-name: closing;
+        animation-duration: 500ms;
+      }
+
+      article {
+        margin-top: 2rem;
+        padding: 2rem;
+
+        @include breakpoint(sm) {
+          margin-top: 1rem;
+          padding: 1rem;
+        }
+
+        @keyframes article-first {
+          0%   {
+            opacity: 0;
+            max-height: 0;
+          }
+          50%   {
+            opacity: 0;
+            max-height: 0;
+          }
+          100% {
+            opacity: 1;
+            max-height: 1500px;
+          }
+        }
+
+        @keyframes article-after {
+          0%   {
+            opacity: 0;
+            max-height: 0;
+          }
+          25%   {
+            opacity: 1;
+          }
+          50%   {
+            opacity: 1;
+            max-height: 1500px;
+          }
+          100% {
+            opacity: 1;
+            max-height: 1500px;
+          }
+        }
+
+        animation-name: article-first;
+        animation-duration: 2s;
+      }
+
+      h1 {
+        @extend h4;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &.is-single {
+    .container {
+      section:first-of-type {
+        margin-bottom: 1rem;
+
+        article {
+          width: calc(100% / 3);
+          padding: 0 2rem;
+
+          @include breakpoint(sm) {
+            width: 100%;
+          }
+
+          &.active {
+            background: #ffffff;
+          }
+
+          h1 {
+            width: 100%;
+          }
+
+          p {
+            overflow: hidden;
+            max-height: 0;
+            margin: 0;
+          }
+
+          .btn {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.faq {
+  cursor: pointer;
+
+  h1 {
+    @extend h5;
+  }
+
+  p {
+    overflow: hidden;
+    line-height: 0%;
+    margin: 0;
+    color: transparent;
+    transition:
+            line-height 500ms ease,
+            color 500ms ease,
+            margin 500ms ease;
+  }
+
+  &.open {
+    p {
+      line-height: 125%;
+      margin: 0 0 1rem;
+      color: black;
+    }
+  }
+
+}

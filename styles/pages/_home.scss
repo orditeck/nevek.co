@@ -1,0 +1,38 @@
+section.homepage {
+
+  @import 'home/welcome';
+  @import 'home/logo-slider';
+  @import 'home/services';
+  @import 'home/section-with-bg';
+
+  section.mustard {
+    @include section-with-bg($color-mustard, $color-dark-liver, darken($color-green-sheen, 25%));
+
+    .bg {
+      top: -5rem;
+
+      img {
+        //width: 70%;
+      }
+
+      .img:after {
+        background: linear-gradient(90deg, rgba($color-mustard, 1) 0%, rgba($color-mustard, 0) 13%, rgba($color-mustard, 0) 87%, rgba($color-mustard, 1) 100%);
+      }
+    }
+  }
+
+  section.green-sheen {
+    @include section-with-bg($color-green-sheen, darken($color-green-sheen, 50%), $color-dark-liver);
+    .bg {
+      top: -5rem;
+
+      img {
+        //width: 70%;
+      }
+    }
+  }
+
+  section.white {
+    @include section-with-bg(#FFF, darken(#FFF, 75%), darken($color-dark-liver, 10%));
+  }
+}

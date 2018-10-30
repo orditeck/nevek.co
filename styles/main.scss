@@ -1,0 +1,15 @@
+@import 'includes/variables';
+@import 'includes/mixins';
+
+@import '~normalize.css/normalize';
+@import '~swiper/dist/css/swiper.min';
+
+@import 'includes/fonts';
+@import 'includes/base';
+
+@import 'components/logo-slider';
+@import 'components/btn';
+@import 'components/faq';
+@import 'components/footer';
+
+@import 'pages/home';
