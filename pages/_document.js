@@ -1,5 +1,4 @@
 import Document, {Head, Main, NextScript} from 'next/document'
-import Manifest from 'next-manifest/manifest'
 import Footer from '../layouts/Footer'
 
 export default class MyDocument extends Document {
@@ -12,6 +11,7 @@ export default class MyDocument extends Document {
         return <html>
         <Head>
             <meta content="text/html; charset=utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="description" content="Expert en accompagnement, consultation et développement Web. Porteur numérique de votre vision d'entreprise." />
             <meta property="og:title" content="Keven Lefebvre | Stratège numérique à Chicoutimi, Saguenay (Québec)" />
             <meta property="og:type" content="website" />
@@ -19,11 +19,8 @@ export default class MyDocument extends Document {
             <meta property="og:image" content="/static/images/og_image.jpg" />
             <meta property="og:description" content="Expert en accompagnement, consultation et développement Web. Porteur numérique de votre vision d'entreprise." />
             <meta property="fb:admins" content="10216200435020466" />
-            <Manifest
-                href='/static/manifest/manifest.json'
-                themeColor='#FFE066'
-                initialScale='1'
-            />
+            <meta name="theme-color" content="#FFE066" />
+            <link rel="manifest" href="/static/manifest/manifest.json" />
         </Head>
         <body>
             <Main/>
