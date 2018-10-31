@@ -8,7 +8,7 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "deploy": "next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"nevek.co\" >> out/CNAME && cp out/404/index.html out/404.html && git add out/ && git commit -m \"Deploy to gh-pages\" && git subtree push --prefix out origin gh-pages",
+    "deploy": "rm -rf out && git clone git@github.com:orditeck/nevek.co.git --branch gh-pages out && npm run build && npm run export && cd out && touch .nojekyll && touch CNAME && echo \"nevek.co\" >> CNAME && cp 404/index.html 404.html && git add --all && git commit -m \"Release at $(date)\" && git push && cd .. && rm -rf out",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Keven Lefebvre <keven@nevek.co>",
