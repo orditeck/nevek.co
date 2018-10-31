@@ -1,6 +1,6 @@
 self.__precacheManifest = [
   {
-    "url": "/_next/static/M5WbCwCPDc_GWHFSUfHPJ/pages/_app.js"
+    "url": "/_next/static/aqeravhCeTepPPAb0uZ4l/pages/_app.js"
   },
   {
     "url": "/_next/static/runtime/webpack-80dd23e3eafca5314609.js"
@@ -18,13 +18,13 @@ self.__precacheManifest = [
     "url": "/_next/static/chunks/commons.ec46080cab65bdd23019.js"
   },
   {
-    "url": "/_next/static/M5WbCwCPDc_GWHFSUfHPJ/pages/index.js"
+    "url": "/_next/static/aqeravhCeTepPPAb0uZ4l/pages/index.js"
   },
   {
-    "url": "/_next/static/M5WbCwCPDc_GWHFSUfHPJ/pages/_error.js"
+    "url": "/_next/static/aqeravhCeTepPPAb0uZ4l/pages/_error.js"
   },
   {
-    "url": "/_next/static/M5WbCwCPDc_GWHFSUfHPJ/pages/404.js"
+    "url": "/_next/static/aqeravhCeTepPPAb0uZ4l/pages/404.js"
   },
   {
     "url": "/_next/main.js"
@@ -47,7 +47,7 @@ self.__precacheManifest = [
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  
+  "precache-manifest.6c432c5028d94e1e1925117ba156149a.js"
 );
 
 /**
