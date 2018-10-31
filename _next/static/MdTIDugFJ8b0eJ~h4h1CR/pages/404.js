@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{226:function(n,e,t){__NEXT_REGISTER_PAGE("/404",function(){return n.exports=t(227),{page:n.exports.default}})},227:function(n,e,t){"use strict";t.r(e);var o=t(0),s=t.n(o);e.default=function(){return s.a.createElement("section",{className:"404"},"Oopsi")}}},[[226,1,0]]]);
