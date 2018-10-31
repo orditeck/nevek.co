@@ -5349,6 +5349,29 @@ module.exports = hoistNonReactStatics;
 
 /***/ }),
 
+/***/ "./node_modules/next-offline/register-sw.js":
+/*!**************************************************!*\
+  !*** ./node_modules/next-offline/register-sw.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker
+      .register('/service-worker.js')
+      .then(function(registration) {
+        console.log('SW registered: ', registration);
+      })
+      .catch(function(registrationError) {
+        console.log('SW registration failed: ', registrationError);
+      });
+  });
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/next/dist/client/dev-error-overlay/eventsource.js":
 /*!************************************************************************!*\
   !*** ./node_modules/next/dist/client/dev-error-overlay/eventsource.js ***!
@@ -17960,12 +17983,17 @@ module.exports = function(module) {
 /***/ }),
 
 /***/ 0:
-/*!******************************************************!*\
-  !*** multi ./node_modules/next/dist/client/next-dev ***!
-  \******************************************************/
+/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./node_modules/next-offline/register-sw.js ./node_modules/next-offline/register-sw.js ./node_modules/next-offline/register-sw.js ./node_modules/next-offline/register-sw.js ./node_modules/next-offline/register-sw.js ./node_modules/next/dist/client/next-dev ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(/*! /Users/kevenlefebvre/Sites/nevek/nevek.co/node_modules/next-offline/register-sw.js */"./node_modules/next-offline/register-sw.js");
+__webpack_require__(/*! /Users/kevenlefebvre/Sites/nevek/nevek.co/node_modules/next-offline/register-sw.js */"./node_modules/next-offline/register-sw.js");
+__webpack_require__(/*! /Users/kevenlefebvre/Sites/nevek/nevek.co/node_modules/next-offline/register-sw.js */"./node_modules/next-offline/register-sw.js");
+__webpack_require__(/*! /Users/kevenlefebvre/Sites/nevek/nevek.co/node_modules/next-offline/register-sw.js */"./node_modules/next-offline/register-sw.js");
+__webpack_require__(/*! /Users/kevenlefebvre/Sites/nevek/nevek.co/node_modules/next-offline/register-sw.js */"./node_modules/next-offline/register-sw.js");
 module.exports = __webpack_require__(/*! /Users/kevenlefebvre/Sites/nevek/nevek.co/node_modules/next/dist/client/next-dev */"./node_modules/next/dist/client/next-dev.js");
 
 
