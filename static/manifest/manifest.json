@@ -1,0 +1,10 @@
+{
+	"name": "Nevek.co",
+	"short_name": "nevek.co",
+	"icons": false,
+	"start_url": "/",
+	"display": "standalone",
+	"orientation": "natural",
+	"background_color": "#FFE066",
+	"theme_color": "#FFE066"
+}
