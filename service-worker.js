@@ -1,33 +1,30 @@
 self.__precacheManifest = [
   {
-    "url": "/_next/static/aqeravhCeTepPPAb0uZ4l/pages/_app.js"
+    "url": "/_next/static/uKgBNiyBO8LjqDdbUJ~TL/pages/index.js"
   },
   {
-    "url": "/_next/static/runtime/webpack-80dd23e3eafca5314609.js"
+    "url": "/_next/static/chunks/commons.16a77b50b68291f8af76.js"
   },
   {
-    "url": "/_next/static/runtime/main-09a86bf6c73a8e25806f.js"
+    "url": "/_next/static/runtime/main-9aee6b3e670f388f2f29.js"
   },
   {
-    "url": "/_next/static/css/styles.ae8b199c.chunk.css"
+    "url": "/_next/static/uKgBNiyBO8LjqDdbUJ~TL/pages/_app.js"
   },
   {
-    "url": "/_next/static/chunks/styles.657eff96a6cd38ad1259.js"
+    "url": "/_next/static/uKgBNiyBO8LjqDdbUJ~TL/pages/404.js"
   },
   {
-    "url": "/_next/static/chunks/commons.ec46080cab65bdd23019.js"
+    "url": "/_next/static/runtime/webpack-89179faa512dd01fbb62.js"
   },
   {
-    "url": "/_next/static/aqeravhCeTepPPAb0uZ4l/pages/index.js"
+    "url": "/_next/static/uKgBNiyBO8LjqDdbUJ~TL/pages/_error.js"
   },
   {
-    "url": "/_next/static/aqeravhCeTepPPAb0uZ4l/pages/_error.js"
+    "url": "/_next/static/css/styles.bb605338.chunk.css"
   },
   {
-    "url": "/_next/static/aqeravhCeTepPPAb0uZ4l/pages/404.js"
-  },
-  {
-    "url": "/_next/main.js"
+    "url": "/_next/static/chunks/styles.9b0e64dac05461ea14d5.js"
   }
 ];
 
@@ -47,7 +44,7 @@ self.__precacheManifest = [
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.6c432c5028d94e1e1925117ba156149a.js"
+  "precache-manifest.c1833fabd777e0906ccdac2d0bebd526.js"
 );
 
 /**
