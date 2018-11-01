@@ -19,6 +19,10 @@ export default class MyDocument extends Document {
             <meta property="og:image" content="/static/images/og_image.jpg" />
             <meta property="og:description" content="Expert en accompagnement, consultation et développement Web. Porteur numérique de votre vision d'entreprise." />
             <meta property="fb:admins" content="10216200435020466" />
+            <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon.png" />
+            <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/favicon-32x32.png" />
+            <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.png" />
+            <link rel="shortcut icon" href="/static/icons/favicon.ico" type="image/x-icon" />
             <meta name="theme-color" content="#FFE066" />
             <link rel="manifest" href="/static/manifest/manifest.json" />
         </Head>
