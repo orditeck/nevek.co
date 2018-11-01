@@ -1,6 +1,6 @@
 self.__precacheManifest = [
   {
-    "url": "/_next/static/Wa9dZT9E9h89O2nu4aBM2/pages/index.js"
+    "url": "/_next/static/tA13HGsNBEqyq1kSbUopz/pages/_app.js"
   },
   {
     "url": "/_next/static/chunks/commons.16a77b50b68291f8af76.js"
@@ -9,22 +9,22 @@ self.__precacheManifest = [
     "url": "/_next/static/runtime/main-9aee6b3e670f388f2f29.js"
   },
   {
-    "url": "/_next/static/chunks/styles.9b0e64dac05461ea14d5.js"
+    "url": "/_next/static/css/styles.8ac91eef.chunk.css"
   },
   {
-    "url": "/_next/static/css/styles.8ac91eef.chunk.css"
+    "url": "/_next/static/chunks/styles.9b0e64dac05461ea14d5.js"
   },
   {
     "url": "/_next/static/runtime/webpack-89179faa512dd01fbb62.js"
   },
   {
-    "url": "/_next/static/Wa9dZT9E9h89O2nu4aBM2/pages/_error.js"
+    "url": "/_next/static/tA13HGsNBEqyq1kSbUopz/pages/404.js"
   },
   {
-    "url": "/_next/static/Wa9dZT9E9h89O2nu4aBM2/pages/_app.js"
+    "url": "/_next/static/tA13HGsNBEqyq1kSbUopz/pages/index.js"
   },
   {
-    "url": "/_next/static/Wa9dZT9E9h89O2nu4aBM2/pages/404.js"
+    "url": "/_next/static/tA13HGsNBEqyq1kSbUopz/pages/_error.js"
   }
 ];
 
@@ -53,6 +53,34 @@ importScripts(
  * See https://goo.gl/S9QRab
  */
 self.__precacheManifest = [
+  {
+    "url": "static/icons/android-chrome-192x192.png",
+    "revision": "606ae2c2a561140fb6da48090bd5747e"
+  },
+  {
+    "url": "static/icons/android-chrome-512x512.png",
+    "revision": "dba09596a968c4231206f78268138bfe"
+  },
+  {
+    "url": "static/icons/apple-touch-icon-precomposed.png",
+    "revision": "4f905e034d52d191c855cfa2259a96de"
+  },
+  {
+    "url": "static/icons/apple-touch-icon.png",
+    "revision": "46d4bf3f6d45268a73302907868b544e"
+  },
+  {
+    "url": "static/icons/favicon-16x16.png",
+    "revision": "69f0fa8e7bcdb891b3865b7557960d52"
+  },
+  {
+    "url": "static/icons/favicon-32x32.png",
+    "revision": "563f46b9e2683313d7c720e3980369d7"
+  },
+  {
+    "url": "static/icons/favicon.ico",
+    "revision": "dc6a9c14cfaa02c6794e9600b6f597c4"
+  },
   {
     "url": "static/images/accompagnement.gif",
     "revision": "8b70b604c37c9aecea2fbf22ee0d2ebb"
@@ -119,7 +147,7 @@ self.__precacheManifest = [
   },
   {
     "url": "static/manifest/manifest.json",
-    "revision": "1ef803e7191ce80807ef0ae0b556e26a"
+    "revision": "4396ed19165d212dcae62d3063cdc8b2"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
