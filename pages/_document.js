@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
     }
 
     render() {
-        return <html>
+        return <html lang="fr">
         <Head>
             <meta content="text/html; charset=utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
