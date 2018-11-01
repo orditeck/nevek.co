@@ -1,6 +1,6 @@
 self.__precacheManifest = [
   {
-    "url": "/_next/static/uKgBNiyBO8LjqDdbUJ~TL/pages/index.js"
+    "url": "/_next/static/0piMdU9IGd~XihZU4ved7/pages/index.js"
   },
   {
     "url": "/_next/static/chunks/commons.16a77b50b68291f8af76.js"
@@ -9,22 +9,22 @@ self.__precacheManifest = [
     "url": "/_next/static/runtime/main-9aee6b3e670f388f2f29.js"
   },
   {
-    "url": "/_next/static/uKgBNiyBO8LjqDdbUJ~TL/pages/_app.js"
-  },
-  {
-    "url": "/_next/static/uKgBNiyBO8LjqDdbUJ~TL/pages/404.js"
-  },
-  {
-    "url": "/_next/static/runtime/webpack-89179faa512dd01fbb62.js"
-  },
-  {
-    "url": "/_next/static/uKgBNiyBO8LjqDdbUJ~TL/pages/_error.js"
+    "url": "/_next/static/chunks/styles.9b0e64dac05461ea14d5.js"
   },
   {
     "url": "/_next/static/css/styles.bb605338.chunk.css"
   },
   {
-    "url": "/_next/static/chunks/styles.9b0e64dac05461ea14d5.js"
+    "url": "/_next/static/runtime/webpack-89179faa512dd01fbb62.js"
+  },
+  {
+    "url": "/_next/static/0piMdU9IGd~XihZU4ved7/pages/_error.js"
+  },
+  {
+    "url": "/_next/static/0piMdU9IGd~XihZU4ved7/pages/_app.js"
+  },
+  {
+    "url": "/_next/static/0piMdU9IGd~XihZU4ved7/pages/404.js"
   }
 ];
 
@@ -44,7 +44,7 @@ self.__precacheManifest = [
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.c1833fabd777e0906ccdac2d0bebd526.js"
+  
 );
 
 /**
