@@ -182,6 +182,7 @@ function (_Component) {
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/static/images/logos/garderiedepot.jpg",
+        alt: "Garderie D\xE9p\xF4t",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 23
@@ -196,6 +197,7 @@ function (_Component) {
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/static/images/logos/villesag.jpg",
+        alt: "Ville Saguenay",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 24
@@ -210,6 +212,7 @@ function (_Component) {
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/static/images/logos/uqac.jpg",
+        alt: "Universit\xE9 du Qu\xE9bec \xE0 Chicoutimi",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 25
@@ -224,6 +227,7 @@ function (_Component) {
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/static/images/logos/frt.jpg",
+        alt: "Fen\xEAtres R\xE9jean Tremblay",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 26
@@ -238,6 +242,7 @@ function (_Component) {
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/static/images/logos/gardaworld.jpg",
+        alt: "Garda World",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 27
@@ -252,6 +257,7 @@ function (_Component) {
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/static/images/logos/lacbeauport.jpg",
+        alt: "Municipalit\xE9 du Lac Beauport",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 28
@@ -266,6 +272,7 @@ function (_Component) {
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/static/images/logos/sthubert.jpg",
+        alt: "St-Hubert",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 29
@@ -280,6 +287,7 @@ function (_Component) {
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/static/images/logos/laparisienne.jpg",
+        alt: "La Parisienne",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 30
@@ -294,6 +302,7 @@ function (_Component) {
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/static/images/logos/arcticpower.jpg",
+        alt: "Arctic Power",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 31

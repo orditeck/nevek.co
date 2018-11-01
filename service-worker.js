@@ -1,6 +1,6 @@
 self.__precacheManifest = [
   {
-    "url": "/_next/static/kl6Si5xXQJ40f8~0vOokN/pages/_app.js"
+    "url": "/_next/static/Wa9dZT9E9h89O2nu4aBM2/pages/index.js"
   },
   {
     "url": "/_next/static/chunks/commons.16a77b50b68291f8af76.js"
@@ -9,22 +9,22 @@ self.__precacheManifest = [
     "url": "/_next/static/runtime/main-9aee6b3e670f388f2f29.js"
   },
   {
-    "url": "/_next/static/css/styles.bb605338.chunk.css"
+    "url": "/_next/static/chunks/styles.9b0e64dac05461ea14d5.js"
   },
   {
-    "url": "/_next/static/chunks/styles.9b0e64dac05461ea14d5.js"
+    "url": "/_next/static/css/styles.8ac91eef.chunk.css"
   },
   {
     "url": "/_next/static/runtime/webpack-89179faa512dd01fbb62.js"
   },
   {
-    "url": "/_next/static/kl6Si5xXQJ40f8~0vOokN/pages/404.js"
+    "url": "/_next/static/Wa9dZT9E9h89O2nu4aBM2/pages/_error.js"
   },
   {
-    "url": "/_next/static/kl6Si5xXQJ40f8~0vOokN/pages/index.js"
+    "url": "/_next/static/Wa9dZT9E9h89O2nu4aBM2/pages/_app.js"
   },
   {
-    "url": "/_next/static/kl6Si5xXQJ40f8~0vOokN/pages/_error.js"
+    "url": "/_next/static/Wa9dZT9E9h89O2nu4aBM2/pages/404.js"
   }
 ];
 
