@@ -72,17 +72,17 @@ section.services {
 
         &:nth-of-type(1){
           border-top-color: $color-green-sheen;
-          .btn { background-color: $color-green-sheen; }
+          .btn { background-color: darken($color-green-sheen, 25%); }
         }
 
         &:nth-of-type(2){
           border-top-color: $color-lapis-lazuli;
-          .btn { background-color: $color-lapis-lazuli; }
+          .btn { background-color: darken($color-lapis-lazuli, 5%); }
         }
 
         &:nth-of-type(3){
           border-top-color: $color-sunset-orange;
-          .btn { background-color: $color-sunset-orange; }
+          .btn { background-color: darken($color-sunset-orange, 25%); }
         }
 
         &:hover {
