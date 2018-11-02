@@ -1,7 +1,11 @@
 import React from 'react'
 import App, { Container } from 'next/app'
+import Router from 'next/router'
 import Head from 'next/head'
+import * as gtag from '../lib/gtag'
 import '../styles/main.scss'
+
+Router.events.on('routeChangeComplete', url => gtag.pageview(url));
 
 export default class Nevek extends App {
     static async getInitialProps({ Component, router, ctx }) {
