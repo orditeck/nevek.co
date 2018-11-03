@@ -2,6 +2,7 @@ import React from 'react'
 import App, { Container } from 'next/app'
 import Router from 'next/router'
 import Head from 'next/head'
+import lozad from 'lozad'
 import * as gtag from '../lib/gtag'
 import '../styles/main.scss'
 
@@ -16,6 +17,10 @@ export default class Nevek extends App {
         }
 
         return { pageProps }
+    }
+
+    componentDidMount = () => {
+        lozad('img').observe()
     }
 
     render () {

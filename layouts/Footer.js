@@ -30,7 +30,7 @@ export default () => <footer id="site-footer">
 
     <div className="container">
         <small>
-            <img src="/static/images/footer.png"
+            <img data-src="/static/images/footer.png"
                  alt="Keven Lefebvre, Stratège numérique, Consultant Web & Développeur Web Senior à Chicoutimi, Saguenay."/>
             Keven Lefebvre © {new Date().getFullYear()}, tous droits réservés. <br/>
             Stratège numérique, Consultant Web & Développeur Web Senior à Chicoutimi, Saguenay. <br />

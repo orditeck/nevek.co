@@ -2,7 +2,7 @@ export default () => <section className="with-bg right mustard">
     <div className="container">
         <div className="bg">
             <div className="img">
-                <img src="/static/images/engagement.gif" alt="Un engagement clair" />
+                <img data-src="/static/images/engagement.gif" alt="Un engagement clair" />
             </div>
         </div>
         <section className="overlay">

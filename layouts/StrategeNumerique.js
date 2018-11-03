@@ -2,7 +2,7 @@ export default () => <section className="with-bg left green-sheen">
     <div className="container">
         <div className="bg">
             <div className="img">
-                <img src="/static/images/stratege.gif" alt="Stratège numérique"/>
+                <img data-src="/static/images/stratege.gif" alt="Stratège numérique"/>
             </div>
         </div>
         <section className="overlay">
