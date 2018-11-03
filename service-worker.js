@@ -1,6 +1,6 @@
 self.__precacheManifest = [
   {
-    "url": "/_next/static/GqZEN5Dnf~KfOcdDW3ed4/pages/index.js"
+    "url": "/_next/static/Sansq4TocgBV4nbxhiE2H/pages/index.js"
   },
   {
     "url": "/_next/static/chunks/commons.ff681317a71012bab4ec.js"
@@ -12,19 +12,19 @@ self.__precacheManifest = [
     "url": "/_next/static/chunks/styles.9b0e64dac05461ea14d5.js"
   },
   {
-    "url": "/_next/static/css/styles.8ac91eef.chunk.css"
+    "url": "/_next/static/css/styles.be078a6d.chunk.css"
   },
   {
     "url": "/_next/static/runtime/webpack-89179faa512dd01fbb62.js"
   },
   {
-    "url": "/_next/static/GqZEN5Dnf~KfOcdDW3ed4/pages/_error.js"
+    "url": "/_next/static/Sansq4TocgBV4nbxhiE2H/pages/_error.js"
   },
   {
-    "url": "/_next/static/GqZEN5Dnf~KfOcdDW3ed4/pages/_app.js"
+    "url": "/_next/static/Sansq4TocgBV4nbxhiE2H/pages/_app.js"
   },
   {
-    "url": "/_next/static/GqZEN5Dnf~KfOcdDW3ed4/pages/404.js"
+    "url": "/_next/static/Sansq4TocgBV4nbxhiE2H/pages/404.js"
   }
 ];
 
@@ -100,6 +100,10 @@ self.__precacheManifest = [
   {
     "url": "static/images/engagement.gif",
     "revision": "b8c0648e57dd45c90be0c9698cd1cee9"
+  },
+  {
+    "url": "static/images/footer.png",
+    "revision": "ddb84334d5e566a41033f7fbbbb0d727"
   },
   {
     "url": "static/images/logos/arcticpower.jpg",
