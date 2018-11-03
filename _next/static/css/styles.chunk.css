@@ -959,13 +959,13 @@ body {
 
 .faq {
   cursor: pointer; }
-  .faq p {
+  .faq p, .faq ul {
     overflow: hidden;
     line-height: 0%;
     margin: 0;
     color: transparent;
     transition: line-height 500ms ease, color 500ms ease, margin 500ms ease; }
-  .faq.open p {
+  .faq.open p, .faq.open ul {
     line-height: 125%;
     margin: 0 0 1rem;
     color: black; }
