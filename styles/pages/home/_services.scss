@@ -16,6 +16,10 @@ section.services {
       position: relative;
       $length: 50px;
       $space-between: 20px;
+
+      @include breakpoint(sm) {
+        padding: 3rem 0;
+      }
     }
 
     section:first-of-type {
@@ -68,6 +72,11 @@ section.services {
           transition:
                   background 500ms ease,
                   opacity 500ms ease;
+
+          @include breakpoint(md) {
+            left: 1rem;
+            bottom: 0.5rem;
+          }
         }
 
         &:nth-of-type(1){

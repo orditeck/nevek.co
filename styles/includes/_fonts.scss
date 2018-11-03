@@ -4,9 +4,11 @@ a {
   text-decoration: none;
   color: darken($color-mustard, 25%);
   font-weight: 500;
+  transition:
+          background 250ms ease,
+          color 250ms ease,
+          border 250ms ease;
 }
-
-
 
 h1, .h1 {
   font-size: 2em;

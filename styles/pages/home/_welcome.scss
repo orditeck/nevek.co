@@ -8,6 +8,10 @@ section.header {
   background: $color-dark-liver url('/static/images/bg_top_home.jpg') 50% 50%;
   background-size: cover;
 
+  @include breakpoint(sm) {
+    background-position: 0 50%;
+  }
+
   .content {
     width: 24rem;
     margin-left: calc(100% - 480px);
@@ -24,11 +28,11 @@ section.header {
     @include breakpoint(sm) {
       margin-left: 0;
       width: 100%;
+      padding: 3rem 1rem;
     }
 
     h1 {
       font-size: 1.9em;
-      line-height: 1.1em;
       font-weight: 300;
 
       @include breakpoint(sm) {
@@ -44,11 +48,9 @@ section.header {
       margin-bottom: 1.5rem;
       color: white;
       font-size: 1.3em;
-      line-height: 1.3em;
 
       @include breakpoint(sm) {
         font-size: 1.1em;
-        line-height: 1.1em;
       }
     }
   }
