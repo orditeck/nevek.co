@@ -146,7 +146,9 @@ function (_Component) {
           delay: 2000,
           disableOnInteraction: false,
           stopOnLastSlide: false
-        }
+        },
+        preloadImages: false,
+        lazy: true
       });
     }
   }, {
@@ -156,156 +158,228 @@ function (_Component) {
         className: "logo-slider",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 22
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "swiper-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 23
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "swiper-wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 24
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "swiper-slide",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 25
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/static/images/logos/garderiedepot.jpg",
+        className: "swiper-lazy",
+        "data-src": "/static/images/logos/garderiedepot.jpg",
         alt: "Garderie D\xE9p\xF4t",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 26
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "swiper-lazy-preloader",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "swiper-slide",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 29
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/static/images/logos/villesag.jpg",
+        className: "swiper-lazy",
+        "data-src": "/static/images/logos/villesag.jpg",
         alt: "Ville Saguenay",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 30
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "swiper-lazy-preloader",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "swiper-slide",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 33
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/static/images/logos/uqac.jpg",
+        className: "swiper-lazy",
+        "data-src": "/static/images/logos/uqac.jpg",
         alt: "Universit\xE9 du Qu\xE9bec \xE0 Chicoutimi",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 34
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "swiper-lazy-preloader",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 35
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "swiper-slide",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 37
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/static/images/logos/frt.jpg",
+        className: "swiper-lazy",
+        "data-src": "/static/images/logos/frt.jpg",
         alt: "Fen\xEAtres R\xE9jean Tremblay",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 38
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "swiper-lazy-preloader",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "swiper-slide",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 41
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/static/images/logos/gardaworld.jpg",
+        className: "swiper-lazy",
+        "data-src": "/static/images/logos/gardaworld.jpg",
         alt: "Garda World",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 42
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "swiper-lazy-preloader",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "swiper-slide",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 45
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/static/images/logos/lacbeauport.jpg",
+        className: "swiper-lazy",
+        "data-src": "/static/images/logos/lacbeauport.jpg",
         alt: "Municipalit\xE9 du Lac Beauport",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 46
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "swiper-lazy-preloader",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 47
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "swiper-slide",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 49
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/static/images/logos/sthubert.jpg",
+        className: "swiper-lazy",
+        "data-src": "/static/images/logos/sthubert.jpg",
         alt: "St-Hubert",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 50
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "swiper-lazy-preloader",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "swiper-slide",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 53
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/static/images/logos/laparisienne.jpg",
+        className: "swiper-lazy",
+        "data-src": "/static/images/logos/laparisienne.jpg",
         alt: "La Parisienne",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 54
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "swiper-lazy-preloader",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "swiper-slide",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 57
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/static/images/logos/arcticpower.jpg",
+        className: "swiper-lazy",
+        "data-src": "/static/images/logos/arcticpower.jpg",
         alt: "Arctic Power",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 58
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "swiper-lazy-preloader",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59
         },
         __self: this
       })))));
@@ -1234,7 +1308,7 @@ var _jsxFileName = "/Users/kevenlefebvre/Sites/nevek/nevek.co/layouts/Engagement
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "/static/images/engagement.gif",
+    "data-src": "/static/images/engagement.gif",
     alt: "Un engagement clair",
     __source: {
       fileName: _jsxFileName,
@@ -1900,7 +1974,7 @@ var _jsxFileName = "/Users/kevenlefebvre/Sites/nevek/nevek.co/layouts/Footer.js"
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "/static/images/footer.png",
+    "data-src": "/static/images/footer.png",
     alt: "Keven Lefebvre, Strat\xE8ge num\xE9rique, Consultant Web & D\xE9veloppeur Web Senior \xE0 Chicoutimi, Saguenay.",
     __source: {
       fileName: _jsxFileName,
@@ -2018,7 +2092,7 @@ var _jsxFileName = "/Users/kevenlefebvre/Sites/nevek/nevek.co/layouts/StrategeNu
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "/static/images/stratege.gif",
+    "data-src": "/static/images/stratege.gif",
     alt: "Strat\xE8ge num\xE9rique",
     __source: {
       fileName: _jsxFileName,

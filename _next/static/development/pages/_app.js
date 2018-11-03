@@ -4624,6 +4624,151 @@ module.exports = hoistNonReactStatics;
 
 /***/ }),
 
+/***/ "./node_modules/lozad/dist/lozad.js":
+/*!******************************************!*\
+  !*** ./node_modules/lozad/dist/lozad.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*! lozad.js - v1.6.0 - 2018-07-24
+* https://github.com/ApoorvSaxena/lozad.js
+* Copyright (c) 2018 Apoorv Saxena; Licensed MIT */
+
+
+(function (global, factory) {
+	 true ? module.exports = factory() :
+	undefined;
+}(this, (function () { 'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+/**
+ * Detect IE browser
+ * @const {boolean}
+ * @private
+ */
+var isIE = typeof document !== 'undefined' && document.documentMode;
+
+var defaultConfig = {
+  rootMargin: '0px',
+  threshold: 0,
+  load: function load(element) {
+    if (element.nodeName.toLowerCase() === 'picture') {
+      var img = document.createElement('img');
+      if (isIE && element.getAttribute('data-iesrc')) {
+        img.src = element.getAttribute('data-iesrc');
+      }
+      if (element.getAttribute('data-alt')) {
+        img.alt = element.getAttribute('data-alt');
+      }
+      element.appendChild(img);
+    }
+    if (element.getAttribute('data-src')) {
+      element.src = element.getAttribute('data-src');
+    }
+    if (element.getAttribute('data-srcset')) {
+      element.srcset = element.getAttribute('data-srcset');
+    }
+    if (element.getAttribute('data-background-image')) {
+      element.style.backgroundImage = 'url(\'' + element.getAttribute('data-background-image') + '\')';
+    }
+    if (element.getAttribute('data-toggle-class')) {
+      element.classList.toggle(element.getAttribute('data-toggle-class'));
+    }
+  },
+  loaded: function loaded() {}
+};
+
+function markAsLoaded(element) {
+  element.setAttribute('data-loaded', true);
+}
+
+var isLoaded = function isLoaded(element) {
+  return element.getAttribute('data-loaded') === 'true';
+};
+
+var onIntersection = function onIntersection(load, loaded) {
+  return function (entries, observer) {
+    entries.forEach(function (entry) {
+      if (entry.intersectionRatio > 0) {
+        observer.unobserve(entry.target);
+
+        if (!isLoaded(entry.target)) {
+          load(entry.target);
+          markAsLoaded(entry.target);
+          loaded(entry.target);
+        }
+      }
+    });
+  };
+};
+
+var getElements = function getElements(selector) {
+  if (selector instanceof Element) {
+    return [selector];
+  }
+  if (selector instanceof NodeList) {
+    return selector;
+  }
+  return document.querySelectorAll(selector);
+};
+
+var lozad = function () {
+  var selector = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '.lozad';
+  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+  var _defaultConfig$option = _extends({}, defaultConfig, options),
+      rootMargin = _defaultConfig$option.rootMargin,
+      threshold = _defaultConfig$option.threshold,
+      load = _defaultConfig$option.load,
+      loaded = _defaultConfig$option.loaded;
+
+  var observer = void 0;
+
+  if (window.IntersectionObserver) {
+    observer = new IntersectionObserver(onIntersection(load, loaded), {
+      rootMargin: rootMargin,
+      threshold: threshold
+    });
+  }
+
+  return {
+    observe: function observe() {
+      var elements = getElements(selector);
+
+      for (var i = 0; i < elements.length; i++) {
+        if (isLoaded(elements[i])) {
+          continue;
+        }
+        if (observer) {
+          observer.observe(elements[i]);
+          continue;
+        }
+        load(elements[i]);
+        markAsLoaded(elements[i]);
+        loaded(elements[i]);
+      }
+    },
+    triggerLoad: function triggerLoad(element) {
+      if (isLoaded(element)) {
+        return;
+      }
+
+      load(element);
+      markAsLoaded(element);
+      loaded(element);
+    }
+  };
+};
+
+return lozad;
+
+})));
+
+
+/***/ }),
+
 /***/ "./node_modules/next/app.js":
 /*!**********************************!*\
   !*** ./node_modules/next/app.js ***!
@@ -9764,9 +9909,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/head */ "./node_modules/next/head.js");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _lib_gtag__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../lib/gtag */ "./lib/gtag.js");
-/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../styles/main.scss */ "./styles/main.scss");
-/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_styles_main_scss__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var lozad__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lozad */ "./node_modules/lozad/dist/lozad.js");
+/* harmony import */ var lozad__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lozad__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _lib_gtag__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../lib/gtag */ "./lib/gtag.js");
+/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../styles/main.scss */ "./styles/main.scss");
+/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_styles_main_scss__WEBPACK_IMPORTED_MODULE_7__);
 
 var _jsxFileName = "/Users/kevenlefebvre/Sites/nevek/nevek.co/pages/_app.js";
 
@@ -9786,13 +9933,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -9801,7 +9951,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 next_router__WEBPACK_IMPORTED_MODULE_3___default.a.events.on('routeChangeComplete', function (url) {
-  return _lib_gtag__WEBPACK_IMPORTED_MODULE_5__["pageview"](url);
+  return _lib_gtag__WEBPACK_IMPORTED_MODULE_6__["pageview"](url);
 });
 
 var Nevek =
@@ -9810,9 +9960,23 @@ function (_App) {
   _inherits(Nevek, _App);
 
   function Nevek() {
+    var _getPrototypeOf2;
+
+    var _this;
+
     _classCallCheck(this, Nevek);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Nevek).apply(this, arguments));
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Nevek)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "componentDidMount", function () {
+      lozad__WEBPACK_IMPORTED_MODULE_5___default()('img').observe();
+    });
+
+    return _this;
   }
 
   _createClass(Nevek, [{
@@ -9824,25 +9988,25 @@ function (_App) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_2__["Container"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 30
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_4___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 31
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 32
         },
         __self: this
       }, "Keven Lefebvre | Strat\xE8ge num\xE9rique \xE0 Chicoutimi, Saguenay (Qu\xE9bec)")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Component, _extends({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 34
         },
         __self: this
       })));
