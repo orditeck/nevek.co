@@ -5,7 +5,7 @@
     @extend h5;
   }
 
-  p {
+  p, ul {
     overflow: hidden;
     line-height: 0%;
     margin: 0;
@@ -17,7 +17,7 @@
   }
 
   &.open {
-    p {
+    p, ul {
       line-height: 125%;
       margin: 0 0 1rem;
       color: black;

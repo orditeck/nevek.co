@@ -6,34 +6,12 @@ export default () => <section className="with-bg white">
             <h1>Foire aux questions</h1>
 
             <FaqItem>
-                <h1>Quel est ton rôle?</h1>
-                <p>
-                    À titre de stratège numérique, je vous accompagnerai en commençant par l'analyse de vos
-                    besoins jusqu'au support post-livraison. Je serai votre département numérique.
-                </p>
-                <p>
-                    À titre de consultant Web, je comblerai des besoins précis. Ça ressemble au rôle
-                    d'accompagnement, mais c'est davantage ciblé sur des besoins définis que vous aimeriez combler.
-                </p>
-                <p>
-                    À titre de développeur Web, je participerai au développement de votre projet. Peut-être
-                    avez-vous une équipe de développeurs, un projet déjà débuté ou un projet ayant besoin de
-                    support et vous cherchez une dizaine de doigts supplémentaires 💪.
-                </p>
-                <p>
-                    Dans tous les cas, je me ferai un devoir de bien faire comprendre toutes les options qui
-                    s'offrent à vous et les implications de chacunes.
-                </p>
-            </FaqItem>
-
-            <FaqItem>
                 <h1>Combien charges-tu / combien ça va coûter?</h1>
                 <p>
-                    La plupart du temps, je charge au projet, et non à l'heure. Je vous fournierai un estimé
-                    pour la réalisation du projet dans son ensemble, vous n'aurez donc pas à débourser pour
-                    chaque petit détail supplémentaire (dans les limites du raisonnable). Le projet est terminé
-                    lorsque vous êtes satisfait du résultat. Sur la majorité des projets, le support est inclus
-                    gratuitement.
+                    La plupart du temps, je charge au projet, et non à l'heure. Je vous fourni un estimé pour la
+                    réalisation du projet dans son ensemble, vous n'avez donc pas à débourser pour chaque petit détail
+                    supplémentaire (dans les limites du raisonnable). Le projet est terminé lorsque vous êtes satisfait
+                    du résultat. Le support est inclus gratuitement dans la majorité des cas.
                 </p>
                 <p>
                     Pour connaître combien ça coûte, comme chaque projet est unique, ça dépend du projet. C'est
@@ -46,15 +24,15 @@ export default () => <section className="with-bg white">
                 <h1>J'ai besoin d'aide immédiatement, peux-tu m'aider?</h1>
                 <p>
                     Probablement. Une consultation téléphonique coûte 180$ jusqu'à deux heures.
-                    Tirez-en le maximum en demandant ce que vous voulez, incluant une correction rapide sur votre
-                    site Web.
+                    Tirez le maximum de ces deux heures en demandant tout ce que vous voulez, incluant une correction
+                    rapide sur votre site Web.
                 </p>
                 <p>
-                    Je vous informerai <u>clairement</u> lorsque mon temps deviendra facturable, vous aurez toujours
-                    le choix de continuer ou non. Aucune surprise.
+                    Lors d'un appel, je vous informerai clairement lorsque mon temps deviendra facturable, aucune surprise.
                 </p>
                 <p>
-                    Je ne charge habituellement rien pour quelque chose qui se règle en quelques minutes.
+                    Je ne charge habituellement rien pour quelque chose qui se règle en quelques minutes, n'hésitez donc
+                    jamais à m'appeler!
                 </p>
                 <p>
                     <a href="tel://18444487602" onClick={(e) => e.stopPropagation()}>Appelez-moi: 1 (844) 448-7602</a>
@@ -66,11 +44,26 @@ export default () => <section className="with-bg white">
                 <p>
                     Si vous avez besoin de quoi que ce soit, je suis aussi loin qu'un <
                     a href="tel://18444487602" onClick={(e) => e.stopPropagation()}>appel</a> ou qu'un <
-                    a href="mailto:keven@nevek.co" onClick={(e) => e.stopPropagation()}>courriel</a>.
-                    Si quelque chose que j'ai fais brise ou ne fonctionne plus comme prévu, c'est gratuit. Si vous
-                    avez des questions par rapport à quelque chose que j'ai fais, c'est gratuit. Si vous avez
-                    besoin d'un estimé, c'est gratuit.
+                    a href="mailto:keven@nevek.co" onClick={(e) => e.stopPropagation()}>courriel</a>. Le support
+                    post-livraison est généralement gratuit.
                 </p>
+            </FaqItem>
+
+            <FaqItem>
+                <h1>Pourquoi faire affaires avec toi?</h1>
+                <ul>
+                    <li>J'aspire à ce que vous deveniez le meilleur sur le Web</li>
+                    <li>J'ai plus de 10 ans d'expérience en Web</li>
+                    <li>Je suis un passionné, vous verrez, c'est contagieux</li>
+                    <li>J'ai des spécialités tout en restant généraliste</li>
+                    <li>J'ai de l'expérience avec des grandes entreprises et des PME</li>
+                    <li>Mon travail a eu des impacts significatifs sur le chiffre d'affaires de mes clients</li>
+                    <li>
+                        J'ai des solides références, <
+                        a href="tel://18444487602" onClick={(e) => e.stopPropagation()}>contactez-moi</a> pour
+                        obtenir des exemples concrets
+                    </li>
+                </ul>
             </FaqItem>
 
             <FaqItem>
@@ -78,22 +71,52 @@ export default () => <section className="with-bg white">
                 <p>
                     Parce que je traite leur projet comme si c'était le mien. Car je sais me mettre à leur place
                     et à la place de leurs clients. Je parle honnêtement et je suis un bon vulgérisateur. Mes clients
-                    comprennent ce que je fais car je prend le temps de leur expliquer. Mes clients se font
-                    présenter plusieurs options et font donc des choix éclairés. Je m'investi personnellement
-                    dans tous les projets que je fais. Mes clients sont traités aux petits soins.
+                    comprennent ce que je fais car je prend le temps de leur expliquer. Ils se font présenter plusieurs
+                    options et font donc des choix éclairés. Je m'investi personnellement dans tous les projets que je
+                    fais. Mes clients sont traités aux petits soins.
+                </p>
+                <p>
+                    Faire traiter votre projet avec l'importance qu'il mérite vous intéresse? <
+                    a href="tel://18444487602" onClick={(e) => e.stopPropagation()}>Contactez-moi</a>!
                 </p>
             </FaqItem>
 
             <FaqItem>
                 <h1>Offres-tu l'hébergement Web?</h1>
                 <p>
-                    Parfois en option. Plus précisement, j'offre de la gestion d'hébergement, du « managed hosting »
-                    en bon français. Ce qui veut dire que je gèrerai l'ensemble de votre hébergement (les migrations,
-                    les courriels, les DNS, etc) pour vous offrir une tranquilité d'esprit complète.
+                    Parfois, en option. Plus précisement, j'offre de la gestion d'hébergement, du « managed hosting »
+                    en bon français. Ce qui veut dire que je peux gérer l'ensemble de votre infrastructure Web pour vous
+                    offrir une tranquilité d'esprit complète.
                 </p>
                 <p>
-                    Il existe cependant d'autres options et tout dépend de vos besoins. Je ne vous vendrai
-                    jamais des services dont vous n'avez pas besoin.
+                    Il existe cependant d'autres options et tout dépend de vos besoins. Je ne vous vendrai jamais des
+                    services dont vous n'avez pas besoin.
+                </p>
+            </FaqItem>
+
+            <FaqItem>
+                <h1>Fais-tu tout toi-même? SEO, SEM, PPC, design, etc?</h1>
+                <p>
+                    Non.
+                </p>
+                <p>
+                    J'offre trois services:
+                </p>
+                <ul>
+                    <li>Développement Web (programmation)</li>
+                    <li>Consultation</li>
+                    <li>Accompagnement</li>
+                </ul>
+                <p>
+                    En consultation, la majorité de mes clients ont déjà les ressources (ex: designer) à l'interne
+                    ou à l'externe. Je viens combler un besoin précis, par exemple, la formation d'une équipe,
+                    l'évaluer de la sécurité d'un site, de l'application ou du serveur, etc.
+                </p>
+                <p>
+                    En accompagnement, nous chercherons ensemble les meilleures ressources pour nous aider selon
+                    votre budget. Avec mes dix années d'expériences dans le Web, comme propriétaire d'agence, directeur
+                    des technologies ou encore consultant dans diverses grandes organisations, j'ai les connaissances
+                    nécessaires pour gérer l'ensemble de votre numérique et faire les bons choix.
                 </p>
             </FaqItem>
 
@@ -115,6 +138,7 @@ export default () => <section className="with-bg white">
                         href="https://www.php-fig.org/psr/"
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
                     ><abbr title="PHP Standards Recommendations">PSR</abbr></a>.
                     J'utilise le formattage automatique pour
                     rendre mon code lisible. Je documente.
@@ -132,11 +156,19 @@ export default () => <section className="with-bg white">
             </FaqItem>
 
             <FaqItem>
-                <h1>Qu'est-ce que ça représente nevek?</h1>
+                <h1>Es-tu 360°? 2.0? 4.0?</h1>
+                <p>
+                    Je suis capable de pivoter sur moi-même à 360°, même plus avec un peu de motivation.
+                    J'ai cependant une vision périphérique en dessous de la moyenne. Je suis actuellement en
+                    version {new Date().getFullYear()}.{("0" + (new Date().getMonth() + 1)).slice(-2)}.
+                </p>
+            </FaqItem>
+
+            <FaqItem>
+                <h1>Qu'est-ce que ça veut dire nevek?</h1>
                 <p>
                     Keven<br />
-                    Nevek<br />
-                    😊
+                    Nevek
                 </p>
             </FaqItem>
 

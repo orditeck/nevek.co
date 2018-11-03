@@ -17,6 +17,10 @@ export default () => <article className="accompagnement">
         démarquer et augmenter votre chiffre d'affaire. Puisque notre partenariat est intimement lié aux résultats,
         je carbure au surpassement des objectifs tout comme vous.
     </p>
+
+    <p>
+        Votre projet devient notre projet.
+    </p>
 </article>
 
 export class Summary extends Component {
