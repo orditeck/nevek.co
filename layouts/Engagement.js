@@ -9,7 +9,7 @@ export default () => <section className="with-bg right mustard">
             <h1>Un engagement clair</h1>
 
             <p>
-                Mon engagment envers vous est simple:<br />
+                Mon engagement envers vous est simple:<br />
                 <strong>transposer votre vision dans l'univers numérique</strong>.
             </p>
 
@@ -17,7 +17,7 @@ export default () => <section className="with-bg right mustard">
                 Je suis un passionné du Web. J'ai des connaissances étendues dans le numérique, j'ai de
                 fortes opinions quant à l'avenir du Web, de son passé et de son présent. C'est l'atout
                 qu'il vous faut pour bien vous positionner, aujourd'hui, pour ne pas reproduire les erreurs du passé,
-                pour répondre dès maintenant aux besoins de vos clients et de vous assurer d'une perrenité
+                pour répondre dès maintenant aux besoins de vos clients et de vous assurer d'une pérennité
                 numérique (car oui, ça existe).
             </p>
 

@@ -6,9 +6,8 @@ export default () => <article className="consultation">
 
     <p>
         Mon service de consultation est similaire à celui d'accompagnement, à la différence qu'il est ciblé sur des
-        besoins précis. Le service se termine souvent suite à la complétion d'un objectif particulier, par
-        exemple suite à la formation de vos équipes, et recommence suite à d'autres besoins. À travers mon chapeau
-        de consultant, j'aurai pour mission de vous donner des conseils d'expert dans un domaine particulier.
+        besoins précis. travers mon chapeau de consultant, j'aurai donc pour mission de vous donner des conseils d'expert
+        dans un domaine particulier.
     </p>
 
     <p>
@@ -34,8 +33,8 @@ export class Summary extends Component {
             <h1>Consultation</h1>
             <p>
                 À mi-chemin entre développeur et accompagnateur, mon rôle de consultant Web est de vous donner les
-                meilleurs conseils d'expert pour vos besoins précis. Avec ma connaissance approfondie du Web, vous
-                serez entre bonne main.
+                meilleurs conseils d'expert pour vos besoins précis. Avec ma connaissance approfondie du Web, vous serez
+                entre bonnes-mains.
             </p>
         </ServiceSummary>
 }

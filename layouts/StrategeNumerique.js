@@ -20,8 +20,7 @@ export default () => <section className="with-bg left green-sheen">
 
             <p>
                 Un stratège numérique est la personne idéale pour vous aider à mettre au point un plan
-                numérique selon vos besoins et votre budget. Étape par étape en fonction de des objectifs
-                clairs.
+                numérique selon vos besoins et votre budget. Étape par étape en fonction d'objectifs clairs.
             </p>
 
             <p>
