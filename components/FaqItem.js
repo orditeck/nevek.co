@@ -1,21 +1,21 @@
 import React, {Component} from 'react';
-import classNames from 'classnames';
 
 export default class extends Component {
-    state = {
-        open: false
-    };
+    slugify = (text) => text.toString().toLowerCase().trim()
+        .replace(/[^\w\s-]/g, '') // remove non-word [a-z0-9_], non-whitespace, non-hyphen characters
+        .replace(/[\s_-]+/g, '_') // swap any length of whitespace, underscore, hyphen characters with a single _
+        .replace(/^-+|-+$/g, ''); // remove leading, trailing -
 
-    onClick = () => {
-        this.setState({
-            open: !this.state.open
-        });
-    };
 
-    render = () =>
-        <article className={classNames('faq', {
-            open: this.state.open
-        })} onClick={this.onClick}>
+    render = () => {
+        const id = this.slugify(this.props.title || '');
+
+        return <article className="faq">
+            <input type="checkbox" id={id}/>
+            <label className="title" htmlFor={id}>
+                {this.props.title}
+            </label>
             {this.props.children}
-        </article>
+        </article>;
+    }
 }

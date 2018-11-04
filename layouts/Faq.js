@@ -1,12 +1,11 @@
-import { FaqItem } from '../components/'
+import {FaqItem} from '../components/'
 
 export default () => <section className="with-bg white">
     <div className="container">
         <section>
             <h1>Foire aux questions</h1>
 
-            <FaqItem>
-                <h1>Combien charges-tu / combien ça va coûter?</h1>
+            <FaqItem title="Combien charges-tu / combien ça va coûter?">
                 <p>
                     La plupart du temps, je charge au projet, et non à l'heure. Je vous fournis un estimé pour la
                     réalisation du projet dans son ensemble, vous n'avez donc pas à débourser pour chaque petit détail
@@ -20,15 +19,15 @@ export default () => <section className="with-bg white">
                 </p>
             </FaqItem>
 
-            <FaqItem>
-                <h1>J'ai besoin d'aide immédiatement, peux-tu m'aider?</h1>
+            <FaqItem title="J'ai besoin d'aide immédiatement, peux-tu m'aider?">
                 <p>
                     Probablement. Une consultation téléphonique coûte 180$ jusqu'à deux heures.
                     Tirez le maximum de ces deux heures en demandant tout ce que vous voulez, incluant une correction
                     rapide sur votre site Web.
                 </p>
                 <p>
-                    Lors d'un appel, je vous informerai clairement lorsque mon temps deviendra facturable. Aucune surprise.
+                    Lors d'un appel, je vous informerai clairement lorsque mon temps deviendra facturable. Aucune
+                    surprise.
                 </p>
                 <p>
                     Je ne charge habituellement rien pour quelque chose qui se règle en quelques minutes, n'hésitez donc
@@ -39,8 +38,7 @@ export default () => <section className="with-bg white">
                 </p>
             </FaqItem>
 
-            <FaqItem>
-                <h1>Et si j'ai besoin de support ensuite?</h1>
+            <FaqItem title="Et si j'ai besoin de support ensuite?">
                 <p>
                     Si vous avez besoin de quoi que ce soit, je suis aussi loin qu'un <
                     a href="tel://18444487602" onClick={(e) => e.stopPropagation()}>appel</a> ou qu'un <
@@ -49,8 +47,7 @@ export default () => <section className="with-bg white">
                 </p>
             </FaqItem>
 
-            <FaqItem>
-                <h1>Pourquoi faire affaire avec toi?</h1>
+            <FaqItem title="Pourquoi faire affaire avec toi?">
                 <ul>
                     <li>J'aspire à ce que vous deveniez le meilleur sur le Web</li>
                     <li>J'ai plus de 10 ans d'expérience en Web</li>
@@ -66,8 +63,7 @@ export default () => <section className="with-bg white">
                 </ul>
             </FaqItem>
 
-            <FaqItem>
-                <h1>Pourquoi tes clients aiment-ils travailler toi?</h1>
+            <FaqItem title="Pourquoi tes clients aiment-ils travailler toi?">
                 <p>
                     Parce que je traite leur projet comme si c'était le mien. Car je sais me mettre à leur place et à
                     la place de leurs clients. Je parle honnêtement et je suis un bon vulgarisateur. Mes clients
@@ -81,8 +77,7 @@ export default () => <section className="with-bg white">
                 </p>
             </FaqItem>
 
-            <FaqItem>
-                <h1>Offres-tu l'hébergement Web?</h1>
+            <FaqItem title="Offres-tu l'hébergement Web?">
                 <p>
                     Parfois, en option. Plus précisément, j'offre de la gestion d'hébergement, du « managed hosting » en
                     bon français. Ce qui veut dire que je peux gérer l'ensemble de votre infrastructure Web pour vous
@@ -94,8 +89,7 @@ export default () => <section className="with-bg white">
                 </p>
             </FaqItem>
 
-            <FaqItem>
-                <h1>Fais-tu tout toi-même? Design, rédaction, SEO, SEM, PPC, etc.?</h1>
+            <FaqItem title="Fais-tu tout toi-même? Design, rédaction, SEO, SEM, PPC, etc.?">
                 <p>
                     Non.
                 </p>
@@ -120,10 +114,9 @@ export default () => <section className="with-bg white">
                 </p>
             </FaqItem>
 
-            <FaqItem>
-                <h1>Qu'est-ce que ça veut dire nevek?</h1>
+            <FaqItem title="Qu'est-ce que ça veut dire nevek?">
                 <p>
-                    Keven<br />
+                    Keven<br/>
                     Nevek
                 </p>
             </FaqItem>
