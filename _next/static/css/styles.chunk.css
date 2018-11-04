@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700|Varela);
+@charset "UTF-8";
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -886,7 +887,7 @@ h4, section.homepage section.services .container section.service h1, .h4 {
   font-size: 1.4em;
   line-height: 125%; }
 
-h5, .faq h1, section.homepage section.services .container section:first-of-type article h1, .h5 {
+h5, section.homepage section.services .container section:first-of-type article h1, .h5 {
   font-size: 1.2em;
   line-height: 125%; }
 
@@ -957,18 +958,38 @@ body {
     .btn:hover span:after {
       width: 100%; }
 
-.faq {
-  cursor: pointer; }
-  .faq p, .faq ul {
-    overflow: hidden;
-    line-height: 0%;
-    margin: 0;
-    color: transparent;
-    transition: line-height 500ms ease, color 500ms ease, margin 500ms ease; }
-  .faq.open p, .faq.open ul {
-    line-height: 125%;
-    margin: 0 0 1rem;
-    color: black; }
+.faq > *:not(input):not(label) {
+  overflow: hidden;
+  line-height: 0%;
+  margin: 0;
+  color: transparent;
+  transition: line-height 500ms ease, color 500ms ease, margin 500ms ease; }
+
+.faq li {
+  position: relative;
+  display: block; }
+  .faq li:before {
+    position: absolute;
+    left: -1rem;
+    content: "\2022";
+    font-size: 1.2rem;
+    top: 0.05rem; }
+
+.faq input {
+  display: none; }
+
+.faq label {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.2em;
+  line-height: 125%;
+  font-weight: bold;
+  margin: 0.67em 0; }
+
+.faq input:checked ~ *:not(input):not(label) {
+  line-height: 125%;
+  margin: 0 0 1rem;
+  color: black; }
 
 footer#site-footer {
   width: 100%;
