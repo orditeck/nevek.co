@@ -393,6 +393,164 @@ function (_Component) {
 
 /***/ }),
 
+/***/ "./components/SectionWithBg.js":
+/*!*************************************!*\
+  !*** ./components/SectionWithBg.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/kevenlefebvre/Sites/nevek/nevek.co/components/SectionWithBg.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+var _default =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(_default, _Component);
+
+  function _default() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, _default);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(_default)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "ref", react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef());
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "onClick", function (e) {
+      e.preventDefault();
+
+      _this.ref.current.nextElementSibling.scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "render", function () {
+      var _classNames;
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: classnames__WEBPACK_IMPORTED_MODULE_1___default()((_classNames = {
+          'with-bg': true
+        }, _defineProperty(_classNames, "".concat(_this.props.position), !!_this.props.position), _defineProperty(_classNames, "".concat(_this.props.color), !!_this.props.color), _classNames)),
+        ref: _this.ref,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "bg",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "img",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        "data-src": _this.props.backgroundImage,
+        alt: _this.props.title,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        },
+        __self: this
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "overlay",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
+        },
+        __self: this
+      }, _this.props.title), _this.props.children, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 34
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 35
+        },
+        __self: this
+      }, "Curieux d'en apprendre plus?", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "",
+        onClick: _this.onClick,
+        className: "btn btn-primary",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 37
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38
+        },
+        __self: this
+      }, "Continuez votre lecture \u2193")))))));
+    });
+
+    return _this;
+  }
+
+  return _default;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+
+
+/***/ }),
+
 /***/ "./components/Services.js":
 /*!********************************!*\
   !*** ./components/Services.js ***!
@@ -780,13 +938,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       lineNumber: 7
     },
     __self: this
-  }, "Mon service d'accompagnement consiste \xE0 vous fournir des conseils personnalis\xE9s dans une perspective de d\xE9veloppement des affaires, mais aussi de vos comp\xE9tences personnelles. Ce n'est pas seulement de vous donner la tranquilit\xE9 d'esprit de faire affaire avec un professionnel d'exp\xE9rience pour l'ensemble de votre num\xE9rique, mais aussi d'avoir un alli\xE9 qui vous expliquera en profondeur toutes les options qui s'offrent \xE0 vous."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Mon service d'accompagnement consiste \xE0 vous fournir des conseils personnalis\xE9s dans une perspective de d\xE9veloppement des affaires, mais aussi de vos comp\xE9tences personnelles. Ce n'est pas seulement de vous donner la tranquillit\xE9 d'esprit de faire affaire avec un professionnel d'exp\xE9rience pour l'ensemble de votre num\xE9rique, mais aussi d'avoir un alli\xE9 qui vous expliquera en profondeur toutes les options qui s'offrent \xE0 vous."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     },
     __self: this
-  }, "Ce service est un partenariat o\xF9 vous me mettez en charge de ce que je fais de mieux afin de vous concentrer \xE0 ce que vous faites le mieux. Nous travaillons ensemble afin de d\xE9finir les meilleures strat\xE9gies pour vous d\xE9marquer et augmenter votre chiffre d'affaire. Puisque notre partenariat est intimement li\xE9 aux r\xE9sultats, je carbure au surpassement des objectifs tout comme vous."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Ce service est un partenariat o\xF9 vous me mettez en charge de ce que je fais de mieux afin de vous concentrer \xE0 ce que vous faites le mieux. Nous travaillons ensemble afin de d\xE9finir les meilleures strat\xE9gies pour vous d\xE9marquer et augmenter votre chiffre d'affaires. Puisque notre partenariat est intimement li\xE9 aux r\xE9sultats, je carbure au surpassement des objectifs tout comme vous."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
@@ -833,7 +991,7 @@ function (_Component) {
           lineNumber: 30
         },
         __self: this
-      }, "Mon service d'accompagnement vous assure d'avoir un partenaire fiable et comp\xE9tant pour tout ce qui touche le num\xE9rique de votre entreprise. C'est la tranquilit\xE9 d'esprit de savoir que votre num\xE9rique est guid\xE9 par un expert qui transporte votre vision."));
+      }, "Mon service d'accompagnement vous assure d'avoir un partenaire fiable et comp\xE9tent pour tout ce qui touche le num\xE9rique de votre entreprise. C'est la tranquillit\xE9 d'esprit de savoir que votre num\xE9rique est guid\xE9 par un expert qui transporte votre vision."));
     });
 
     return _this;
@@ -901,70 +1059,70 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       lineNumber: 7
     },
     __self: this
-  }, "Mon service de consultation est similaire \xE0 celui d'accompagnement, \xE0 la diff\xE9rence qu'il est cibl\xE9 sur des besoins pr\xE9cis. Le service se termine souvent suite \xE0 la compl\xE9tion d'un objectif particulier, par exemple suite \xE0 la formation de vos \xE9quipes, et recommence suite \xE0 d'autres besoins. \xC0 travers mon chapeau de consultant, j'aurai pour mission de vous donner des conseils d'expert dans un domaine particulier."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Mon service de consultation est similaire \xE0 celui d'accompagnement, \xE0 la diff\xE9rence qu'il est cibl\xE9 sur des besoins pr\xE9cis. travers mon chapeau de consultant, j'aurai donc pour mission de vous donner des conseils d'expert dans un domaine particulier."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 13
     },
     __self: this
   }, "Voici quelques exemples de services offerts en consultation:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 17
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 18
     },
     __self: this
   }, "Formations des \xE9quipes"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 19
     },
     __self: this
   }, "R\xE9daction de votre appel d'offres"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 20
     },
     __self: this
   }, "Gestion de votre projet num\xE9rique"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 21
     },
     __self: this
   }, "\xC9laboration d'une strat\xE9gie d'innovation technologique"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 22
     },
     __self: this
   }, "Identification des risques et des opportunit\xE9s technologiques pour votre projet"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 23
     },
     __self: this
   }, "Veille technologique approfondie"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 24
     },
     __self: this
   }, "Direction de projets techniques"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 25
     },
     __self: this
   }, "D\xE9ploiement des projets"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 26
     },
     __self: this
   }, "Conseils d'expert sur la s\xE9curit\xE9")));
@@ -993,22 +1151,22 @@ function (_Component) {
       }, _this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 32
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 33
         },
         __self: this
       }, "Consultation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 34
         },
         __self: this
-      }, "\xC0 mi-chemin entre d\xE9veloppeur et accompagnateur, mon r\xF4le de consultant Web est de vous donner les meilleurs conseils d'expert pour vos besoins pr\xE9cis. Avec ma connaissance approfondie du Web, vous serez entre bonne main."));
+      }, "\xC0 mi-chemin entre d\xE9veloppeur et accompagnateur, mon r\xF4le de consultant Web est de vous donner les meilleurs conseils d'expert pour vos besoins pr\xE9cis. Avec ma connaissance approfondie du Web, vous serez entre bonnes-mains."));
     });
 
     return _this;
@@ -1076,31 +1234,47 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       lineNumber: 7
     },
     __self: this
-  }, "Si on me demandait de comparer le travail de deux carreleurs, la seule chose que je saurais comparer, c'est le r\xE9sultat final, soit l'alignement des tuiles. Il en a va sensiblement de m\xEAme les d\xE9veloppeurs Web: sans conna\xEEtre toutes les bonnes pratiques, il est difficile savoir si on a fait le bon choix."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "D\xE9veloppeur Web passionn\xE9 et ayant plus de 10 ann\xE9es d'exp\xE9rience, je mets mes comp\xE9tences \xE0 votre service."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 11
     },
     __self: this
-  }, "C'est d'ailleurs pour cette raison qu'en plus de mon service de d\xE9veloppement Web, j'offre \xE9galement les services de consultation et d'accompagnement Web: j'aide des entreprises \xE0 faire le bon choix lors de la s\xE9lection de leur agence Web, de leur d\xE9veloppeur Web et m\xEAme de leur employ\xE9."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Je poss\xE8de une excellente capacit\xE9 d'analyse, je trouve mon plaisir \xE0 en apprendre le plus possible et avec mes int\xE9r\xEAts tr\xE8s vari\xE9s, j'arrive toujours avec une vue d'ensemble dans les projets auxquels je participe."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 16
     },
     __self: this
-  }, "Le d\xE9veloppement Web n'\xE9chappe pas au principe qu'il y a autant de fa\xE7ons de faire quelque chose qu'il y a de personnes pour le faire. Mais heureusement, des standards existent et m\xEAme en leur absence, une veille technologique approfondie permet de faire des choix \xE9clair\xE9s."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Pour votre nouveau projet, projet en cours de d\xE9veloppement ou en maintenance, pour votre application Web, votre site Web ou votre boutique en ligne, je saurai vous proposer des solutions adapt\xE9es \xE0 votre budget, \xE0 vos besoins et \xE0 ceux de vos clients."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 22
     },
     __self: this
-  }, "Avec mes ann\xE9es d'exp\xE9rience dans le Web, je connais les bonnes m\xE9thodes pour r\xE9aliser des projets Web qui durent longtemps. Plut\xF4t que de d\xE9penser des sommes d'entretiens et de r\xE9\xE9critures, je pr\xE9f\xE8re que mes clients r\xE9-investissent dans leurs plateformes pour r\xE9pondre aux besoins \xE9volutifs de leurs utilisateurs."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "J'ai de solides r\xE9f\xE9rences en d\xE9veloppement Web, ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "tel://18444487602",
+    onClick: function onClick(e) {
+      return e.stopPropagation();
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 23
     },
     __self: this
-  }, "Faire affaire avec un programmeur d'exp\xE9rience, c'est s'assurer d'avoir une sous-fondation solide suivie d'une fondation modulable qui permettra d'\xE9voluer au rythme de votre entreprise."));
+  }, "communiquez avec moi"), " pour obtenir des exemples concrets."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }, "De fa\xE7on plus technique, je suis un d\xE9veloppeur Full Stack, je fais donc du frontend et du backend. Je d\xE9veloppe principalement en JavaScript (frontend & backend) et PHP. Je suis expert dans ces langages. J'ai beaucoup d'exp\xE9riences par le fait m\xEAme en HTML5/CSS3. J'ai de bonnes connaissances en Python. J'ai beaucoup d'exp\xE9riences en MySQL et de bonnes connaissances en NoSQL. Et en multitude d'autres choses que je vous d\xE9taillerai avec plaisir."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  }, "Je suis \xE9galement expert WordPress. Apr\xE8s plus de 10 ans \xE0 l'utiliser de fa\xE7on avanc\xE9e, je le connais comme le fond de ma poche. J'ai de l'exp\xE9rience avec plusieurs CMS dans divers langages."));
 });
 var Summary =
 /*#__PURE__*/
@@ -1126,22 +1300,22 @@ function (_Component) {
       }, _this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 43
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 44
         },
         __self: this
       }, "D\xE9veloppement"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 45
         },
         __self: this
-      }, "Je suis un d\xE9veloppeur Web senior qui offre du d\xE9veloppement haut de gamme aux entreprises soucieuses de leurs conversions et de l'exp\xE9rience de leurs utilisateurs. Je d\xE9veloppe d'abord pour les clients de mes clients."));
+      }, "Je suis un d\xE9veloppeur Web senior qui offre un service haut de gamme aux entreprises soucieuses de leurs conversions et de l'exp\xE9rience Web de leurs utilisateurs. Je m'assure que votre projet r\xE9ponde le mieux qu'il soit aux besoins de vos clients."));
     });
 
     return _this;
@@ -1274,124 +1448,106 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_SectionWithBg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/SectionWithBg */ "./components/SectionWithBg.js");
 var _jsxFileName = "/Users/kevenlefebvre/Sites/nevek/nevek.co/layouts/Engagement.js";
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    className: "with-bg right mustard",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 1
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 2
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "bg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 3
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "img",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    "data-src": "/static/images/engagement.gif",
-    alt: "Un engagement clair",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    className: "overlay",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
-  }, "Un engagement clair"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, "Mon engagment envers vous est simple:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }, "transposer votre vision dans l'univers num\xE9rique"), "."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, "Je suis un passionn\xE9 du Web. J'ai des connaissances \xE9tendues dans le num\xE9rique, j'ai de fortes opinions quant \xE0 l'avenir du Web, de son pass\xE9 et de son pr\xE9sent. C'est l'atout qu'il vous faut pour bien vous positionner, aujourd'hui, pour ne pas reproduire les erreurs du pass\xE9, pour r\xE9pondre d\xE8s maintenant aux besoins de vos clients et de vous assurer d'une perrenit\xE9 num\xE9rique (car oui, \xE7a existe)."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }, "Je m'engage \xE0 \xEAtre le porteur num\xE9rique de votre vision d'entreprise et de votre vision personnelle d'entrepreneur.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, "Curieux d'en apprendre plus?", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "",
-    className: "btn btn-primary",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, "Continuez votre lecture \u2193")))))));
-});
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+var _default =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(_default, _Component);
+
+  function _default() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, _default);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(_default)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "render", function () {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SectionWithBg__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        position: "right",
+        color: "mustard",
+        backgroundImage: "/static/images/engagement.gif",
+        title: "Un engagement clair",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 6
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12
+        },
+        __self: this
+      }, "Mon engagement envers vous est simple:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        },
+        __self: this
+      }, "transposer votre vision dans l'univers num\xE9rique"), "."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        },
+        __self: this
+      }, "Je suis un passionn\xE9 du Web. J'ai des connaissances \xE9tendues dans le num\xE9rique, j'ai de fortes opinions quant \xE0 l'avenir du Web, de son pass\xE9 et de son pr\xE9sent. C'est l'atout qu'il vous faut pour bien vous positionner, aujourd'hui, pour ne pas reproduire les erreurs du pass\xE9, pour r\xE9pondre d\xE8s maintenant aux besoins de vos clients et de vous assurer d'une p\xE9rennit\xE9 num\xE9rique (car oui, \xE7a existe)."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        },
+        __self: this
+      }, "Je m'engage \xE0 \xEAtre le porteur num\xE9rique de votre vision d'entreprise et de votre vision personnelle d'entrepreneur.")));
+    });
+
+    return _this;
+  }
+
+  return _default;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+
 
 /***/ }),
 
@@ -1455,13 +1611,13 @@ var _jsxFileName = "/Users/kevenlefebvre/Sites/nevek/nevek.co/layouts/Faq.js";
       lineNumber: 10
     },
     __self: this
-  }, "La plupart du temps, je charge au projet, et non \xE0 l'heure. Je vous fourni un estim\xE9 pour la r\xE9alisation du projet dans son ensemble, vous n'avez donc pas \xE0 d\xE9bourser pour chaque petit d\xE9tail suppl\xE9mentaire (dans les limites du raisonnable). Le projet est termin\xE9 lorsque vous \xEAtes satisfait du r\xE9sultat. Le support est inclus gratuitement dans la majorit\xE9 des cas."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "La plupart du temps, je charge au projet, et non \xE0 l'heure. Je vous fournis un estim\xE9 pour la r\xE9alisation du projet dans son ensemble, vous n'avez donc pas \xE0 d\xE9bourser pour chaque petit d\xE9tail suppl\xE9mentaire (dans les limites du raisonnable). Le projet est termin\xE9 lorsque vous \xEAtes satisfait du r\xE9sultat. Le support est inclus gratuitement dans la majorit\xE9 des cas."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
     },
     __self: this
-  }, "Pour conna\xEEtre combien \xE7a co\xFBte, comme chaque projet est unique, \xE7a d\xE9pend du projet. C'est pourquoi m\xEAme donner un ordre de grandeur est impossible. Donnez-moi quelques d\xE9tails et il me fera plaisir de vous donner un approximatif pour vous donner une id\xE9e.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components___WEBPACK_IMPORTED_MODULE_1__["FaqItem"], {
+  }, "Pour conna\xEEtre combien \xE7a co\xFBte, comme chaque projet est unique, \xE7a d\xE9pend du projet. C'est pourquoi m\xEAme donner un ordre de grandeur est impossible. Donnez-moi quelques d\xE9tails et c'est avec plaisir que je vous donnerai un approximatif.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components___WEBPACK_IMPORTED_MODULE_1__["FaqItem"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
@@ -1485,7 +1641,7 @@ var _jsxFileName = "/Users/kevenlefebvre/Sites/nevek/nevek.co/layouts/Faq.js";
       lineNumber: 30
     },
     __self: this
-  }, "Lors d'un appel, je vous informerai clairement lorsque mon temps deviendra facturable, aucune surprise."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Lors d'un appel, je vous informerai clairement lorsque mon temps deviendra facturable. Aucune surprise."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
@@ -1557,7 +1713,7 @@ var _jsxFileName = "/Users/kevenlefebvre/Sites/nevek/nevek.co/layouts/Faq.js";
       lineNumber: 53
     },
     __self: this
-  }, "Pourquoi faire affaires avec toi?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  }, "Pourquoi faire affaire avec toi?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 54
@@ -1593,7 +1749,7 @@ var _jsxFileName = "/Users/kevenlefebvre/Sites/nevek/nevek.co/layouts/Faq.js";
       lineNumber: 59
     },
     __self: this
-  }, "J'ai de l'exp\xE9rience avec des grandes entreprises et des PME"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "J'ai de l'exp\xE9rience avec de grandes entreprises et des PME"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 60
@@ -1605,7 +1761,7 @@ var _jsxFileName = "/Users/kevenlefebvre/Sites/nevek/nevek.co/layouts/Faq.js";
       lineNumber: 61
     },
     __self: this
-  }, "J'ai des solides r\xE9f\xE9rences, ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, "J'ai de solides r\xE9f\xE9rences, ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "tel://18444487602",
     onClick: function onClick(e) {
       return e.stopPropagation();
@@ -1633,7 +1789,7 @@ var _jsxFileName = "/Users/kevenlefebvre/Sites/nevek/nevek.co/layouts/Faq.js";
       lineNumber: 71
     },
     __self: this
-  }, "Parce que je traite leur projet comme si c'\xE9tait le mien. Car je sais me mettre \xE0 leur place et \xE0 la place de leurs clients. Je parle honn\xEAtement et je suis un bon vulg\xE9risateur. Mes clients comprennent ce que je fais car je prend le temps de leur expliquer. Ils se font pr\xE9senter plusieurs options et font donc des choix \xE9clair\xE9s. Je m'investi personnellement dans tous les projets que je fais. Mes clients sont trait\xE9s aux petits soins."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Parce que je traite leur projet comme si c'\xE9tait le mien. Car je sais me mettre \xE0 leur place et \xE0 la place de leurs clients. Je parle honn\xEAtement et je suis un bon vulgarisateur. Mes clients comprennent ce que je fais, car je prends le temps de leur expliquer. Ils se font pr\xE9senter plusieurs options et font donc des choix \xE9clair\xE9s. Je m'investis personnellement dans tous les projets que je fais. Mes clients sont trait\xE9s aux petits soins."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 78
@@ -1667,7 +1823,7 @@ var _jsxFileName = "/Users/kevenlefebvre/Sites/nevek/nevek.co/layouts/Faq.js";
       lineNumber: 86
     },
     __self: this
-  }, "Parfois, en option. Plus pr\xE9cisement, j'offre de la gestion d'h\xE9bergement, du \xAB managed hosting \xBB en bon fran\xE7ais. Ce qui veut dire que je peux g\xE9rer l'ensemble de votre infrastructure Web pour vous offrir une tranquilit\xE9 d'esprit compl\xE8te."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Parfois, en option. Plus pr\xE9cis\xE9ment, j'offre de la gestion d'h\xE9bergement, du \xAB managed hosting \xBB en bon fran\xE7ais. Ce qui veut dire que je peux g\xE9rer l'ensemble de votre infrastructure Web pour vous offrir une tranquillit\xE9 d'esprit compl\xE8te."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 91
@@ -1685,7 +1841,7 @@ var _jsxFileName = "/Users/kevenlefebvre/Sites/nevek/nevek.co/layouts/Faq.js";
       lineNumber: 98
     },
     __self: this
-  }, "Fais-tu tout toi-m\xEAme? SEO, SEM, PPC, design, etc?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Fais-tu tout toi-m\xEAme? Design, r\xE9daction, SEO, SEM, PPC, etc.?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 99
@@ -1727,13 +1883,13 @@ var _jsxFileName = "/Users/kevenlefebvre/Sites/nevek/nevek.co/layouts/Faq.js";
       lineNumber: 110
     },
     __self: this
-  }, "En consultation, la majorit\xE9 de mes clients ont d\xE9j\xE0 les ressources (ex: designer) \xE0 l'interne ou \xE0 l'externe. Je viens combler un besoin pr\xE9cis, par exemple, la formation d'une \xE9quipe, l'\xE9valuer de la s\xE9curit\xE9 d'un site, de l'application ou du serveur, etc."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "En consultation, la majorit\xE9 de mes clients ont d\xE9j\xE0 les ressources (ex.: designer) \xE0 l'interne ou \xE0 l'externe. Je viens combler un besoin pr\xE9cis, par exemple, la formation d'une \xE9quipe, l'\xE9valuer de la s\xE9curit\xE9 d'un site, de l'application ou du serveur, etc."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 115
     },
     __self: this
-  }, "En accompagnement, nous chercherons ensemble les meilleures ressources pour nous aider selon votre budget. Avec mes dix ann\xE9es d'exp\xE9riences dans le Web, comme propri\xE9taire d'agence, directeur des technologies ou encore consultant dans diverses grandes organisations, j'ai les connaissances n\xE9cessaires pour g\xE9rer l'ensemble de votre num\xE9rique et faire les bons choix.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components___WEBPACK_IMPORTED_MODULE_1__["FaqItem"], {
+  }, "En accompagnement, nous chercherons ensemble les meilleures ressources pour nous aider selon votre budget. Avec mes dix ann\xE9es d'exp\xE9rience dans le Web, comme propri\xE9taire d'agence, directeur des technologies ou encore consultant dans diverses grandes organisations, j'ai les connaissances n\xE9cessaires pour g\xE9rer l'ensemble de votre num\xE9rique et faire les bons choix.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components___WEBPACK_IMPORTED_MODULE_1__["FaqItem"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 123
@@ -1745,95 +1901,16 @@ var _jsxFileName = "/Users/kevenlefebvre/Sites/nevek/nevek.co/layouts/Faq.js";
       lineNumber: 124
     },
     __self: this
-  }, "En quoi d\xE9veloppes-tu?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Qu'est-ce que \xE7a veut dire nevek?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 125
     },
     __self: this
-  }, "Je d\xE9veloppe principalement en JavaScript (frontend & backend) et PHP. J'ai beaucoup d'exp\xE9riences par le fait m\xEAme en HTML5/CSS3. J'ai de bonnes connaissances en Python. J'ai beaucoup d'exp\xE9riences en MySQL et de bonnes connaissances en NoSQL."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 130
-    },
-    __self: this
-  }, "Mais surtout, j'analyse et je conceptualise avant de d\xE9buter la programmation. De cette fa\xE7on, la structure organisationnelle du site Web ou de l'application est \xE9tabli \xE0 l'avance, il ne reste qu'\xE0 faire le plus facile: programmer!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 135
-    },
-    __self: this
-  }, "Je programme toujours en suivant les normes les plus populaires. Par exemple, en PHP, je me soucie que mon code soit conforme aux standards ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://www.php-fig.org/psr/",
-    target: "_blank",
-    rel: "noopener noreferrer",
-    onClick: function onClick(e) {
-      return e.stopPropagation();
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 137
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("abbr", {
-    title: "PHP Standards Recommendations",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 142
-    },
-    __self: this
-  }, "PSR")), ". J'utilise le formattage automatique pour rendre mon code lisible. Je documente."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 146
-    },
-    __self: this
-  }, "J'opte le plus souvent possible pour une g\xE9n\xE9ration de site statique, permettant ainsi une rapidit\xE9 in\xE9galable qui n'a que des r\xE9percussions positive sur le positionnement dans les moteurs de recherche, sur les taux de conversion, etc."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 151
-    },
-    __self: this
-  }, "Je suis expert WordPress. Apr\xE8s plus de 10 ans \xE0 l'utiliser de fa\xE7on avanc\xE9e, je connais les meilleures pratiques et je connais tr\xE8s bien son code source. Il fait parti des options que j'offre lorsque je pr\xE9sente tous les choix.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components___WEBPACK_IMPORTED_MODULE_1__["FaqItem"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 158
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 159
-    },
-    __self: this
-  }, "Es-tu 360\xB0? 2.0? 4.0?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 160
-    },
-    __self: this
-  }, "Je suis capable de pivoter sur moi-m\xEAme \xE0 360\xB0, m\xEAme plus avec un peu de motivation. J'ai cependant une vision p\xE9riph\xE9rique en dessous de la moyenne. Je suis actuellement en version ", new Date().getFullYear(), ".", ("0" + (new Date().getMonth() + 1)).slice(-2), ".")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components___WEBPACK_IMPORTED_MODULE_1__["FaqItem"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 167
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 168
-    },
-    __self: this
-  }, "Qu'est-ce que \xE7a veut dire nevek?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 169
-    },
-    __self: this
   }, "Keven", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 170
+      lineNumber: 126
     },
     __self: this
   }), "Nevek")))));
@@ -2058,124 +2135,106 @@ var _jsxFileName = "/Users/kevenlefebvre/Sites/nevek/nevek.co/layouts/Footer.js"
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_SectionWithBg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/SectionWithBg */ "./components/SectionWithBg.js");
 var _jsxFileName = "/Users/kevenlefebvre/Sites/nevek/nevek.co/layouts/StrategeNumerique.js";
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    className: "with-bg left green-sheen",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 1
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 2
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "bg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 3
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "img",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    "data-src": "/static/images/stratege.gif",
-    alt: "Strat\xE8ge num\xE9rique",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    className: "overlay",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
-  }, "Strat\xE8ge num\xE9rique"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, "On parle de virage num\xE9rique des entreprises depuis d\xE9j\xE0 plusieurs ann\xE9es. Mais peut-\xEAtre vous demandez-vous:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }, "\xC0 qui s'adresser?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, "Par o\xF9 commencer?")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, "Un strat\xE8ge num\xE9rique est la personne id\xE9ale pour vous aider \xE0 mettre au point un plan num\xE9rique selon vos besoins et votre budget. \xC9tape par \xE9tape en fonction de des objectifs clairs."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, "Communiquez avec moi afin d'obtenir gratuitement des suggestions d'am\xE9liorations num\xE9riques pour votre entreprise."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: this
-  }, "Curieux d'en apprendre plus?", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "",
-    className: "btn btn-primary",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }, "Continuez votre lecture \u2193")))))));
-});
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+var _default =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(_default, _Component);
+
+  function _default() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, _default);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(_default)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "render", function () {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SectionWithBg__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        position: "left",
+        color: "green-sheen",
+        backgroundImage: "/static/images/stratege.gif",
+        title: "Strat\xE8ge num\xE9rique",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 6
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12
+        },
+        __self: this
+      }, "On parle de virage num\xE9rique des entreprises depuis d\xE9j\xE0 plusieurs ann\xE9es. Mais peut-\xEAtre vous demandez-vous:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18
+        },
+        __self: this
+      }, "\xC0 qui s'adresser?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        },
+        __self: this
+      }, "Par o\xF9 commencer?")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 22
+        },
+        __self: this
+      }, "Un strat\xE8ge num\xE9rique est la personne id\xE9ale pour vous aider \xE0 mettre au point un plan num\xE9rique selon vos besoins et votre budget. \xC9tape par \xE9tape en fonction d'objectifs clairs."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27
+        },
+        __self: this
+      }, "Communiquez avec moi afin d'obtenir gratuitement des suggestions d'am\xE9liorations num\xE9riques pour votre entreprise."));
+    });
+
+    return _this;
+  }
+
+  return _default;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+
 
 /***/ }),
 
