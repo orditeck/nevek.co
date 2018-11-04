@@ -1,13 +1,14 @@
-export default () => <section className="with-bg right mustard">
-    <div className="container">
-        <div className="bg">
-            <div className="img">
-                <img data-src="/static/images/engagement.gif" alt="Un engagement clair" />
-            </div>
-        </div>
-        <section className="overlay">
-            <h1>Un engagement clair</h1>
+import React, {Component} from 'react'
+import SectionWithBg from '../components/SectionWithBg'
 
+export default class extends Component {
+    render = () =>
+        <SectionWithBg
+            position="right"
+            color="mustard"
+            backgroundImage="/static/images/engagement.gif"
+            title="Un engagement clair"
+        >
             <p>
                 Mon engagement envers vous est simple:<br />
                 <strong>transposer votre vision dans l'univers numérique</strong>.
@@ -27,15 +28,5 @@ export default () => <section className="with-bg right mustard">
                     personnelle d'entrepreneur.
                 </strong>
             </p>
-
-            <footer>
-                <p>
-                    Curieux d'en apprendre plus?
-                    <a href="" className="btn btn-primary">
-                        <span>Continuez votre lecture ↓</span>
-                    </a>
-                </p>
-            </footer>
-        </section>
-    </div>
-</section>
+    </SectionWithBg>
+}
