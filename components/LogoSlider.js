@@ -14,7 +14,9 @@ export default class extends Component {
                 stopOnLastSlide: false
             },
             preloadImages: false,
-            lazy: true
+            lazy: {
+                loadPrevNext: true
+            },
         });
     }
 
