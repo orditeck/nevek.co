@@ -1,30 +1,30 @@
 self.__precacheManifest = [
   {
-    "url": "/_next/static/2VEOb8ywou2i1mlduA5dw/pages/_app.js"
+    "url": "/_next/static/xmYLC2NY6qMaKImehtZlV/pages/index.js"
   },
   {
-    "url": "/_next/static/chunks/commons.41aac5e65d2fc2f57629.js"
+    "url": "/_next/static/chunks/commons.343b550d0640d60f991e.js"
   },
   {
-    "url": "/_next/static/runtime/main-c3a98f19253935e27354.js"
+    "url": "/_next/static/runtime/main-61c9e6f149e0dfaba240.js"
   },
   {
-    "url": "/_next/static/css/styles.a4164663.chunk.css"
+    "url": "/_next/static/xmYLC2NY6qMaKImehtZlV/pages/_app.js"
   },
   {
-    "url": "/_next/static/chunks/styles.42884f71002b9655808b.js"
+    "url": "/_next/static/xmYLC2NY6qMaKImehtZlV/pages/404.js"
   },
   {
     "url": "/_next/static/runtime/webpack-89179faa512dd01fbb62.js"
   },
   {
-    "url": "/_next/static/2VEOb8ywou2i1mlduA5dw/pages/index.js"
+    "url": "/_next/static/xmYLC2NY6qMaKImehtZlV/pages/_error.js"
   },
   {
-    "url": "/_next/static/2VEOb8ywou2i1mlduA5dw/pages/_error.js"
+    "url": "/_next/static/css/styles.907bdfb0.chunk.css"
   },
   {
-    "url": "/_next/static/2VEOb8ywou2i1mlduA5dw/pages/404.js"
+    "url": "/_next/static/chunks/styles.42884f71002b9655808b.js"
   }
 ];
 
@@ -148,6 +148,26 @@ self.__precacheManifest = [
   {
     "url": "static/images/stratege.gif",
     "revision": "f04cd2955fd94c4b08e608c4ae231adb"
+  },
+  {
+    "url": "static/images/testimonies/avenir.jpg",
+    "revision": "3c36e183494973cca71a63005b050d7f"
+  },
+  {
+    "url": "static/images/testimonies/david.jpg",
+    "revision": "1edca45f48d38ba5e5ffa0e805f75eea"
+  },
+  {
+    "url": "static/images/testimonies/example.gif",
+    "revision": "6f063d01b347fe11add59322968ce0c0"
+  },
+  {
+    "url": "static/images/testimonies/mathieu.jpg",
+    "revision": "0ab91fd26a37347249ccaa9dc934406e"
+  },
+  {
+    "url": "static/images/testimonies/valerie.jpg",
+    "revision": "7031224a925e3904d46c52939c0a8bdc"
   },
   {
     "url": "static/manifest/manifest.json",

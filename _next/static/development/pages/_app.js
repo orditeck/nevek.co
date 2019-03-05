@@ -4624,147 +4624,22 @@ module.exports = hoistNonReactStatics;
 
 /***/ }),
 
-/***/ "./node_modules/lozad/dist/lozad.js":
-/*!******************************************!*\
-  !*** ./node_modules/lozad/dist/lozad.js ***!
-  \******************************************/
+/***/ "./node_modules/lozad/dist/lozad.min.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lozad/dist/lozad.min.js ***!
+  \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/*! lozad.js - v1.6.0 - 2018-07-24
+/*! lozad.js - v1.7.0 - 2018-11-08
 * https://github.com/ApoorvSaxena/lozad.js
 * Copyright (c) 2018 Apoorv Saxena; Licensed MIT */
-
-
-(function (global, factory) {
-	 true ? module.exports = factory() :
-	undefined;
-}(this, (function () { 'use strict';
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
+!function(t,e){ true?module.exports=e():undefined}(this,function(){"use strict";var g=Object.assign||function(t){for(var e=1;e<arguments.length;e++){var r=arguments[e];for(var o in r)Object.prototype.hasOwnProperty.call(r,o)&&(t[o]=r[o])}return t},r="undefined"!=typeof document&&document.documentMode,l={rootMargin:"0px",threshold:0,load:function(t){if("picture"===t.nodeName.toLowerCase()){var e=document.createElement("img");r&&t.getAttribute("data-iesrc")&&(e.src=t.getAttribute("data-iesrc")),t.getAttribute("data-alt")&&(e.alt=t.getAttribute("data-alt")),t.appendChild(e)}t.getAttribute("data-src")&&(t.src=t.getAttribute("data-src")),t.getAttribute("data-srcset")&&t.setAttribute("srcset",t.getAttribute("data-srcset")),t.getAttribute("data-background-image")&&(t.style.backgroundImage="url('"+t.getAttribute("data-background-image")+"')"),t.getAttribute("data-toggle-class")&&t.classList.toggle(t.getAttribute("data-toggle-class"))},loaded:function(){}};
 /**
- * Detect IE browser
- * @const {boolean}
- * @private
- */
-var isIE = typeof document !== 'undefined' && document.documentMode;
-
-var defaultConfig = {
-  rootMargin: '0px',
-  threshold: 0,
-  load: function load(element) {
-    if (element.nodeName.toLowerCase() === 'picture') {
-      var img = document.createElement('img');
-      if (isIE && element.getAttribute('data-iesrc')) {
-        img.src = element.getAttribute('data-iesrc');
-      }
-      if (element.getAttribute('data-alt')) {
-        img.alt = element.getAttribute('data-alt');
-      }
-      element.appendChild(img);
-    }
-    if (element.getAttribute('data-src')) {
-      element.src = element.getAttribute('data-src');
-    }
-    if (element.getAttribute('data-srcset')) {
-      element.srcset = element.getAttribute('data-srcset');
-    }
-    if (element.getAttribute('data-background-image')) {
-      element.style.backgroundImage = 'url(\'' + element.getAttribute('data-background-image') + '\')';
-    }
-    if (element.getAttribute('data-toggle-class')) {
-      element.classList.toggle(element.getAttribute('data-toggle-class'));
-    }
-  },
-  loaded: function loaded() {}
-};
-
-function markAsLoaded(element) {
-  element.setAttribute('data-loaded', true);
-}
-
-var isLoaded = function isLoaded(element) {
-  return element.getAttribute('data-loaded') === 'true';
-};
-
-var onIntersection = function onIntersection(load, loaded) {
-  return function (entries, observer) {
-    entries.forEach(function (entry) {
-      if (entry.intersectionRatio > 0) {
-        observer.unobserve(entry.target);
-
-        if (!isLoaded(entry.target)) {
-          load(entry.target);
-          markAsLoaded(entry.target);
-          loaded(entry.target);
-        }
-      }
-    });
-  };
-};
-
-var getElements = function getElements(selector) {
-  if (selector instanceof Element) {
-    return [selector];
-  }
-  if (selector instanceof NodeList) {
-    return selector;
-  }
-  return document.querySelectorAll(selector);
-};
-
-var lozad = function () {
-  var selector = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '.lozad';
-  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-  var _defaultConfig$option = _extends({}, defaultConfig, options),
-      rootMargin = _defaultConfig$option.rootMargin,
-      threshold = _defaultConfig$option.threshold,
-      load = _defaultConfig$option.load,
-      loaded = _defaultConfig$option.loaded;
-
-  var observer = void 0;
-
-  if (window.IntersectionObserver) {
-    observer = new IntersectionObserver(onIntersection(load, loaded), {
-      rootMargin: rootMargin,
-      threshold: threshold
-    });
-  }
-
-  return {
-    observe: function observe() {
-      var elements = getElements(selector);
-
-      for (var i = 0; i < elements.length; i++) {
-        if (isLoaded(elements[i])) {
-          continue;
-        }
-        if (observer) {
-          observer.observe(elements[i]);
-          continue;
-        }
-        load(elements[i]);
-        markAsLoaded(elements[i]);
-        loaded(elements[i]);
-      }
-    },
-    triggerLoad: function triggerLoad(element) {
-      if (isLoaded(element)) {
-        return;
-      }
-
-      load(element);
-      markAsLoaded(element);
-      loaded(element);
-    }
-  };
-};
-
-return lozad;
-
-})));
+   * Detect IE browser
+   * @const {boolean}
+   * @private
+   */function f(t){t.setAttribute("data-loaded",!0)}var b=function(t){return"true"===t.getAttribute("data-loaded")};return function(){var r,o,a=0<arguments.length&&void 0!==arguments[0]?arguments[0]:".lozad",t=1<arguments.length&&void 0!==arguments[1]?arguments[1]:{},e=g({},l,t),n=e.root,i=e.rootMargin,d=e.threshold,u=e.load,c=e.loaded,s=void 0;return window.IntersectionObserver&&(s=new IntersectionObserver((r=u,o=c,function(t,e){t.forEach(function(t){(0<t.intersectionRatio||t.isIntersecting)&&(e.unobserve(t.target),b(t.target)||(r(t.target),f(t.target),o(t.target)))})}),{root:n,rootMargin:i,threshold:d})),{observe:function(){for(var t=function(t){var e=1<arguments.length&&void 0!==arguments[1]?arguments[1]:document;return t instanceof Element?[t]:t instanceof NodeList?t:e.querySelectorAll(t)}(a,n),e=0;e<t.length;e++)b(t[e])||(s?s.observe(t[e]):(u(t[e]),f(t[e]),c(t[e])))},triggerLoad:function(t){b(t)||(u(t),f(t),c(t))},observer:s}}});
 
 
 /***/ }),
@@ -7385,23 +7260,23 @@ module.exports = __webpack_require__(/*! ./dist/lib/router */ "./node_modules/ne
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_10edf27d814a728d21af ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_52339ab353c8e0db40da ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_10edf27d814a728d21af */ "dll-reference dll_10edf27d814a728d21af"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_52339ab353c8e0db40da */ "dll-reference dll_52339ab353c8e0db40da"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_10edf27d814a728d21af ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_52339ab353c8e0db40da ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_10edf27d814a728d21af */ "dll-reference dll_10edf27d814a728d21af"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_52339ab353c8e0db40da */ "dll-reference dll_52339ab353c8e0db40da"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -8009,12 +7884,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_10edf27d814a728d21af ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_52339ab353c8e0db40da ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_10edf27d814a728d21af */ "dll-reference dll_10edf27d814a728d21af"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_52339ab353c8e0db40da */ "dll-reference dll_52339ab353c8e0db40da"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -8229,12 +8104,12 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_10edf27d814a728d21af ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_52339ab353c8e0db40da ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_10edf27d814a728d21af */ "dll-reference dll_10edf27d814a728d21af"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_52339ab353c8e0db40da */ "dll-reference dll_52339ab353c8e0db40da"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -9909,7 +9784,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/head */ "./node_modules/next/head.js");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var lozad__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lozad */ "./node_modules/lozad/dist/lozad.js");
+/* harmony import */ var lozad__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lozad */ "./node_modules/lozad/dist/lozad.min.js");
 /* harmony import */ var lozad__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lozad__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _lib_gtag__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../lib/gtag */ "./lib/gtag.js");
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../styles/main.scss */ "./styles/main.scss");
@@ -10095,14 +9970,14 @@ return { page: module.exports.default }});
 
 /***/ }),
 
-/***/ "dll-reference dll_10edf27d814a728d21af":
+/***/ "dll-reference dll_52339ab353c8e0db40da":
 /*!*******************************************!*\
-  !*** external "dll_10edf27d814a728d21af" ***!
+  !*** external "dll_52339ab353c8e0db40da" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_10edf27d814a728d21af;
+module.exports = dll_52339ab353c8e0db40da;
 
 /***/ })
 
