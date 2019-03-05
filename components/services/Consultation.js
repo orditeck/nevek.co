@@ -6,7 +6,7 @@ export default () => <article className="consultation">
 
     <p>
         Mon service de consultation est similaire à celui d'accompagnement, à la différence qu'il est ciblé sur des
-        besoins précis. travers mon chapeau de consultant, j'aurai donc pour mission de vous donner des conseils d'expert
+        besoins précis. À travers mon chapeau de consultant, j'aurai donc pour mission de vous donner des conseils d'expert
         dans un domaine particulier.
     </p>
 
