@@ -1,5 +1,5 @@
 import { Welcome, LogoSlider, Services } from '../components/'
-import { Engagement, StrategeNumerique, Faq } from '../layouts/'
+import { Engagement, StrategeNumerique, Faq, Testimonies } from '../layouts/'
 
 export default () =>
     <section className="homepage">
@@ -8,5 +8,14 @@ export default () =>
         <Services />
         <Engagement />
         <StrategeNumerique />
-        <Faq />
+        <section className="with-bg white faq-testimonies">
+            <div className="container">
+                <section>
+                    <Faq />
+                </section>
+                <section>
+                    <Testimonies />
+                </section>
+            </div>
+        </section>
     </section>

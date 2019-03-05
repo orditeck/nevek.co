@@ -4,6 +4,7 @@ section.homepage {
   @import 'home/logo-slider';
   @import 'home/services';
   @import 'home/section-with-bg';
+  @import 'home/faq-testimonies';
 
   section.mustard {
     @include section-with-bg($color-mustard, $color-dark-liver, darken($color-green-sheen, 25%));

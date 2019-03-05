@@ -1,0 +1,201 @@
+section.faq-testimonies .container {
+
+  display: flex;
+
+  @include breakpoint(sm) {
+    display: block;
+  }
+
+  > section {
+    &:first-of-type {
+      width: 60%;
+      flex: 6;
+
+      @include breakpoint(sm) {
+        width: 100%;
+      }
+    }
+
+    &:last-of-type {
+      width: 40%;
+      flex: 4;
+      margin: 0 0 0 1rem;
+
+      @include breakpoint(sm) {
+        width: 100%;
+      }
+    }
+
+    p {
+      width: 100%;
+    }
+  }
+
+  .testimony {
+    position: relative;
+    width: 80%;
+    padding: 3rem 1rem;
+    margin: 3rem auto 0;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.07);
+    text-align: center;
+
+    &:before {
+      content: '“';
+      position: absolute;
+      left: 3rem;
+      top: 3rem;
+      font-size: 5rem;
+      font-family: 'Arial', sans-serif;
+      z-index: 2;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto 1rem;
+      width: 7.5rem;
+    }
+
+    div.about-tooltip {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: 8.5rem;
+      margin-left: calc(50% - (1rem / 2) + 4rem);
+      font-size: 0.5rem;
+      line-height: 0.5rem;
+      padding: 0.3rem 0;
+      width: 5rem;
+      background: $color-mustard;
+      color: #000;
+      animation-name: about-tooltip;
+      animation-duration: 500ms;
+
+      @keyframes about-tooltip {
+        0% {
+          opacity: 0;
+        }
+        100%   {
+          opacity: 1;
+        }
+      }
+    }
+
+    div.about-toggle {
+      width: 1rem;
+      height: 1rem;
+      font-size: 0.6rem;
+      line-height: 1rem;
+      position: absolute;
+      top: 9.5rem;
+      left: calc(50% - (1rem / 2) + 3rem);
+      background: #f3f3f3;
+      color: #b1b1b1;
+      border-radius: 100%;
+      cursor: pointer;
+      text-align: center;
+      transition: $base-transition;
+      z-index: 2;
+
+      &:hover {
+        background: $color-mustard;
+        color: #000;
+      }
+    }
+
+    .swiper-slide p {
+      width: 60%;
+      margin: 0 auto;
+      font-size: 0.8rem;
+      line-height: 1.2rem;
+    }
+
+    h2, h3 {
+      font-size: 0.8rem;
+      line-height: 1.2rem;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    h2 {
+      margin: 1rem 0 0;
+    }
+
+    h3 {
+      a {
+        position: relative;
+        content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+        left: 0.2rem;
+      }
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+      filter: grayscale(100%);
+      opacity: 0.15;
+      transform: scale(0.7);
+    }
+
+    .about {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      box-sizing: border-box;
+      text-align: left;
+      font-size: 0.8rem;
+      line-height: 1.4rem;
+      transition: opacity 250ms ease-in-out;
+      z-index: 2;
+
+      &.invisible {
+        display: none;
+      }
+
+      &.visible {
+        opacity: 1;
+        display: block;
+        animation-name: about-visible;
+        animation-duration: 500ms;
+
+        @keyframes about-visible {
+          0% {
+            opacity: 0;
+          }
+          100%   {
+            opacity: 1;
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+        max-width: 350px;
+      }
+
+      div {
+        position: relative;
+        margin-top: -1rem;
+        margin-left: calc(100% - 1rem);
+        margin-bottom: 1rem;
+        transition: $base-transition;
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+        line-height: 2rem;
+        background: #f3f3f3;
+        color: #b1b1b1;
+        border-radius: 100%;
+        cursor: pointer;
+        text-align: center;
+
+        &:hover {
+          background: darken(#f3f3f3, 10%);
+          color: darken(#b1b1b1, 10%);
+        }
+      }
+    }
+  }
+
+}
