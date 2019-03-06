@@ -34,6 +34,13 @@ export default class extends Component {
                 }
             }
         });
+
+        /**
+         * Trigger resize after init otherwise for some reason swiper sets an incorrect width
+         */
+        setTimeout(() => {
+            window.dispatchEvent(new Event('resize'));
+        }, 0);
     }
 
     aboutToggle = () => {
