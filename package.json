@@ -26,6 +26,6 @@
     "normalize.css": "^8.0.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "swiper": "^4.4.2"
+    "swiper": "^4.5.0"
   }
 }
