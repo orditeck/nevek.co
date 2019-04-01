@@ -24,7 +24,7 @@
     "next-offline": "^3.3.6",
     "node-sass": "^4.11.0",
     "normalize.css": "^8.0.1",
-    "react": "^16.8.4",
+    "react": "^16.8.6",
     "react-dom": "^16.8.4",
     "swiper": "^4.5.0"
   }
