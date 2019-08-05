@@ -24,7 +24,7 @@ export default class extends Component {
     };
 
     onServiceClick = async (service) => {
-        const { currentService: previousServiceState } = this.state;
+        const {currentService: previousServiceState} = this.state;
         const opening = previousServiceState === null;
         const closing = previousServiceState === service;
 
@@ -33,13 +33,13 @@ export default class extends Component {
             title: 'Services'
         });
 
-        if(!opening && !closing){
+        if (!opening && !closing) {
             document.querySelectorAll('section.service article').forEach(
                 el => el.style.animationName = "article-after"
             );
         }
 
-        if(closing){
+        if (closing) {
 
             document.querySelector('section.service').classList.add('closing');
 
@@ -62,9 +62,14 @@ export default class extends Component {
                 "is-single": !!this.state.currentService
             })}>
             <div className="container">
-                <h1>
-                    <span>{this.state.title}</span>
-                </h1>
+                <header>
+                    <div>
+                        <h1>{this.state.title}</h1>
+                    </div>
+                    <div className="bg-title">
+                        <h1>Services</h1>
+                    </div>
+                </header>
                 <section>
                     <AccompagnementSummary
                         currentService={this.state.currentService}
@@ -85,7 +90,7 @@ export default class extends Component {
                         active: !!this.state.currentService
                     })}>
 
-                    <Service />
+                    <Service/>
                 </section>
             </div>
         </section>

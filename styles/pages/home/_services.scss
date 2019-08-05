@@ -2,6 +2,7 @@ section.services {
   background: #FFF;
   padding: 0 0 5rem 0;
   border-bottom: 5px solid darken($color-mustard, 25%);
+  overflow: hidden;
 
   .container {
 
@@ -9,18 +10,38 @@ section.services {
       width: 95%;
     }
 
-    > h1 {
-      text-align: center;
-      padding: 5rem 0;
-      margin: 0;
+    header {
       position: relative;
-      $length: 50px;
-      $space-between: 20px;
 
-      @include breakpoint(sm) {
-        padding: 3rem 0;
+      h1 {
+        text-align: left;
+        margin: 7rem 0 6rem;
+        position: relative;
+        font-size: 3rem;
+        $length: 50px;
+        $space-between: 20px;
+
+        @include breakpoint(sm) {
+          padding: 3rem 0;
+        }
+      }
+
+      .bg-title {
+        position: absolute;
+        top: -0.5rem;
+        z-index: 1;
+
+        h1 {
+          font-size: 6rem;
+          color: transparent;
+          -webkit-text-stroke: 0.5px #000000;
+          margin: 0;
+        }
       }
     }
+
+
+
 
     section:first-of-type {
       display: flex;

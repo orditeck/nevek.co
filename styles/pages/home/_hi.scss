@@ -1,0 +1,64 @@
+section.hi {
+  background: $color-dark-liver url('/static/images/bg_top_home3.jpg') 50% 50%;
+  background-size: cover;
+  border-bottom: 0.25rem solid $color-mustard;
+  position: relative;
+  z-index: 3;
+
+  @include breakpoint(sm) {
+    background-position: 65% 0;
+  }
+
+  .container {
+    .content {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 90vh;
+
+      article {
+        h1, h2, h3 {
+          margin: 0;
+          padding: 0 1rem;
+        }
+
+        h1 {
+          font-size: 4rem;
+          font-weight: normal;
+          color: $color-mustard;
+          display: inline-flex;
+        }
+
+        h2 {
+          font-size: 2.64rem;
+          text-transform: uppercase;
+          letter-spacing: -0.1rem;
+          background: $color-dark-liver;
+          padding: 0.5rem 1rem;
+        }
+
+        h3 {
+          font-size: 1rem;
+          padding: 0;
+          position: relative;
+          transform: translateX(-1rem);
+        }
+
+        @include breakpoint(sm) {
+          h1 {
+            font-size: 2.5rem;
+          }
+
+          h2 {
+            font-size: 1.6rem;
+          }
+
+          h3 {
+            font-size: 0.8rem;
+            transform: translateX(-0.4rem);
+          }
+        }
+      }
+    }
+  }
+}

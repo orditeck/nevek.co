@@ -1,5 +1,4 @@
 import Document, {Head, Main, NextScript} from 'next/document'
-import Footer from '../layouts/Footer'
 import { GA_TRACKING_ID } from '../lib/gtag'
 
 export default class MyDocument extends Document {
@@ -42,7 +41,6 @@ export default class MyDocument extends Document {
         </Head>
         <body>
             <Main/>
-            <Footer/>
             <NextScript/>
         </body>
         </html>

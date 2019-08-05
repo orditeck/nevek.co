@@ -1,9 +1,10 @@
-import { Welcome, LogoSlider, Services } from '../components/'
+import { Hi, WhatIDo, LogoSlider, Services } from '../components/'
 import { Engagement, StrategeNumerique, Faq, Testimonies } from '../layouts/'
 
 export default () =>
     <section className="homepage">
-        <Welcome />
+        <Hi />
+        <WhatIDo />
         <LogoSlider />
         <Services />
         <Engagement />
