@@ -1,5 +1,5 @@
 section.hi {
-  background: $color-dark-liver url('/static/images/bg_top_home3.jpg') 50% 50%;
+  background: $color-dark-liver url('/static/images/bg_top_home-min.jpg') 50% 50%;
   background-size: cover;
   border-bottom: 0.25rem solid $color-mustard;
   position: relative;
@@ -39,9 +39,7 @@ section.hi {
 
         h3 {
           font-size: 1rem;
-          padding: 0;
           position: relative;
-          transform: translateX(-1rem);
         }
 
         @include breakpoint(sm) {
@@ -55,7 +53,6 @@ section.hi {
 
           h3 {
             font-size: 0.8rem;
-            transform: translateX(-0.4rem);
           }
         }
       }
