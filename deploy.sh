@@ -2,11 +2,12 @@
 
 source .env
 
-echo "Delete old export if it exists"
+echo "Delete old export/clone if it exists"
+rm -rf previous_out
 rm -rf out
 
 echo "Clone current gh-pages branch to out directory"
-git clone git@github.com:orditeck/nevek.co.git --branch gh-pages out
+git clone git@github.com:orditeck/nevek.co.git --branch gh-pages previous_out
 
 echo "Build"
 npm run build
@@ -14,13 +15,21 @@ npm run build
 echo "Export"
 npm run export
 
+echo "Prepare git in new export's folder"
+mkdir out/.git
+cp -R previous_out/.git out
+
+echo "Remove previously cloned gh-pages, we're done with it"
+rm -rf previous_out
+
+echo "Start preparing with the new export"
 cd out
 
 echo "Add GitHub related stuff"
 touch .nojekyll
 touch CNAME
 echo "${GITHUB_CNAME}" >> CNAME
-cp 404/index.html 404.html
+cp index.html 404.html
 
 echo "Add, commit & push"
 git add --all
