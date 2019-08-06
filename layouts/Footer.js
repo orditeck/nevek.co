@@ -35,7 +35,7 @@ export default () => <footer id="site-footer">
             Keven Lefebvre © {new Date().getFullYear()}, tous droits réservés. <br/>
             Stratège numérique, Consultant Web & Développeur Web Senior à Chicoutimi, Saguenay. <br />
             <a href="https://github.com/orditeck/nevek.co" target="_blank" rel="noopener noreferrer">Sources de ce site</a>
-            <a href="https://github.com/orditeck" target="_blank" rel="noopener noreferrer">Github</a>
+            <a href="https://github.com/orditeck" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://www.instagram.com/keven.lefebvre" target="_blank" rel="noopener noreferrer">Instagram</a>
             <a href="https://www.facebook.com/keven.lefebvre" target="_blank" rel="noopener noreferrer">Facebook</a>
             <a href="https://www.linkedin.com/in/orditeck/" target="_blank" rel="noopener noreferrer">LinkedIn</a>

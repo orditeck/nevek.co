@@ -1,4 +1,4 @@
-import { Hi, WhatIDo, LogoSlider, Services } from '../components/'
+import { Hi, WhatIDo, LogoSlider, Services, Menu } from '../components/'
 import { Engagement, StrategeNumerique, Faq, Testimonies } from '../layouts/'
 
 export default () =>

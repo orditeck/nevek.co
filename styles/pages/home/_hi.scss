@@ -1,9 +1,18 @@
 section.hi {
   background: $color-dark-liver url('/static/images/bg_top_home-min.jpg') 50% 50%;
   background-size: cover;
-  border-bottom: 0.25rem solid $color-mustard;
   position: relative;
   z-index: 3;
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 0.25rem;
+    background-color: $color-mustard;
+  }
 
   @include breakpoint(sm) {
     background-position: 65% 0;
@@ -14,7 +23,8 @@ section.hi {
       display: inline-flex;
       flex-direction: column;
       justify-content: flex-end;
-      height: 90vh;
+      height: 90vh; /* Fallback for browsers that do not support Custom Properties */
+      height: calc(var(--vh, 1vh) * 90);
 
       article {
         h1, h2, h3 {
@@ -44,11 +54,11 @@ section.hi {
 
         @include breakpoint(sm) {
           h1 {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
           }
 
           h2 {
-            font-size: 1.6rem;
+            font-size: 1.58rem;
           }
 
           h3 {

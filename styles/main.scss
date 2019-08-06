@@ -4,7 +4,6 @@
 @import '~normalize.css/normalize';
 @import '~swiper/dist/css/swiper.min';
 @import '~aos/src/sass/aos';
-@import '~locomotive-scroll/src/locomotive-scroll';
 
 @import 'includes/fonts';
 @import 'includes/base';
@@ -15,5 +14,7 @@
 @import 'components/btn';
 @import 'components/faq';
 @import 'components/footer';
+@import 'components/main-nav';
+@import 'components/scroll';
 
 @import 'pages/home';

@@ -1,6 +1,7 @@
 html {
   font: 20px/150% 'Ubuntu', sans-serif;
   font-weight: 300;
+  box-sizing: border-box;
 
   @include breakpoint(md) {
     font-size: 19px;
@@ -9,6 +10,10 @@ html {
   @include breakpoint(sm) {
     font-size: 18px;
   }
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {

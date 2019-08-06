@@ -1,0 +1,19 @@
+.main-nav {
+  position: relative;
+  box-shadow: 0 0.3rem 0.3rem 0 rgba(0, 0, 0, 0.06);
+  z-index: 10;
+  background: #fff;
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+
+    li a {
+      padding: 1rem 0;
+      display: block;
+      cursor: pointer;
+    }
+  }
+}
