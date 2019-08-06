@@ -1,5 +1,86 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/_app.js"],{
 
+/***/ "./components/LaxSetup.js":
+/*!********************************!*\
+  !*** ./components/LaxSetup.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var lax_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! lax.js */ "./node_modules/lax.js/lib/lax.min.js");
+/* harmony import */ var lax_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(lax_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+
+
+
+
+
+
+
+
+
+
+var LaxSetup =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(LaxSetup, _React$Component);
+
+  function LaxSetup() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, LaxSetup);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, (_getPrototypeOf2 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(LaxSetup)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "updateLax", function () {
+      lax_js__WEBPACK_IMPORTED_MODULE_7___default.a.update(window.scrollY);
+    });
+
+    return _this;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(LaxSetup, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      lax_js__WEBPACK_IMPORTED_MODULE_7___default.a.setup();
+      document.addEventListener('scroll', this.updateLax, false);
+      this.updateLax();
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      document.removeEventListener('scroll', this.updateLax);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return this.props.children;
+    }
+  }]);
+
+  return LaxSetup;
+}(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (LaxSetup);
+
+/***/ }),
+
 /***/ "./layouts/Footer.js":
 /*!***************************!*\
   !*** ./layouts/Footer.js ***!
@@ -170,7 +251,7 @@ var _jsxFileName = "/Users/kevenlefebvre/Sites/nevek/nevek.co/layouts/Footer.js"
       lineNumber: 38
     },
     __self: this
-  }, "Github"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, "GitHub"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.instagram.com/keven.lefebvre",
     target: "_blank",
     rel: "noopener noreferrer",
@@ -4824,6 +4905,18 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/
 
 /***/ }),
 
+/***/ "./node_modules/lax.js/lib/lax.min.js":
+/*!********************************************!*\
+  !*** ./node_modules/lax.js/lib/lax.min.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+function _slicedToArray(t,a){return _arrayWithHoles(t)||_iterableToArrayLimit(t,a)||_nonIterableRest()}function _nonIterableRest(){throw new TypeError("Invalid attempt to destructure non-iterable instance")}function _iterableToArrayLimit(t,a){var n=[],e=!0,r=!1,o=void 0;try{for(var l,i=t[Symbol.iterator]();!(e=(l=i.next()).done)&&(n.push(l.value),!a||n.length!==a);e=!0);}catch(t){r=!0,o=t}finally{try{e||null==i.return||i.return()}finally{if(r)throw o}}return n}function _arrayWithHoles(t){if(Array.isArray(t))return t}!function(){var lax=function(){for(var lax={elements:[]},lastY=0,currentBreakpoint="default",breakpointsSeparator="_",transformFns={"data-lax-opacity":function(t,a){t.opacity=a},"data-lax-translate":function(t,a){t.transform+=" translate(".concat(a,"px, ").concat(a,"px)")},"data-lax-translate-x":function(t,a){t.transform+=" translateX(".concat(a,"px)")},"data-lax-translate-y":function(t,a){t.transform+=" translateY(".concat(a,"px)")},"data-lax-scale":function(t,a){t.transform+=" scale(".concat(a,")")},"data-lax-scale-x":function(t,a){t.transform+=" scaleX(".concat(a,")")},"data-lax-scale-y":function(t,a){t.transform+=" scaleY(".concat(a,")")},"data-lax-skew":function(t,a){t.transform+=" skew(".concat(a,"deg, ").concat(a,"deg)")},"data-lax-skew-x":function(t,a){t.transform+=" skewX(".concat(a,"deg)")},"data-lax-skew-y":function(t,a){t.transform+=" skewY(".concat(a,"deg)")},"data-lax-rotate":function(t,a){t.transform+=" rotate(".concat(a,"deg)")},"data-lax-rotate-x":function(t,a){t.transform+=" rotateX(".concat(a,"deg)")},"data-lax-rotate-y":function(t,a){t.transform+=" rotateY(".concat(a,"deg)")},"data-lax-brightness":function(t,a){t.filter+=" brightness(".concat(a,"%)")},"data-lax-contrast":function(t,a){t.filter+=" contrast(".concat(a,"%)")},"data-lax-hue-rotate":function(t,a){t.filter+=" hue-rotate(".concat(a,"deg)")},"data-lax-blur":function(t,a){t.filter+=" blur(".concat(a,"px)")},"data-lax-invert":function(t,a){t.filter+="  invert(".concat(a,"%)")},"data-lax-saturate":function(t,a){t.filter+="  saturate(".concat(a,"%)")},"data-lax-grayscale":function(t,a){t.filter+="  grayscale(".concat(a,"%)")},"data-lax-bg-pos":function(t,a){t.backgroundPosition="".concat(a,"px ").concat(a,"px")},"data-lax-bg-pos-x":function(t,a){t.backgroundPositionX="".concat(a,"px")},"data-lax-bg-pos-y":function(t,a){t.backgroundPositionY="".concat(a,"px")}},_crazy="",i=0;i<20;i++)_crazy+=" "+5*i+" "+47*i%360+", ";function intrp(t,a){for(var n=0;t[n][0]<=a&&void 0!==t[n+1];)n+=1;var e=t[n][0],r=void 0===t[n-1]?e:t[n-1][0],o=t[n][1],l=void 0===t[n-1]?o:t[n-1][1];return Math.min(Math.max((a-r)/(e-r),0),1)*(o-l)+l}function fnOrVal(s){return"("===s[0]?eval(s):parseFloat(s)}return lax.presets={linger:function(t){return{"data-lax-translate-y":"(vh*0.7) 0, 0 200, -500 0"}},lazy:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:100;return{"data-lax-translate-y":"(vh) 0, (-elh) ".concat(t)}},eager:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:100;return{"data-lax-translate-y":"(vh) 0, (-elh) -".concat(t)}},slalom:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:50;return{"data-lax-translate-x":"vh ".concat(t,", (vh*0.8) ").concat(-t,", (vh*0.6) ").concat(t,", (vh*0.4) ").concat(-t,", (vh*0.2) ").concat(t,", (vh*0) ").concat(-t,", (-elh) ").concat(t)}},crazy:function(t){return{"data-lax-hue-rotate":"".concat(_crazy," | loop=20")}},spin:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:360;return{"data-lax-rotate":"(vh) 0, (-elh) ".concat(t)}},spinRev:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:360;return{"data-lax-rotate":"(vh) 0, (-elh) ".concat(-t)}},spinIn:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:360;return{"data-lax-rotate":"vh ".concat(t,", (vh*0.5) 0")}},spinOut:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:360;return{"data-lax-rotate":"(vh*0.5) 0, -elh ".concat(t)}},blurInOut:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:40;return{"data-lax-blur":"(vh) ".concat(t,", (vh*0.8) 0, (vh*0.2) 0, 0 ").concat(t)}},blurIn:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:40;return{"data-lax-blur":"(vh) ".concat(t,", (vh*0.7) 0")}},blurOut:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:40;return{"data-lax-blur":"(vh*0.3) 0, 0 ".concat(t)}},fadeInOut:function(){return{"data-lax-opacity":"(vh) 0, (vh*0.8) 1, (vh*0.2) 1, 0 0"}},fadeIn:function(){return{"data-lax-opacity":"(vh) 0, (vh*0.7) 1"}},fadeOut:function(){return{"data-lax-opacity":"(vh*0.3) 1, 0 0"}},driftLeft:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:100;return{"data-lax-translate-x":"vh ".concat(t,", -elh ").concat(-t)}},driftRight:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:100;return{"data-lax-translate-x":"vh ".concat(-t,", -elh ").concat(t)}},leftToRight:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:1;return{"data-lax-translate-x":"vh 0, -elh (vw*".concat(t,")")}},rightToLeft:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:1;return{"data-lax-translate-x":"vh 0, -elh (vw*".concat(-t,")")}},zoomInOut:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:.2;return{"data-lax-scale":"(vh) ".concat(t,", (vh*0.8) 1, (vh*0.2) 1, -elh ").concat(t)}},zoomIn:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:.2;return{"data-lax-scale":"(vh) ".concat(t,", (vh*0.7) 1")}},zoomOut:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:.2;return{"data-lax-scale":"(vh*0.3) 1, -elh ".concat(t)}},speedy:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:30;return{"data-lax-skew-x":"(vh) ".concat(t,", -elh ").concat(-t)}},swing:function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:30;return{"data-lax-skew-y":"(vh) ".concat(t,", -elh ").concat(-t)}}},lax.addPreset=function(t,a){lax.presets[t]=a},lax.setup=function(){var t=0<arguments.length&&void 0!==arguments[0]?arguments[0]:{};lax.breakpoints=t.breakpoints||{},lax.selector=t.selector||".lax",lax.populateElements()},lax.removeElement=function(a){var t=lax.elements.findIndex(function(t){return t.el=a});-1<t&&lax.elements.splice(t,1)},lax.createLaxObject=function(t){return{el:t,originalStyle:{transform:t.style.transform,filter:t.style.filter},transforms:{}}},lax.calcTransforms=function(l){for(var i=l.el,e=[],t=0;t<i.attributes.length;t++){var a=i.attributes[t];-1<a.name.indexOf("data-lax-preset")&&e.push(a)}for(var n=function(t){var a=e[t],n=a.name.split(breakpointsSeparator),o=n[1]?"".concat(breakpointsSeparator).concat(n[1]):"";a.value.split(" ").forEach(function(t){var a=t.split("-"),n=lax.presets[a[0]];if(n){var e=n(a[1]);for(var r in e)i.setAttribute("".concat(r).concat(o),e[r])}else console.log("lax error: preset ".concat(a[0]," is not defined"))}),i.setAttribute("data-lax-anchor","self"),i.attributes.removeNamedItem(a.name)},r=0;r<e.length;r++)n(r);if(!(i.attributes["data-lax-use-gpu"]&&"false"===i.attributes["data-lax-use-gpu"].value)&&(i.style["backface-visibility"]="hidden",i.style["-webkit-backface-visibility"]="hidden"),i.attributes["data-lax-use-gpu"]&&i.attributes.removeNamedItem("data-lax-use-gpu"),l.optimise=!1,i.attributes["data-lax-optimize"]&&"true"===i.attributes["data-lax-optimize"].value){l.optimise=!0;var o=i.getBoundingClientRect();i.setAttribute("data-lax-opacity","".concat(-o.height-1," 0, ").concat(-o.height," 1, ").concat(window.innerHeight," 1, ").concat(window.innerHeight+1," 0")),i.attributes.removeNamedItem("data-lax-optimize")}for(var c=0;c<i.attributes.length;c++){var s=i.attributes[c];if(!(s.name.indexOf("data-lax")<0)){var u=s.name.split(breakpointsSeparator),f=u[0].split("-"),d=u[1]||"default";if("lax"===f[1])if("data-lax-anchor"===s.name){l["data-lax-anchor"]="self"===s.value?i:document.querySelector(s.value);var v=l["data-lax-anchor"].getBoundingClientRect();l.anchorTop=Math.floor(v.top)+window.scrollY}else!function(){var t=_slicedToArray(s.value.replace(/vw/g,window.innerWidth).replace(/vh/g,window.innerHeight).replace(/elh/g,i.clientHeight).replace(/elw/g,i.clientWidth).replace(/\s+/g," ").split("|"),2),a=t[0],n=t[1],r={};n&&n.split(" ").forEach(function(t){var a=_slicedToArray(t.split("="),2),n=a[0],e=a[1];r[n]=n&&fnOrVal(e)});var e=u[0],o=a.split(",").map(function(t){return t.trim().split(" ").map(fnOrVal)}).sort(function(t,a){return t[0]-a[0]});l.transforms[e]||(l.transforms[e]={}),l.transforms[e][d]={valueMap:o,options:r}}()}}var x=i.attributes["data-lax-sprite-data"]&&i.attributes["data-lax-sprite-data"].value;if(x){l.spriteData=x.split(",").map(function(t){return parseInt(t)}),i.style.height=l.spriteData[1]+"px",i.style.width=l.spriteData[0]+"px";var p=i.attributes["data-lax-sprite-image"]&&i.attributes["data-lax-sprite-image"].value;p&&(i.style.backgroundImage="url(".concat(p,")"))}return l},lax.addElement=function(t){var a=lax.calcTransforms(lax.createLaxObject(t));lax.elements.push(a),lax.updateElement(a)},lax.populateElements=function(){lax.elements=[],document.querySelectorAll(lax.selector).forEach(lax.addElement),currentBreakpoint=lax.getCurrentBreakPoint()},lax.updateElements=function(){lax.elements.forEach(function(t){lax.calcTransforms(t),lax.updateElement(t)}),currentBreakpoint=lax.getCurrentBreakPoint()},lax.getCurrentBreakPoint=function(){var t="default",a=window.innerWidth;for(var n in lax.breakpoints){if(!(parseFloat(lax.breakpoints[n])<=a))break;t=n}return t},lax.updateElement=function(t){var a=t.originalStyle,n=t.anchorTop,e=t.transforms,r=t.spriteData,o=t.el,l=n?n-lastY:lastY,i={transform:a.transform,filter:a.filter};for(var c in e){var s=e[c][currentBreakpoint]||e[c].default;if(s){var u=l;s.options.offset&&(u+=s.options.offset),s.options.speed&&(u*=s.options.speed),s.options.loop&&(u%=s.options.loop);var f=transformFns[c],d=intrp(s.valueMap,u);f&&f(i,d)}}if(r){var v=_slicedToArray(r,5),x=v[0],p=v[1],h=v[2],m=v[3],g=v[4],b=Math.floor(lastY/g)%h,y=b%m,k=Math.floor(b/m);i.backgroundPosition="-".concat(y*x,"px -").concat(k*p,"px")}if(0===i.opacity)o.style.opacity=0;else for(var w in i)o.style[w]=i[w]},lax.update=function(t){lastY!==t&&(lastY=t,lax.elements.forEach(lax.updateElement))},lax}(); true&&void 0!==module.exports?module.exports=lax:window.lax=lax}();
+
+/***/ }),
+
 /***/ "./node_modules/lozad/dist/lozad.min.js":
 /*!**********************************************!*\
   !*** ./node_modules/lozad/dist/lozad.min.js ***!
@@ -9342,6 +9435,478 @@ try {
 
 /***/ }),
 
+/***/ "./node_modules/stickybits/dist/stickybits.es.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/stickybits/dist/stickybits.es.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/**
+  stickybits - Stickybits is a lightweight alternative to `position: sticky` polyfills
+  @version v3.6.6
+  @link https://github.com/dollarshaveclub/stickybits#readme
+  @author Jeff Wainwright <yowainwright@gmail.com> (https://jeffry.in)
+  @license MIT
+**/
+/*
+  STICKYBITS 💉
+  --------
+  > a lightweight alternative to `position: sticky` polyfills 🍬
+  --------
+  - each method is documented above it our view the readme
+  - Stickybits does not manage polymorphic functionality (position like properties)
+  * polymorphic functionality: (in the context of describing Stickybits)
+    means making things like `position: sticky` be loosely supported with position fixed.
+    It also means that features like `useStickyClasses` takes on styles like `position: fixed`.
+  --------
+  defaults 🔌
+  --------
+  - version = `package.json` version
+  - userAgent = viewer browser agent
+  - target = DOM element selector
+  - noStyles = boolean
+  - offset = number
+  - parentClass = 'string'
+  - scrollEl = window || DOM element selector || DOM element
+  - stickyClass = 'string'
+  - stuckClass = 'string'
+  - useStickyClasses = boolean
+  - useFixed = boolean
+  - useGetBoundingClientRect = boolean
+  - verticalPosition = 'string'
+  --------
+  props🔌
+  --------
+  - p = props {object}
+  --------
+  instance note
+  --------
+  - stickybits parent methods return this
+  - stickybits instance methods return an instance item
+  --------
+  nomenclature
+  --------
+  - target => el => e
+  - props => o || p
+  - instance => item => it
+  --------
+  methods
+  --------
+  - .definePosition = defines sticky or fixed
+  - .addInstance = an array of objects for each Stickybits Target
+  - .getClosestParent = gets the parent for non-window scroll
+  - .getTopPosition = gets the element top pixel position from the viewport
+  - .computeScrollOffsets = computes scroll position
+  - .toggleClasses = older browser toggler
+  - .manageState = manages sticky state
+  - .removeClass = older browser support class remover
+  - .removeInstance = removes an instance
+  - .cleanup = removes all Stickybits instances and cleans up dom from stickybits
+*/
+var Stickybits =
+/*#__PURE__*/
+function () {
+  function Stickybits(target, obj) {
+    var o = typeof obj !== 'undefined' ? obj : {};
+    this.version = '3.6.6';
+    this.userAgent = window.navigator.userAgent || 'no `userAgent` provided by the browser';
+    this.props = {
+      customStickyChangeNumber: o.customStickyChangeNumber || null,
+      noStyles: o.noStyles || false,
+      stickyBitStickyOffset: o.stickyBitStickyOffset || 0,
+      parentClass: o.parentClass || 'js-stickybit-parent',
+      scrollEl: typeof o.scrollEl === 'string' ? document.querySelector(o.scrollEl) : o.scrollEl || window,
+      stickyClass: o.stickyClass || 'js-is-sticky',
+      stuckClass: o.stuckClass || 'js-is-stuck',
+      stickyChangeClass: o.stickyChangeClass || 'js-is-sticky--change',
+      useStickyClasses: o.useStickyClasses || false,
+      useFixed: o.useFixed || false,
+      useGetBoundingClientRect: o.useGetBoundingClientRect || false,
+      verticalPosition: o.verticalPosition || 'top'
+      /*
+        define positionVal after the setting of props, because definePosition looks at the props.useFixed
+        ----
+        -  uses a computed (`.definePosition()`)
+        -  defined the position
+      */
+
+    };
+    this.props.positionVal = this.definePosition() || 'fixed';
+    this.instances = [];
+    var _this$props = this.props,
+        positionVal = _this$props.positionVal,
+        verticalPosition = _this$props.verticalPosition,
+        noStyles = _this$props.noStyles,
+        stickyBitStickyOffset = _this$props.stickyBitStickyOffset;
+    var verticalPositionStyle = verticalPosition === 'top' && !noStyles ? stickyBitStickyOffset + "px" : '';
+    var positionStyle = positionVal !== 'fixed' ? positionVal : '';
+    this.els = typeof target === 'string' ? document.querySelectorAll(target) : target;
+    if (!('length' in this.els)) this.els = [this.els];
+
+    for (var i = 0; i < this.els.length; i++) {
+      var el = this.els[i]; // set vertical position
+
+      el.style[verticalPosition] = verticalPositionStyle;
+      el.style.position = positionStyle; // instances are an array of objects
+
+      this.instances.push(this.addInstance(el, this.props));
+    }
+  }
+  /*
+    setStickyPosition ✔️
+    --------
+    —  most basic thing stickybits does
+    => checks to see if position sticky is supported
+    => defined the position to be used
+    => stickybits works accordingly
+  */
+
+
+  var _proto = Stickybits.prototype;
+
+  _proto.definePosition = function definePosition() {
+    var stickyProp;
+
+    if (this.props.useFixed) {
+      stickyProp = 'fixed';
+    } else {
+      var prefix = ['', '-o-', '-webkit-', '-moz-', '-ms-'];
+      var test = document.head.style;
+
+      for (var i = 0; i < prefix.length; i += 1) {
+        test.position = prefix[i] + "sticky";
+      }
+
+      stickyProp = test.position ? test.position : 'fixed';
+      test.position = '';
+    }
+
+    return stickyProp;
+  }
+  /*
+    addInstance ✔️
+    --------
+    — manages instances of items
+    - takes in an el and props
+    - returns an item object
+    ---
+    - target = el
+    - o = {object} = props
+      - scrollEl = 'string' | object
+      - verticalPosition = number
+      - off = boolean
+      - parentClass = 'string'
+      - stickyClass = 'string'
+      - stuckClass = 'string'
+    ---
+    - defined later
+      - parent = dom element
+      - state = 'string'
+      - offset = number
+      - stickyStart = number
+      - stickyStop = number
+    - returns an instance object
+  */
+  ;
+
+  _proto.addInstance = function addInstance(el, props) {
+    var _this = this;
+
+    var item = {
+      el: el,
+      parent: el.parentNode,
+      props: props
+    };
+
+    if (props.positionVal === 'fixed' || props.useStickyClasses) {
+      this.isWin = this.props.scrollEl === window;
+      var se = this.isWin ? window : this.getClosestParent(item.el, item.props.scrollEl);
+      this.computeScrollOffsets(item);
+      item.parent.className += " " + props.parentClass;
+      item.state = 'default';
+
+      item.stateContainer = function () {
+        return _this.manageState(item);
+      };
+
+      se.addEventListener('scroll', item.stateContainer);
+    }
+
+    return item;
+  }
+  /*
+    --------
+    getParent 👨‍
+    --------
+    - a helper function that gets the target element's parent selected el
+    - only used for non `window` scroll elements
+    - supports older browsers
+  */
+  ;
+
+  _proto.getClosestParent = function getClosestParent(el, match) {
+    // p = parent element
+    var p = match;
+    var e = el;
+    if (e.parentElement === p) return p; // traverse up the dom tree until we get to the parent
+
+    while (e.parentElement !== p) {
+      e = e.parentElement;
+    } // return parent element
+
+
+    return p;
+  }
+  /*
+    --------
+    getTopPosition
+    --------
+    - a helper function that gets the topPosition of a Stickybit element
+    - from the top level of the DOM
+  */
+  ;
+
+  _proto.getTopPosition = function getTopPosition(el) {
+    if (this.props.useGetBoundingClientRect) {
+      return el.getBoundingClientRect().top + (this.props.scrollEl.pageYOffset || document.documentElement.scrollTop);
+    }
+
+    var topPosition = 0;
+
+    do {
+      topPosition = el.offsetTop + topPosition;
+    } while (el = el.offsetParent);
+
+    return topPosition;
+  }
+  /*
+    computeScrollOffsets 📊
+    ---
+    computeScrollOffsets for Stickybits
+    - defines
+      - offset
+      - start
+      - stop
+  */
+  ;
+
+  _proto.computeScrollOffsets = function computeScrollOffsets(item) {
+    var it = item;
+    var p = it.props;
+    var el = it.el;
+    var parent = it.parent;
+    var isCustom = !this.isWin && p.positionVal === 'fixed';
+    var isTop = p.verticalPosition !== 'bottom';
+    var scrollElOffset = isCustom ? this.getTopPosition(p.scrollEl) : 0;
+    var stickyStart = isCustom ? this.getTopPosition(parent) - scrollElOffset : this.getTopPosition(parent);
+    var stickyChangeOffset = p.customStickyChangeNumber !== null ? p.customStickyChangeNumber : el.offsetHeight;
+    var parentBottom = stickyStart + parent.offsetHeight;
+    it.offset = scrollElOffset + p.stickyBitStickyOffset;
+    it.stickyStart = isTop ? stickyStart - it.offset : 0;
+    it.stickyChange = it.stickyStart + stickyChangeOffset;
+    it.stickyStop = isTop ? parentBottom - (el.offsetHeight + it.offset) : parentBottom - window.innerHeight;
+  }
+  /*
+    toggleClasses ⚖️
+    ---
+    toggles classes (for older browser support)
+    r = removed class
+    a = added class
+  */
+  ;
+
+  _proto.toggleClasses = function toggleClasses(el, r, a) {
+    var e = el;
+    var cArray = e.className.split(' ');
+    if (a && cArray.indexOf(a) === -1) cArray.push(a);
+    var rItem = cArray.indexOf(r);
+    if (rItem !== -1) cArray.splice(rItem, 1);
+    e.className = cArray.join(' ');
+  }
+  /*
+    manageState 📝
+    ---
+    - defines the state
+      - normal
+      - sticky
+      - stuck
+  */
+  ;
+
+  _proto.manageState = function manageState(item) {
+    // cache object
+    var it = item;
+    var e = it.el;
+    var p = it.props;
+    var state = it.state;
+    var start = it.stickyStart;
+    var change = it.stickyChange;
+    var stop = it.stickyStop;
+    var stl = e.style; // cache props
+
+    var ns = p.noStyles;
+    var pv = p.positionVal;
+    var se = p.scrollEl;
+    var sticky = p.stickyClass;
+    var stickyChange = p.stickyChangeClass;
+    var stuck = p.stuckClass;
+    var vp = p.verticalPosition;
+    var isTop = vp !== 'bottom';
+    /*
+      requestAnimationFrame
+      ---
+      - use rAF
+      - or stub rAF
+    */
+
+    var rAFStub = function rAFDummy(f) {
+      f();
+    };
+
+    var rAF = !this.isWin ? rAFStub : window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || rAFStub;
+    /*
+      define scroll vars
+      ---
+      - scroll
+      - notSticky
+      - isSticky
+      - isStuck
+    */
+
+    var tC = this.toggleClasses;
+    var scroll = this.isWin ? window.scrollY || window.pageYOffset : se.scrollTop;
+    var notSticky = scroll > start && scroll < stop && (state === 'default' || state === 'stuck');
+    var isSticky = isTop && scroll <= start && (state === 'sticky' || state === 'stuck');
+    var isStuck = scroll >= stop && state === 'sticky';
+    /*
+      Unnamed arrow functions within this block
+      ---
+      - help wanted or discussion
+      - view test.stickybits.js
+        - `stickybits .manageState  `position: fixed` interface` for more awareness 👀
+    */
+
+    if (notSticky) {
+      it.state = 'sticky';
+      rAF(function () {
+        tC(e, stuck, sticky);
+        stl.position = pv;
+        if (ns) return;
+        stl.bottom = '';
+        stl[vp] = p.stickyBitStickyOffset + "px";
+      });
+    } else if (isSticky) {
+      it.state = 'default';
+      rAF(function () {
+        tC(e, sticky);
+        tC(e, stuck);
+        if (pv === 'fixed') stl.position = '';
+      });
+    } else if (isStuck) {
+      it.state = 'stuck';
+      rAF(function () {
+        tC(e, sticky, stuck);
+        if (pv !== 'fixed' || ns) return;
+        stl.top = '';
+        stl.bottom = '0';
+        stl.position = 'absolute';
+      });
+    }
+
+    var isStickyChange = scroll >= change && scroll <= stop;
+    var isNotStickyChange = scroll < change / 2 || scroll > stop;
+    var stub = 'stub'; // a stub css class to remove
+
+    if (isNotStickyChange) {
+      rAF(function () {
+        tC(e, stickyChange);
+      });
+    } else if (isStickyChange) {
+      rAF(function () {
+        tC(e, stub, stickyChange);
+      });
+    }
+  };
+
+  _proto.update = function update(updatedProps) {
+    if (updatedProps === void 0) {
+      updatedProps = null;
+    }
+
+    for (var i = 0; i < this.instances.length; i += 1) {
+      var instance = this.instances[i];
+      this.computeScrollOffsets(instance);
+
+      if (updatedProps) {
+        for (var updatedProp in updatedProps) {
+          instance.props[updatedProp] = updatedProps[updatedProp];
+        }
+      }
+    }
+
+    return this;
+  }
+  /*
+    removes an instance 👋
+    --------
+    - cleanup instance
+  */
+  ;
+
+  _proto.removeInstance = function removeInstance(instance) {
+    var e = instance.el;
+    var p = instance.props;
+    var tC = this.toggleClasses;
+    e.style.position = '';
+    e.style[p.verticalPosition] = '';
+    tC(e, p.stickyClass);
+    tC(e, p.stuckClass);
+    tC(e.parentNode, p.parentClass);
+  }
+  /*
+    cleanup 🛁
+    --------
+    - cleans up each instance
+    - clears instance
+  */
+  ;
+
+  _proto.cleanup = function cleanup() {
+    for (var i = 0; i < this.instances.length; i += 1) {
+      var instance = this.instances[i];
+
+      if (instance.stateContainer) {
+        instance.props.scrollEl.removeEventListener('scroll', instance.stateContainer);
+      }
+
+      this.removeInstance(instance);
+    }
+
+    this.manageState = false;
+    this.instances = [];
+  };
+
+  return Stickybits;
+}();
+/*
+  export
+  --------
+  exports StickBits to be used 🏁
+*/
+
+
+function stickybits(target, o) {
+  return new Stickybits(target, o);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (stickybits);
+
+
+/***/ }),
+
 /***/ "./node_modules/url/url.js":
 /*!*********************************!*\
   !*** ./node_modules/url/url.js ***!
@@ -10151,6 +10716,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../styles/main.scss */ "./styles/main.scss");
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_styles_main_scss__WEBPACK_IMPORTED_MODULE_17__);
 /* harmony import */ var _layouts_Footer__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../layouts/Footer */ "./layouts/Footer.js");
+/* harmony import */ var stickybits__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! stickybits */ "./node_modules/stickybits/dist/stickybits.es.js");
+/* harmony import */ var _components_LaxSetup__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../components/LaxSetup */ "./components/LaxSetup.js");
 
 
 
@@ -10171,6 +10738,8 @@ var _jsxFileName = "/Users/kevenlefebvre/Sites/nevek/nevek.co/pages/_app.js";
 
 
 
+
+
 next_router__WEBPACK_IMPORTED_MODULE_12___default.a.events.on('routeChangeComplete', function (url) {
   return _lib_gtag__WEBPACK_IMPORTED_MODULE_16__["pageview"](url);
 });
@@ -10181,24 +10750,18 @@ function (_App) {
   Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_8__["default"])(Nevek, _App);
 
   function Nevek() {
-    var _getPrototypeOf2;
-
     var _this;
 
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Nevek);
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__["default"])(this, (_getPrototypeOf2 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__["default"])(Nevek)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__["default"])(Nevek).call(this));
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_9__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this), "componentDidMount",
     /*#__PURE__*/
     Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
     /*#__PURE__*/
     _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee() {
-      var LocomotiveScroll;
+      var vh;
       return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -10209,25 +10772,16 @@ function (_App) {
                 easing: 'ease-out-quart',
                 once: true
               });
+              Object(stickybits__WEBPACK_IMPORTED_MODULE_19__["default"])('.stickybits', {
+                useStickyClasses: true,
+                scrollEl: '#__next'
+              }); // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 
-              if (!document) {
-                _context.next = 7;
-                break;
-              }
+              vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
 
-              _context.next = 5;
-              return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! locomotive-scroll */ "./node_modules/locomotive-scroll/dist/locomotive-scroll.esm.js"));
+              document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
 
             case 5:
-              LocomotiveScroll = _context.sent;
-              new LocomotiveScroll["default"]({
-                el: document.querySelector("#__next"),
-                smooth: true,
-                getSpeed: true,
-                getDirection: true
-              });
-
-            case 7:
             case "end":
               return _context.stop();
           }
@@ -10235,6 +10789,7 @@ function (_App) {
       }, _callee);
     })));
 
+    _this.ref = react__WEBPACK_IMPORTED_MODULE_10___default.a.createRef();
     return _this;
   }
 
@@ -10247,31 +10802,37 @@ function (_App) {
       return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_11__["Container"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 55
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_13___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 56
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 57
         },
         __self: this
-      }, "Keven Lefebvre | Strat\xE8ge num\xE9rique \xE0 Chicoutimi, Saguenay (Qu\xE9bec)")), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
+      }, "Keven Lefebvre | Strat\xE8ge num\xE9rique \xE0 Chicoutimi, Saguenay (Qu\xE9bec)")), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_LaxSetup__WEBPACK_IMPORTED_MODULE_20__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 59
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_layouts_Footer__WEBPACK_IMPORTED_MODULE_18__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 60
+        },
+        __self: this
+      }))), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_layouts_Footer__WEBPACK_IMPORTED_MODULE_18__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
         },
         __self: this
       }));
