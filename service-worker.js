@@ -1,30 +1,39 @@
 self.__precacheManifest = [
   {
-    "url": "/_next/static/bO2EsU_pnyZb7xe4e-t5U/pages/index.js"
+    "url": "/_next/static/91SnA_TK3mriB-x1NCS9S/pages/404.js",
+    "revision": "f8d51ad8de04ed28e6f3"
   },
   {
-    "url": "/_next/static/chunks/commons.c1cbc0a42d7a96b7dd30.js"
+    "url": "/_next/static/91SnA_TK3mriB-x1NCS9S/pages/_app.js",
+    "revision": "243e22d672bfe01deadf"
   },
   {
-    "url": "/_next/static/chunks/styles.78de0a868bd4f0bbdb40.js"
+    "url": "/_next/static/91SnA_TK3mriB-x1NCS9S/pages/_error.js",
+    "revision": "431072385e5e833bf8c9"
   },
   {
-    "url": "/_next/static/css/styles.fd0d01b3.chunk.css"
+    "url": "/_next/static/91SnA_TK3mriB-x1NCS9S/pages/index.js",
+    "revision": "84e5c76a27b5c60aaabb"
   },
   {
-    "url": "/_next/static/runtime/main-2b7ddc31e31384604297.js"
+    "url": "/_next/static/chunks/commons.ebca37b94be3b7466ce0.js",
+    "revision": "636f37bacb490cee95f8"
   },
   {
-    "url": "/_next/static/runtime/webpack-f5e50b6b501ccea2a79b.js"
+    "url": "/_next/static/chunks/styles.78de0a868bd4f0bbdb40.js",
+    "revision": "e76ee45d53e020f3dbad"
   },
   {
-    "url": "/_next/static/bO2EsU_pnyZb7xe4e-t5U/pages/_error.js"
+    "url": "/_next/static/css/styles.1e9f1dc3.chunk.css",
+    "revision": "e76ee45d53e020f3dbad"
   },
   {
-    "url": "/_next/static/bO2EsU_pnyZb7xe4e-t5U/pages/_app.js"
+    "url": "/_next/static/runtime/main-9a9f7d73cc0f680b26ab.js",
+    "revision": "78dde1197b2812208865"
   },
   {
-    "url": "/_next/static/bO2EsU_pnyZb7xe4e-t5U/pages/404.js"
+    "url": "/_next/static/runtime/webpack-f5e50b6b501ccea2a79b.js",
+    "revision": "ae583f202258b164868a"
   }
 ];
 
@@ -41,11 +50,17 @@ self.__precacheManifest = [
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
   
 );
+
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -143,7 +158,7 @@ self.__precacheManifest = [
   },
   {
     "url": "static/images/og_image.jpg",
-    "revision": "d8b839a436c89f9dffa86e8806e5497f"
+    "revision": "b515645f5c74e8c24077b92a4151ac6e"
   },
   {
     "url": "static/images/stratege.gif",
@@ -170,7 +185,6 @@ self.__precacheManifest = [
     "revision": "7031224a925e3904d46c52939c0a8bdc"
   }
 ].concat(self.__precacheManifest || []);
-workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerRoute(/^https?.*/, workbox.strategies.networkFirst(), 'GET');
+workbox.routing.registerRoute(/^https?.*/, new workbox.strategies.NetworkFirst({ "cacheName":"offlineCache", plugins: [new workbox.expiration.Plugin({ maxEntries: 200, purgeOnQuotaError: false })] }), 'GET');
