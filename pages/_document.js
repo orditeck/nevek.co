@@ -24,7 +24,6 @@ export default class MyDocument extends Document {
             <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.png" />
             <link rel="shortcut icon" href="/static/icons/favicon.ico" type="image/x-icon" />
             <meta name="theme-color" content="#FFE066" />
-            <link rel="manifest" href="/static/manifest/manifest.json" />
             <script
                 async
                 src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}

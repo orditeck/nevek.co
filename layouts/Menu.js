@@ -29,7 +29,7 @@ export default () => {
                 <li><a onClick={setCurrent('accompagnement')}>Accompagnement</a></li>
                 <li><a onClick={setCurrent('consultation')}>Consultation</a></li>
                 <li><a onClick={setCurrent('developpement')}>Développement Web</a></li>
-                <li><a onClick={setCurrent('engagement')}>Blabla</a></li>
+                <li><a onClick={setCurrent('engagement')}>Mon engagement</a></li>
                 <li><a onClick={setCurrent('faq')}>F.A.Q.</a></li>
                 <li><a onClick={setCurrent('site-footer')}>Contact</a></li>
             </ul>
