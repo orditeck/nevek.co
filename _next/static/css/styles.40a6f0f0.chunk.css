@@ -1892,7 +1892,7 @@ section.homepage section.hi {
     top: 10vh; }
   section.homepage section.hi .bg3 {
     animation: 200ms ease-in-out forwards bg3;
-    animation-delay: 5s; }
+    animation-delay: 3s; }
 
 @keyframes bg3 {
   0% {
@@ -1909,7 +1909,7 @@ section.homepage section.hi {
     opacity: 0;
     transform: rotate(10deg);
     animation: 200ms ease-in-out forwards bg1;
-    animation-delay: 5s; }
+    animation-delay: 3s; }
 
 @keyframes bg1 {
   0% {
@@ -1924,7 +1924,7 @@ section.homepage section.hi {
     opacity: 0;
     transform: rotate(20deg);
     animation: 200ms ease-in-out forwards bg2;
-    animation-delay: 5s;
+    animation-delay: 3s;
     overflow: hidden; }
 
 @keyframes bg2 {
@@ -1959,8 +1959,8 @@ section.homepage section.hi {
       bottom: 50%;
       transform: translate(-50%, 50%);
       height: auto;
-      animation: 750ms ease-in-out forwards hi-content;
-      animation-delay: 7s; }
+      animation: 500ms ease-in-out forwards hi-content;
+      animation-delay: 4s; }
 
 @keyframes hi-content {
   0% {
@@ -1996,7 +1996,7 @@ section.homepage section.hi {
         color: #FFE066;
         display: inline-flex;
         animation: 250ms ease-in-out forwards hi-content-h;
-        animation-delay: 3s; }
+        animation-delay: 2s; }
       section.homepage section.hi .container .content article h2 {
         font-size: 2.64rem;
         text-transform: uppercase;
@@ -2004,7 +2004,7 @@ section.homepage section.hi {
         background: #50514F;
         padding: 0.5rem 1rem;
         animation: 250ms ease-in-out forwards hi-content-h;
-        animation-delay: 3.5s; }
+        animation-delay: 2.5s; }
       section.homepage section.hi .container .content article h3 {
         font-size: 1rem; }
         section.homepage section.hi .container .content article h3 span {
@@ -2012,7 +2012,7 @@ section.homepage section.hi {
           section.homepage section.hi .container .content article h3 span:first-of-type {
             animation-delay: 1s; }
           section.homepage section.hi .container .content article h3 span:last-of-type {
-            animation-delay: 2s; }
+            animation-delay: 1.3s; }
       @media (max-width: 768px) {
         section.homepage section.hi .container .content article h1 {
           font-size: 2.3rem; }
