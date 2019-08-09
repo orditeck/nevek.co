@@ -1892,7 +1892,7 @@ section.homepage section.hi {
     top: 10vh; }
   section.homepage section.hi .bg3 {
     animation: 200ms ease-in-out forwards bg3;
-    animation-delay: 3s; }
+    animation-delay: 4s; }
 
 @keyframes bg3 {
   0% {
@@ -1900,8 +1900,41 @@ section.homepage section.hi {
   100% {
     transform: rotate(-3deg); } }
     section.homepage section.hi .bg3:after {
+      opacity: 0;
+      width: 50vw;
+      height: 40vh;
+      left: 25vw;
+      top: 30vh;
       content: '';
-      border: 1px solid rgba(255, 255, 255, 0.5); }
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      animation: 500ms ease-in-out forwards bg3-after1, 1s ease-in-out forwards bg3-after2;
+      animation-delay: 500ms, 3s; }
+
+@keyframes bg3-after1 {
+  0% {
+    opacity: 0;
+    width: 50vw;
+    height: 1px;
+    left: 25vw;
+    top: 50vh; }
+  100% {
+    opacity: 1;
+    width: 50vw;
+    height: 40vh;
+    left: 25vw;
+    top: 30vh; } }
+
+@keyframes bg3-after2 {
+  0% {
+    width: 50vw;
+    height: 40vh;
+    left: 25vw;
+    top: 30vh; }
+  100% {
+    width: 90vw;
+    height: 80vh;
+    left: 5vw;
+    top: 10vh; } }
   section.homepage section.hi .bg1, section.homepage section.hi .bg2 div {
     background: transparent url("/static/images/bg_top_home-min.jpg") 50% 50%;
     background-size: cover; }
@@ -1909,7 +1942,7 @@ section.homepage section.hi {
     opacity: 0;
     transform: rotate(10deg);
     animation: 200ms ease-in-out forwards bg1;
-    animation-delay: 3s; }
+    animation-delay: 4s; }
 
 @keyframes bg1 {
   0% {
@@ -1924,7 +1957,7 @@ section.homepage section.hi {
     opacity: 0;
     transform: rotate(20deg);
     animation: 200ms ease-in-out forwards bg2;
-    animation-delay: 3s;
+    animation-delay: 4s;
     overflow: hidden; }
 
 @keyframes bg2 {
@@ -1960,7 +1993,7 @@ section.homepage section.hi {
       transform: translate(-50%, 50%);
       height: auto;
       animation: 500ms ease-in-out forwards hi-content;
-      animation-delay: 4s; }
+      animation-delay: 4.5s; }
 
 @keyframes hi-content {
   0% {
@@ -1996,7 +2029,7 @@ section.homepage section.hi {
         color: #FFE066;
         display: inline-flex;
         animation: 250ms ease-in-out forwards hi-content-h;
-        animation-delay: 2s; }
+        animation-delay: 2000ms; }
       section.homepage section.hi .container .content article h2 {
         font-size: 2.64rem;
         text-transform: uppercase;
@@ -2007,12 +2040,12 @@ section.homepage section.hi {
         animation-delay: 2.5s; }
       section.homepage section.hi .container .content article h3 {
         font-size: 1rem; }
-        section.homepage section.hi .container .content article h3 span {
-          animation: 750ms ease-in-out forwards hi-content-h; }
-          section.homepage section.hi .container .content article h3 span:first-of-type {
-            animation-delay: 1s; }
-          section.homepage section.hi .container .content article h3 span:last-of-type {
-            animation-delay: 1.3s; }
+        section.homepage section.hi .container .content article h3 span:first-of-type {
+          animation: 750ms ease-in-out forwards hi-content-h;
+          animation-delay: 1000ms; }
+        section.homepage section.hi .container .content article h3 span:last-of-type {
+          animation: 750ms ease-in-out forwards hi-content-h;
+          animation-delay: 1300ms; }
       @media (max-width: 768px) {
         section.homepage section.hi .container .content article h1 {
           font-size: 2.3rem; }
