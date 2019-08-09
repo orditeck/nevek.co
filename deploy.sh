@@ -40,6 +40,9 @@ echo "Delete export"
 cd ..
 rm -rf out
 
+echo "Delete build"
+rm -rf build
+
 echo "Purge Cloudflare cache"
 curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${CLOUDFLARE_ZONE}/purge_cache" \
      -H "X-Auth-Email: ${CLOUDFLARE_AUTH_EMAIL}" \
