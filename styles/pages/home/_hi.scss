@@ -33,7 +33,7 @@ section.hi {
     }
 
     animation: 200ms ease-in-out forwards bg3;
-    animation-delay: 5s;
+    animation-delay: 3s;
 
     &:after {
       content: '';
@@ -66,7 +66,7 @@ section.hi {
     opacity: 0;
     transform: rotate(10deg);
     animation: 200ms ease-in-out forwards bg1;
-    animation-delay: 5s;
+    animation-delay: 3s;
   }
 
   .bg2 {
@@ -89,7 +89,7 @@ section.hi {
     opacity: 0;
     transform: rotate(20deg);
     animation: 200ms ease-in-out forwards bg2;
-    animation-delay: 5s;
+    animation-delay: 3s;
     overflow: hidden;
 
     div {
@@ -143,8 +143,8 @@ section.hi {
         }
       }
 
-      animation: 750ms ease-in-out forwards hi-content;
-      animation-delay: 7s;
+      animation: 500ms ease-in-out forwards hi-content;
+      animation-delay: 4s;
 
       article {
         @keyframes hi-content-h {
@@ -176,7 +176,7 @@ section.hi {
           color: $color-mustard;
           display: inline-flex;
           animation: 250ms ease-in-out forwards hi-content-h;
-          animation-delay: 3s;
+          animation-delay: 2s;
         }
 
         h2 {
@@ -186,7 +186,7 @@ section.hi {
           background: $color-dark-liver;
           padding: 0.5rem 1rem;
           animation: 250ms ease-in-out forwards hi-content-h;
-          animation-delay: 3.5s;
+          animation-delay: 2.5s;
         }
 
         h3 {
@@ -200,7 +200,7 @@ section.hi {
             }
 
             &:last-of-type {
-              animation-delay: 2s;
+              animation-delay: 1.3s;
             }
           }
         }
