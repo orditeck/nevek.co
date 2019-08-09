@@ -20,10 +20,6 @@ const App = props => {
         }
     }
 
-    if(typeof window !== 'undefined'){
-        window.addEventListener('wheel', (e) => e.preventDefault())
-    }
-
     return <StateProvider initialState={initialState} reducer={reducer}>
         <DomLibsSetup>
             <Head>
