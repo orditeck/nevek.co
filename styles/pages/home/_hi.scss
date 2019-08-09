@@ -1,8 +1,103 @@
 section.hi {
-  background: $color-dark-liver url('/static/images/bg_top_home-min.jpg') 50% 50%;
-  background-size: cover;
+  background: $color-dark-liver;
   position: relative;
   z-index: 3;
+  font-family: 'Varela', sans-serif;
+
+  .bg1,
+  .bg2,
+  .bg2 div,
+  .bg3 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .bg2, .bg3:after {
+    position: absolute;
+    width: 90vw;
+    height: 80vh;
+    left: 5vw;
+    top: 10vh;
+  }
+
+  .bg3 {
+    @keyframes bg3 {
+      0% {
+        transform: rotate(0);
+      }
+
+      100% {
+        transform: rotate(-3deg);
+      }
+    }
+
+    animation: 200ms ease-in-out forwards bg3;
+    animation-delay: 5s;
+
+    &:after {
+      content: '';
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  .bg1, .bg2 div {
+    background: transparent url('/static/images/bg_top_home-min.jpg') 50% 50%;
+    background-size: cover;
+  }
+
+  .bg1 {
+    @keyframes bg1 {
+      0% {
+        opacity: 0;
+        transform: rotate(10deg);
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 1;
+        transform: rotate(0);
+      }
+    }
+
+    opacity: 0;
+    transform: rotate(10deg);
+    animation: 200ms ease-in-out forwards bg1;
+    animation-delay: 5s;
+  }
+
+  .bg2 {
+    @keyframes bg2 {
+      0% {
+        opacity: 0;
+        transform: rotate(-5deg);
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 1;
+        transform: rotate(0);
+      }
+    }
+
+    opacity: 0;
+    transform: rotate(20deg);
+    animation: 200ms ease-in-out forwards bg2;
+    animation-delay: 5s;
+    overflow: hidden;
+
+    div {
+      position: absolute;
+      left: -5vw;
+      top: -10vh;
+    }
+  }
 
   &:after {
     position: absolute;
@@ -19,17 +114,60 @@ section.hi {
   }
 
   .container {
+    text-align: center;
+
     .content {
-      display: inline-flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      height: 90vh; /* Fallback for browsers that do not support Custom Properties */
-      height: calc(var(--vh, 1vh) * 90);
+      position: absolute;
+      left: 50%;
+      bottom: 50%;
+      transform: translate(-50%, 50%);
+      height: auto;
+
+      @keyframes hi-content {
+        0% {
+          left: 50%;
+          bottom: 50%;
+          transform: translate(-50%, 50%)  scale(1);
+        }
+
+        50% {
+          left: 50%;
+          bottom: 50%;
+          transform: translate(-50%, 50%)  scale(0.8);
+        }
+
+        100% {
+          left: 5%;
+          bottom: 5%;
+          transform: translate(0, 0) scale(0.8);
+        }
+      }
+
+      animation: 750ms ease-in-out forwards hi-content;
+      animation-delay: 7s;
 
       article {
+        @keyframes hi-content-h {
+          0% {
+            opacity: 0;
+            transform: scale(1.2);
+          }
+
+          100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
         h1, h2, h3 {
           margin: 0;
           padding: 0 1rem;
+          position: relative;
+        }
+
+        h1, h2, h3 span {
+          opacity: 0;
+          transform: scale(1.2);
         }
 
         h1 {
@@ -37,6 +175,8 @@ section.hi {
           font-weight: normal;
           color: $color-mustard;
           display: inline-flex;
+          animation: 250ms ease-in-out forwards hi-content-h;
+          animation-delay: 3s;
         }
 
         h2 {
@@ -45,11 +185,24 @@ section.hi {
           letter-spacing: -0.1rem;
           background: $color-dark-liver;
           padding: 0.5rem 1rem;
+          animation: 250ms ease-in-out forwards hi-content-h;
+          animation-delay: 3.5s;
         }
 
         h3 {
           font-size: 1rem;
-          position: relative;
+
+          span {
+            animation: 750ms ease-in-out forwards hi-content-h;
+
+            &:first-of-type {
+              animation-delay: 1s;
+            }
+
+            &:last-of-type {
+              animation-delay: 2s;
+            }
+          }
         }
 
         @include breakpoint(sm) {

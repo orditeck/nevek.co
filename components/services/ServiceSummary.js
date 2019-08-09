@@ -9,6 +9,7 @@ export default class extends Component {
         <article
             className={this.props.currentService === this.props.service ? 'active' : ''}
             onClick={this.onClick}
+            id={this.props.service}
         >
             {this.props.children}
             <div className="btn">

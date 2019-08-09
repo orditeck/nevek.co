@@ -1,21 +1,22 @@
-import { Hi, WhatIDo, LogoSlider, Services, Menu } from '../components/'
-import { Engagement, StrategeNumerique, Faq, Testimonies } from '../layouts/'
+import React from "react";
+import {Hi, Menu, WhatIDo, LogoSlider, Services, Engagement, StrategeNumerique, Faq, Testimonies} from "../layouts";
 
 export default () =>
     <section className="homepage">
-        <Hi />
-        <WhatIDo />
-        <LogoSlider />
-        <Services />
-        <Engagement />
-        <StrategeNumerique />
-        <section className="with-bg white faq-testimonies">
+        <Hi/>
+        <Menu/>
+        <WhatIDo/>
+        <LogoSlider/>
+        <Services/>
+        <Engagement/>
+        <StrategeNumerique/>
+        <section id="faq" className="with-bg white faq-testimonies">
             <div className="container">
                 <section>
-                    <Faq />
+                    <Faq/>
                 </section>
                 <section>
-                    <Testimonies />
+                    <Testimonies/>
                 </section>
             </div>
         </section>

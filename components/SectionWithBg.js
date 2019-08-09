@@ -19,6 +19,7 @@ export default class extends Component {
                 [`${this.props.color}`]: !!this.props.color
             })}
             ref={this.ref}
+            id={this.props.id ? this.props.id : undefined}
         >
             <div className="container">
                 <div className="bg">

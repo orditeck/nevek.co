@@ -1,4 +1,4 @@
-import withLaxElement from "./withLaxElement";
+import withLaxElement from "../components/withLaxElement";
 
 export default withLaxElement(
     React.forwardRef(
@@ -8,6 +8,11 @@ export default withLaxElement(
             className="fullscreen hi"
             id="hi"
         >
+            <div className="bg1"/>
+            <div className="bg2">
+                <div></div>
+            </div>
+            <div className="bg3"/>
             <div className="container">
                 <div className="content">
                     <article
@@ -18,7 +23,7 @@ export default withLaxElement(
                             className="lax"
                             data-lax-translate-y="0 0, vh (vh*0.05)"
                             data-lax-anchor="#hi"
-                        >Bonjour, je suis</h3>
+                        ><span>Bonjour, </span><span>je suis</span></h3>
                         <h1
                             className="lax"
                             data-lax-translate-y="0 0, vh (vh*0.05)"

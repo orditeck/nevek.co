@@ -102,7 +102,7 @@ export default () => <>
         <p>
             En consultation, la majorité de mes clients ont déjà les ressources (ex.: designer) à l'interne
             ou à l'externe. Je viens combler un besoin précis, par exemple, la formation d'une équipe,
-            l'évaluer de la sécurité d'un site, de l'application ou du serveur, etc.
+            l'évaluation de la sécurité d'un site, de l'application ou du serveur, etc.
         </p>
         <p>
             En accompagnement, nous chercherons ensemble les meilleures ressources pour nous aider selon

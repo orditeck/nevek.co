@@ -1,7 +1,7 @@
 section.whatido {
   width: 100%;
-  height: 80vh;
-  font-family: 'Varela', sans-serif;
+  min-height: 80vh;
+  height: 100%;
   box-sizing: border-box;
   position: relative;
   background: $color-mustard;
@@ -12,73 +12,90 @@ section.whatido {
     background-position: 0 50%;
   }
 
-  .container {
+  .sections {
     position: relative;
+    min-height: 80vh;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
-    .content {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      transform: rotate(-3deg);
+    section {
+      margin: 3rem 0;
 
-      section {
+      header {
+        transform: rotate(-3deg);
 
-        header {
-          font-size: 3rem;
-          -webkit-text-stroke: 2px $color-mustard;
-          color: transparent;
+        h2 {
           position: relative;
           display: inline;
+          color: transparent;
+          font-size: 3rem;
+          line-height: normal;
+          font-weight: normal;
 
           @include breakpoint(sm) {
             font-size: 2rem;
           }
 
-          .bg {
-            position: absolute;
-            top: 10%;
-            left: 5%;
-            height: 80%;
-            width: 90%;
-            background: $color-dark-liver;
-            z-index: -1;
+          span {
+            position: relative;
+            z-index: 1;
+            font-family: 'Varela', sans-serif;
           }
         }
 
-        &:nth-of-type(1) {
-          text-align: left;
-
-          header {
-            -webkit-text-stroke: 2px $color-sunset-orange;
-          }
-        }
-
-        &:nth-of-type(2) {
-          text-align: center;
-
-          header {
-            -webkit-text-stroke: 2px $color-green-sheen;
-          }
-        }
-
-        &:nth-of-type(3) {
-          text-align: right;
-
-          header {
-            -webkit-text-stroke: 2px $color-lapis-lazuli;
-          }
-        }
-
-        article {
-          display: none;
+        .bg {
+          position: absolute;
+          top: 10%;
+          left: 5%;
+          height: 80%;
+          width: 90%;
+          background: $color-dark-liver;
+          z-index: -1;
         }
       }
 
-    }
+      &:nth-of-type(1) {
+        text-align: left;
 
-    p {
-      display: none;
+        header {
+          -webkit-text-stroke: 2px $color-sunset-orange;
+        }
+      }
+
+      &:nth-of-type(2) {
+        text-align: center;
+
+        header {
+          -webkit-text-stroke: 2px $color-green-sheen;
+        }
+      }
+
+      &:nth-of-type(3) {
+        text-align: right;
+
+        header {
+          -webkit-text-stroke: 2px $color-lapis-lazuli;
+        }
+      }
+
+      article {
+        display: none;
+        position: relative;
+        top: -5rem;
+        background: #fff;
+        color: initial;
+        padding: 5rem 0;
+
+        &.active {
+          display: block;
+        }
+
+        .container {
+          max-width: 600px;
+        }
+      }
     }
   }
 

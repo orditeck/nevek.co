@@ -3,17 +3,15 @@ section.fullscreen {
   height: 100vh; /* Fallback for browsers that do not support Custom Properties */
   height: calc(var(--vh, 1vh) * 100);
   color: white;
-  font-family: 'Varela', sans-serif;
-  box-sizing: border-box;
   overflow: hidden;
 
-  .container {
+  > .container {
     height: 100%;
-  }
 
-  .content {
-    height: 100%;
-    box-sizing: border-box;
-    text-align: left;
+    .content {
+      height: 100%;
+      box-sizing: border-box;
+      text-align: left;
+    }
   }
 }

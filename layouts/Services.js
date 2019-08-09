@@ -8,7 +8,7 @@ import {
     ConsultationSummary,
     Developpement,
     DeveloppementSummary
-} from './services/';
+} from '../components/services';
 
 const services = {
     accompagnement: Accompagnement,

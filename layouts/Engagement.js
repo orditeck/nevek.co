@@ -8,6 +8,7 @@ export default class extends Component {
             color="mustard"
             backgroundImage="/static/images/engagement.gif"
             title="Un engagement clair"
+            id="engagement"
         >
             <p>
                 Mon engagement envers vous est simple:<br />
