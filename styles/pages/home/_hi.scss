@@ -8,16 +8,16 @@ section.hi {
   $animation-rectangle1-delay: 500ms;
 
   $animation-rectangle2-duration: 1s;
-  $animation-rectangle2-delay: 3s;
+  $animation-rectangle2-delay: 2.5s;
 
-  $animation-welcome-part1-duration: 750ms;
+  $animation-welcome-part1-duration: 250ms;
   $animation-welcome-part1-delay: $animation-rectangle1-delay + 0.5s; // 1s
 
-  $animation-welcome-part2-duration: 750ms;
+  $animation-welcome-part2-duration: 250ms;
   $animation-welcome-part2-delay: $animation-welcome-part1-delay + 0.3s; // 1.3s
 
   $animation-keven-duration: 250ms;
-  $animation-keven-delay: $animation-welcome-part2-delay + 0.7s; // 2s
+  $animation-keven-delay: $animation-welcome-part2-delay + 0.3s; // 2s
 
   $animation-title-duration: 250ms;
   $animation-title-delay: $animation-rectangle2-delay - 0.5s; // 2.5s
@@ -25,8 +25,8 @@ section.hi {
   $animation-bg-duration: 200ms;
   $animation-bg-delay: $animation-rectangle2-delay + 1s; // 3s
 
-  $animation-signature-duration: 500ms;
-  $animation-signature-delay: $animation-bg-delay + 0.5s; // 3.5s
+  $animation-signature-duration: 1s;
+  $animation-signature-delay: $animation-rectangle2-delay; // 3s
 
   .bg1,
   .bg2,
@@ -195,12 +195,6 @@ section.hi {
           left: 50%;
           bottom: 50%;
           transform: translate(-50%, 50%) scale(1);
-        }
-
-        50% {
-          left: 50%;
-          bottom: 50%;
-          transform: translate(-50%, 50%) scale(0.8);
         }
 
         100% {
