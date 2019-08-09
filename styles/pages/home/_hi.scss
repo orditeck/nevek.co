@@ -4,6 +4,30 @@ section.hi {
   z-index: 3;
   font-family: 'Varela', sans-serif;
 
+  $animation-rectangle1-duration: 500ms;
+  $animation-rectangle1-delay: 500ms;
+
+  $animation-rectangle2-duration: 1s;
+  $animation-rectangle2-delay: 3s;
+
+  $animation-welcome-part1-duration: 750ms;
+  $animation-welcome-part1-delay: $animation-rectangle1-delay + 0.5s; // 1s
+
+  $animation-welcome-part2-duration: 750ms;
+  $animation-welcome-part2-delay: $animation-welcome-part1-delay + 0.3s; // 1.3s
+
+  $animation-keven-duration: 250ms;
+  $animation-keven-delay: $animation-welcome-part2-delay + 0.7s; // 2s
+
+  $animation-title-duration: 250ms;
+  $animation-title-delay: $animation-rectangle2-delay - 0.5s; // 2.5s
+
+  $animation-bg-duration: 200ms;
+  $animation-bg-delay: $animation-rectangle2-delay + 1s; // 3s
+
+  $animation-signature-duration: 500ms;
+  $animation-signature-delay: $animation-bg-delay + 0.5s; // 3.5s
+
   .bg1,
   .bg2,
   .bg2 div,
@@ -32,12 +56,55 @@ section.hi {
       }
     }
 
-    animation: 200ms ease-in-out forwards bg3;
-    animation-delay: 3s;
+    animation: $animation-bg-duration ease-in-out forwards bg3;
+    animation-delay: $animation-bg-delay;
 
     &:after {
+      @keyframes bg3-after1 {
+        0% {
+          opacity: 0;
+          width: 50vw;
+          height: 1px;
+          left: 25vw;
+          top: 50vh;
+        }
+
+        100% {
+          opacity: 1;
+          width: 50vw;
+          height: 40vh;
+          left: 25vw;
+          top: 30vh;
+        }
+      }
+
+      @keyframes bg3-after2 {
+        0% {
+          width: 50vw;
+          height: 40vh;
+          left: 25vw;
+          top: 30vh;
+        }
+
+        100% {
+          width: 90vw;
+          height: 80vh;
+          left: 5vw;
+          top: 10vh;
+        }
+      }
+
+      opacity: 0;
+      width: 50vw;
+      height: 40vh;
+      left: 25vw;
+      top: 30vh;
       content: '';
       border: 1px solid rgba(255, 255, 255, 0.5);
+      animation:
+              $animation-rectangle1-duration ease-in-out forwards bg3-after1,
+              $animation-rectangle2-duration ease-in-out forwards bg3-after2;
+      animation-delay: $animation-rectangle1-delay, $animation-rectangle2-delay;
     }
   }
 
@@ -65,8 +132,8 @@ section.hi {
 
     opacity: 0;
     transform: rotate(10deg);
-    animation: 200ms ease-in-out forwards bg1;
-    animation-delay: 3s;
+    animation: $animation-bg-duration ease-in-out forwards bg1;
+    animation-delay: $animation-bg-delay;
   }
 
   .bg2 {
@@ -88,8 +155,8 @@ section.hi {
 
     opacity: 0;
     transform: rotate(20deg);
-    animation: 200ms ease-in-out forwards bg2;
-    animation-delay: 3s;
+    animation: $animation-bg-duration ease-in-out forwards bg2;
+    animation-delay: $animation-bg-delay;
     overflow: hidden;
 
     div {
@@ -127,13 +194,13 @@ section.hi {
         0% {
           left: 50%;
           bottom: 50%;
-          transform: translate(-50%, 50%)  scale(1);
+          transform: translate(-50%, 50%) scale(1);
         }
 
         50% {
           left: 50%;
           bottom: 50%;
-          transform: translate(-50%, 50%)  scale(0.8);
+          transform: translate(-50%, 50%) scale(0.8);
         }
 
         100% {
@@ -143,8 +210,8 @@ section.hi {
         }
       }
 
-      animation: 500ms ease-in-out forwards hi-content;
-      animation-delay: 4s;
+      animation: $animation-signature-duration ease-in-out forwards hi-content;
+      animation-delay: $animation-signature-delay;
 
       article {
         @keyframes hi-content-h {
@@ -175,8 +242,8 @@ section.hi {
           font-weight: normal;
           color: $color-mustard;
           display: inline-flex;
-          animation: 250ms ease-in-out forwards hi-content-h;
-          animation-delay: 2s;
+          animation: $animation-keven-duration ease-in-out forwards hi-content-h;
+          animation-delay: $animation-keven-delay;
         }
 
         h2 {
@@ -185,22 +252,22 @@ section.hi {
           letter-spacing: -0.1rem;
           background: $color-dark-liver;
           padding: 0.5rem 1rem;
-          animation: 250ms ease-in-out forwards hi-content-h;
-          animation-delay: 2.5s;
+          animation: $animation-title-duration ease-in-out forwards hi-content-h;
+          animation-delay: $animation-title-delay;
         }
 
         h3 {
           font-size: 1rem;
 
           span {
-            animation: 750ms ease-in-out forwards hi-content-h;
-
             &:first-of-type {
-              animation-delay: 1s;
+              animation: $animation-welcome-part1-duration ease-in-out forwards hi-content-h;
+              animation-delay: $animation-welcome-part1-delay;
             }
 
             &:last-of-type {
-              animation-delay: 1.3s;
+              animation: $animation-welcome-part2-duration ease-in-out forwards hi-content-h;
+              animation-delay: $animation-welcome-part2-delay;
             }
           }
         }
