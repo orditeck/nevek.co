@@ -17,16 +17,19 @@ section.hi {
   $animation-welcome-part2-delay: $animation-welcome-part1-delay + 0.3s; // 1.3s
 
   $animation-keven-duration: 250ms;
-  $animation-keven-delay: $animation-welcome-part2-delay + 0.3s; // 2s
+  $animation-keven-delay: $animation-welcome-part2-delay + 0.3s; // 1.6s
 
   $animation-title-duration: 250ms;
-  $animation-title-delay: $animation-rectangle2-delay - 0.5s; // 2.5s
+  $animation-title-delay: $animation-rectangle2-delay - 0.6s; // 1.9s
 
   $animation-bg-duration: 200ms;
   $animation-bg-delay: $animation-rectangle2-delay + 1s; // 3s
 
-  $animation-signature-duration: 1s;
-  $animation-signature-delay: $animation-rectangle2-delay; // 3s
+  $animation-signature1-duration: 1s;
+  $animation-signature1-delay: $animation-rectangle2-delay; // 2.5s
+
+  $animation-signature2-duration: 250ms;
+  $animation-signature2-delay: $animation-signature1-delay + 1s; // 3.5s
 
   .bg1,
   .bg2,
@@ -204,8 +207,8 @@ section.hi {
         }
       }
 
-      animation: $animation-signature-duration ease-in-out forwards hi-content;
-      animation-delay: $animation-signature-delay;
+      animation: $animation-signature1-duration ease-in-out forwards hi-content;
+      animation-delay: $animation-signature1-delay;
 
       article {
         @keyframes hi-content-h {
@@ -244,10 +247,33 @@ section.hi {
           font-size: 2.64rem;
           text-transform: uppercase;
           letter-spacing: -0.1rem;
-          background: $color-dark-liver;
           padding: 0.5rem 1rem;
           animation: $animation-title-duration ease-in-out forwards hi-content-h;
           animation-delay: $animation-title-delay;
+
+          &:after {
+            content: '';
+            width: 0;
+            height: 100%;
+            position: absolute;
+            background: $color-dark-liver;
+            left: 0;
+            top: 0;
+            z-index: -1;
+
+            @keyframes hi-content-h2-after {
+              0% {
+                width: 0;
+              }
+
+              100% {
+                width: 100%;
+              }
+            }
+
+            animation: $animation-signature2-duration ease-in-out forwards hi-content-h2-after;
+            animation-delay: $animation-signature2-delay;
+          }
         }
 
         h3 {
