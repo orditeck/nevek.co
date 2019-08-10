@@ -1,21 +1,44 @@
 @mixin breakpoint($class) {
   @if $class == xs {
-    @media (max-width: 767px) { @content; }
-  }
-
-  @else if $class == sm {
-    @media (max-width: 768px) { @content; }
-  }
-
-  @else if $class == md {
-    @media (max-width: 1024px) { @content; }
-  }
-
-  @else if $class == lg {
-    @media (min-width: 1200px) { @content; }
-  }
-
-  @else {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $class == sm {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $class == md {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  } @else if $class == lg {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else {
     @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}
+
+/*
+SASS mixin fixing vh for mobile browsers hiding URL bar
+Source: https://gist.github.com/bcyran/c88ec6f54494ce7ec889
+@author: bcyran
+ */
+@mixin vh-fix($property, $value: 100, $include-media-queries: true) {
+  $proportions: (3, 4), (2, 3), (10, 16), (9, 16), (10, 17); // 3/4, 2/3, 10/16, 9/16 and 10/17
+
+  #{$property}: #{$value}vh; // set property in normal vh, it'll be overwritten if device aspect ratio is one of declared
+  #{$property}: calc(var(--vh, 1vh) * #{$value});
+
+  @if ($include-media-queries) {
+    @each $proportion in $proportions {
+      $height: nth($proportion, 1);
+      $width: nth($proportion, 2);
+
+      @media (max-device-aspect-ratio: #{$height}/#{$width}) {
+        #{$property}: calc((100vw * (#{$width} / #{$height})) * (#{$value} / 100) * 0.91);
+      }
+    }
   }
 }

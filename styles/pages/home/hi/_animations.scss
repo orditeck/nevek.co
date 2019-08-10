@@ -71,27 +71,27 @@ $animation-signature2-delay: $animation-signature1-delay + 1s; // 3.5s
   0% {
     opacity: 0;
     height: 1px;
-    top: 50vh;
+    @include vh-fix(top, 50, false);
   }
 
   100% {
     opacity: 1;
-    height: 40vh;
-    top: 30vh;
+    @include vh-fix(height, 40, false);
+    @include vh-fix(top, 30, false);
   }
 }
 
 @keyframes bg3-after2 {
   0% {
-    height: 40vh;
-    top: 30vh;
+    @include vh-fix(height, 40, false);
+    @include vh-fix(top, 30, false);
   }
 
   100% {
     width: 90vw;
-    height: 80vh;
     left: 5vw;
-    top: 10vh;
+    @include vh-fix(height, 80, false);
+    @include vh-fix(top, 10, false);
   }
 }
 

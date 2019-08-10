@@ -1,6 +1,6 @@
 section.whatido {
   width: 100%;
-  min-height: 80vh;
+  @include vh-fix(min-height, 80);
   height: 100%;
   box-sizing: border-box;
   position: relative;
@@ -14,7 +14,7 @@ section.whatido {
 
   .sections {
     position: relative;
-    min-height: 80vh;
+    @include vh-fix(min-height, 80);
     height: 100%;
     display: flex;
     flex-direction: column;
