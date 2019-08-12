@@ -15,7 +15,7 @@
   "repository": "github:orditeck/nevek.co",
   "license": "MIT",
   "dependencies": {
-    "@zeit/next-sass": "^1.0.2-canary.0",
+    "@zeit/next-sass": "^1.0.2-canary.2",
     "aos": "^2.3.4",
     "classnames": "^2.2.6",
     "lax.js": "^1.2.3",
