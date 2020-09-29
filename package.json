@@ -28,6 +28,6 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "stickybits": "^3.6.6",
-    "swiper": "^4.5.0"
+    "swiper": "^6.3.2"
   }
 }
