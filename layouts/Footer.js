@@ -1,9 +1,9 @@
-export default () => <footer id="site-footer">
+export const Footer = () => <footer id="site-footer">
     <div className="container">
         <small>
-            <img src="/static/images/footer.png"
-                 alt="Keven Lefebvre, Stratège numérique, Consultant Web & Développeur Web Senior à Chicoutimi, Saguenay."/>
-            Keven Lefebvre © {new Date().getFullYear()}, tous droits réservés. <br/>
+            <img src="/images/footer.png"
+                alt="Keven Lefebvre, Stratège numérique, Consultant Web & Développeur Web Senior à Chicoutimi, Saguenay." />
+            Keven Lefebvre © {new Date().getFullYear()}, tous droits réservés. <br />
             Stratège numérique, Consultant Web & Développeur Web Senior à Chicoutimi, Saguenay.
         </small>
     </div>
@@ -30,9 +30,9 @@ export default () => <footer id="site-footer">
 
     <div className="container">
         <small>
-            <img data-src="/static/images/footer.png"
-                 alt="Keven Lefebvre, Stratège numérique, Consultant Web & Développeur Web Senior à Chicoutimi, Saguenay."/>
-            Keven Lefebvre © {new Date().getFullYear()}, tous droits réservés. <br/>
+            <img data-src="/images/footer.png"
+                alt="Keven Lefebvre, Stratège numérique, Consultant Web & Développeur Web Senior à Chicoutimi, Saguenay." />
+            Keven Lefebvre © {new Date().getFullYear()}, tous droits réservés. <br />
             Stratège numérique, Consultant Web & Développeur Web Senior à Chicoutimi, Saguenay. <br />
             <a href="https://github.com/orditeck/nevek.co" target="_blank" rel="noopener noreferrer">Sources de ce site</a>
             <a href="https://github.com/orditeck" target="_blank" rel="noopener noreferrer">GitHub</a>

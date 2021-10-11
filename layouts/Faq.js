@@ -1,6 +1,6 @@
-import {FaqItem} from '../components/'
+import { FaqItem } from "../components"
 
-export default () => <>
+export const FAQ = () => <>
     <h1>Foire aux questions</h1>
 
     <FaqItem title="Combien charges-tu / combien ça va coûter?">
@@ -38,10 +38,10 @@ export default () => <>
 
     <FaqItem title="Et si j'ai besoin de support ensuite?">
         <p>
-            Si vous avez besoin de quoi que ce soit, je suis aussi loin qu'un <
-            a href="tel://18444487602" onClick={(e) => e.stopPropagation()}>appel</a> ou qu'un <
-            a href="mailto:keven@nevek.co" onClick={(e) => e.stopPropagation()}>courriel</a>. Le support
-            post-livraison est généralement gratuit.
+            Si vous avez besoin de quoi que ce soit, je suis aussi loin qu'un 
+            <a href="tel://18444487602" onClick={(e) => e.stopPropagation()}>appel</a> ou qu'un 
+            <a href="mailto:keven@nevek.co" onClick={(e) => e.stopPropagation()}>courriel</a>. 
+            Le support post-livraison est généralement gratuit.
         </p>
     </FaqItem>
 
@@ -54,8 +54,8 @@ export default () => <>
             <li>J'ai de l'expérience avec de grandes entreprises et des PME</li>
             <li>Mon travail a eu des impacts significatifs sur le chiffre d'affaires de mes clients</li>
             <li>
-                J'ai de solides références, <
-                a href="tel://18444487602" onClick={(e) => e.stopPropagation()}>contactez-moi</a> pour
+                J'ai de solides références, 
+                <a href="tel://18444487602" onClick={(e) => e.stopPropagation()}>contactez-moi</a> pour
                 obtenir des exemples concrets
             </li>
         </ul>
@@ -70,8 +70,8 @@ export default () => <>
             projets que je fais. Mes clients sont traités aux petits soins.
         </p>
         <p>
-            Faire traiter votre projet avec l'importance qu'il mérite vous intéresse? <
-            a href="tel://18444487602" onClick={(e) => e.stopPropagation()}>Contactez-moi</a>!
+            Faire traiter votre projet avec l'importance qu'il mérite vous intéresse? 
+            <a href="tel://18444487602" onClick={(e) => e.stopPropagation()}>Contactez-moi</a>!
         </p>
     </FaqItem>
 
@@ -114,8 +114,10 @@ export default () => <>
 
     <FaqItem title="Qu'est-ce que ça veut dire nevek?">
         <p>
-            Keven<br/>
+            Keven<br />
             Nevek
         </p>
     </FaqItem>
 </>
+
+export default FAQ

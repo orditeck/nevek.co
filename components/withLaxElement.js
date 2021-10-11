@@ -1,24 +1,14 @@
 import lax from 'lax.js';
-import React from 'react';
+import React, { useEffect } from 'react';
 
-const withLaxElement = Component => props => {
-    class LaxElement extends React.Component {
-        ref = React.createRef();
+export const withLaxElement = Component => props => {
+    const ref = React.createRef();
 
-        componentDidMount() {
-            lax.addElement(this.ref.current);
-        }
+    useEffect(() => {
+        lax.addElement(ref.current);
 
-        componentWillUnmount() {
-            lax.removeElement(this.ref.current);
-        }
+        return () => lax.removeElement(ref.current);
+    }, [])
 
-        render() {
-            return <Component {...props} ref={this.ref} />;
-        }
-    }
-
-    return <LaxElement />;
+    return <Component {...props} ref={ref} />;
 };
-
-export default withLaxElement;

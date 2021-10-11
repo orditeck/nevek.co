@@ -1,16 +1,14 @@
-import React, {Component} from 'react';
+import React from 'react';
 import slugify from '../lib/slugify';
 
-export default class extends Component {
-    render = () => {
-        const id = slugify(this.props.title || '');
+export const FaqItem = ({ title, children }) => {
+    const id = slugify(title || '');
 
-        return <article className="faq">
-            <input type="checkbox" id={id}/>
-            <label className="title" htmlFor={id}>
-                {this.props.title}
-            </label>
-            {this.props.children}
-        </article>;
-    }
+    return <article className="faq">
+        <input type="checkbox" id={id} />
+        <label className="title" htmlFor={id}>
+            {title}
+        </label>
+        {children}
+    </article>;
 }

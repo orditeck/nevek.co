@@ -4,8 +4,8 @@ import stickybits from 'stickybits';
 import lozad from 'lozad';
 import AOS from 'aos';
 
-class DomLibsSetup extends React.Component {
-    constructor(props){
+export class DomLibsSetup extends React.Component {
+    constructor(props) {
         super(props)
         this.stickybits = null
     }
@@ -69,5 +69,3 @@ class DomLibsSetup extends React.Component {
         return this.props.children;
     }
 }
-
-export default DomLibsSetup;

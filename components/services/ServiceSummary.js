@@ -1,19 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-export default class extends Component {
-    onClick = () => {
-        this.props.onClickHandler(this.props.service);
-    };
-
-    render = () =>
-        <article
-            className={this.props.currentService === this.props.service ? 'active' : ''}
-            onClick={this.onClick}
-            id={this.props.service}
-        >
-            {this.props.children}
-            <div className="btn">
-                En savoir plus
-            </div>
-        </article>
-}
+export const ServiceSummary = ({ onClickHandler, currentService, service, children }) =>
+    <article
+        className={currentService === service ? 'active' : ''}
+        onClick={() => onClickHandler(service)}
+        id={service}
+    >
+        {children}
+        <div className="btn">En savoir plus</div>
+    </article>

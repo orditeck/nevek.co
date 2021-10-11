@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
-import ServiceSummary from './ServiceSummary';
+import React from 'react';
+import { ServiceSummary } from './ServiceSummary';
 
-export default () => <article className="accompagnement">
-    <img src="/static/images/accompagnement.gif" alt="Accompagnement" />
+export const Accompagnement = () => <article className="accompagnement">
+    <img src="/images/accompagnement.gif" alt="Accompagnement" />
 
     <p>
         Mon service d'accompagnement consiste à vous fournir des conseils personnalisés dans une perspective de
@@ -23,14 +23,12 @@ export default () => <article className="accompagnement">
     </p>
 </article>
 
-export class Summary extends Component {
-    render = () =>
-        <ServiceSummary service="accompagnement" {...this.props}>
-            <h1>Accompagnement</h1>
-            <p>
-                Mon service d'accompagnement vous assure d'avoir un partenaire fiable et compétent pour tout ce qui
-                touche le numérique de votre entreprise. C'est la tranquillité d'esprit de savoir que votre numérique
-                est guidé par un expert qui transporte votre vision.
-            </p>
-        </ServiceSummary>
-}
+export const Summary = (props) =>
+    <ServiceSummary service="accompagnement" {...props}>
+        <h1>Accompagnement</h1>
+        <p>
+            Mon service d'accompagnement vous assure d'avoir un partenaire fiable et compétent pour tout ce qui
+            touche le numérique de votre entreprise. C'est la tranquillité d'esprit de savoir que votre numérique
+            est guidé par un expert qui transporte votre vision.
+        </p>
+    </ServiceSummary>

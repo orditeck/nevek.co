@@ -1,3 +1,4 @@
-export { default as DomLibsSetup } from './DomLibsSetup';
-export { default as FaqItem } from './FaqItem';
-export { default as SectionWithBg } from './SectionWithBg';
+export { DomLibsSetup } from './DomLibsSetup';
+export { App } from './App';
+export { FaqItem } from './FaqItem';
+export { SectionWithBg } from './SectionWithBg';

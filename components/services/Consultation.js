@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import ServiceSummary from "./ServiceSummary";
+import React from 'react';
+import { ServiceSummary } from './ServiceSummary';
 
-export default () => <article className="consultation">
-    <img src="/static/images/consultation.gif" alt="Consultation" />
+export const Consultation = () => <article className="consultation">
+    <img src="/images/consultation.gif" alt="Consultation" />
 
     <p>
         Mon service de consultation est similaire à celui d'accompagnement, à la différence qu'il est ciblé sur des
@@ -27,14 +27,12 @@ export default () => <article className="consultation">
     </ul>
 </article>
 
-export class Summary extends Component {
-    render = () =>
-        <ServiceSummary service="consultation" {...this.props}>
-            <h1>Consultation</h1>
-            <p>
-                À mi-chemin entre développeur et accompagnateur, mon rôle de consultant Web est de vous donner les
-                meilleurs conseils d'expert pour vos besoins précis. Avec ma connaissance approfondie du Web, vous serez
-                entre bonnes-mains.
-            </p>
-        </ServiceSummary>
-}
+export const Summary = (props) =>
+    <ServiceSummary service="consultation" {...props}>
+        <h1>Consultation</h1>
+        <p>
+            À mi-chemin entre développeur et accompagnateur, mon rôle de consultant Web est de vous donner les
+            meilleurs conseils d'expert pour vos besoins précis. Avec ma connaissance approfondie du Web, vous serez
+            entre bonnes-mains.
+        </p>
+    </ServiceSummary>

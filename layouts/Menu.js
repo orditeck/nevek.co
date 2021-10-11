@@ -1,6 +1,7 @@
-import {useStateValue} from '../state';
+import React from "react";
+import { useStateValue } from '../state';
 
-export default () => {
+export const Menu = () => {
     const [state, dispatch] = useStateValue();
 
     const setCurrent = (id) => () => {
@@ -12,7 +13,7 @@ export default () => {
         const targetEl = document.getElementById(id)
         const menu = document.querySelector('.main-nav')
 
-        if(targetEl){
+        if (targetEl) {
             const yCoordinate = targetEl.getBoundingClientRect().top + window.pageYOffset;
             const yOffset = -10;
             const yOffsetWithMenu = -(menu.clientHeight) + yOffset;

@@ -1,11 +1,11 @@
-import withLaxElement from "../components/withLaxElement";
-import {useStateValue} from "../state";
-import classNames from "classnames";
+import React, { forwardRef } from "react";
+import { withLaxElement } from "../components/withLaxElement";
+import { useStateValue } from "../state";
 
-export default withLaxElement(
-    React.forwardRef(
+export const WhatIDo = withLaxElement(
+    forwardRef(
         (props, ref) => {
-            const [{mainNavItem}, dispatch] = useStateValue();
+            const [{ mainNavItem }, dispatch] = useStateValue();
 
             return <section
                 {...props}
@@ -23,32 +23,32 @@ export default withLaxElement(
                             <h2>
                                 <span>Accompagnement</span>
                                 <div className="lax bg"
-                                     data-lax-translate-y="vh (vh*0.3), (-vh) (-vh*0.3)"
-                                     data-lax-anchor="#whatIDo"/>
+                                    data-lax-translate-y="vh (vh*0.3), (-vh) (-vh*0.3)"
+                                    data-lax-anchor="#whatIDo" />
                             </h2>
                         </header>
                     </section>
                     <section className="lax"
-                             data-lax-translate-y="vh (vh*0.2), (-vh) (-vh*0.2)"
-                             data-lax-anchor="#whatIDo">
+                        data-lax-translate-y="vh (vh*0.2), (-vh) (-vh*0.2)"
+                        data-lax-anchor="#whatIDo">
                         <header className="container">
                             <h2>
                                 <span>Consultation</span>
                                 <div className="lax bg"
-                                     data-lax-translate-y="vh (vh*0.3), (-vh) (-vh*0.3)"
-                                     data-lax-anchor="#whatIDo"/>
+                                    data-lax-translate-y="vh (vh*0.3), (-vh) (-vh*0.3)"
+                                    data-lax-anchor="#whatIDo" />
                             </h2>
                         </header>
                     </section>
                     <section className="lax"
-                             data-lax-translate-y="vh (vh*0.2), (-vh) (-vh*0.2)"
-                             data-lax-anchor="#whatIDo">
+                        data-lax-translate-y="vh (vh*0.2), (-vh) (-vh*0.2)"
+                        data-lax-anchor="#whatIDo">
                         <header className="container">
                             <h2>
                                 <span>Développement Web</span>
                                 <div className="lax bg"
-                                     data-lax-translate-y="vh (vh*0.3), (-vh) (-vh*0.3)"
-                                     data-lax-anchor="#whatIDo"/>
+                                    data-lax-translate-y="vh (vh*0.3), (-vh) (-vh*0.3)"
+                                    data-lax-anchor="#whatIDo" />
                             </h2>
                         </header>
                     </section>

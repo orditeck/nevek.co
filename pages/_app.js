@@ -3,11 +3,11 @@ import {default as NextApp} from 'next/app'
 import Router from 'next/router'
 import * as gtag from '../lib/gtag'
 import '../styles/main.scss'
-import App from "../components/App"
+import { App } from '../components'
 
 Router.events.on('routeChangeComplete', url => gtag.pageview(url))
 
-export default class Nevek extends NextApp {
+export class Nevek extends NextApp {
     static async getInitialProps({Component, router, ctx}) {
         let pageProps = {}
 
@@ -26,3 +26,5 @@ export default class Nevek extends NextApp {
         </App>
     }
 }
+
+export default Nevek

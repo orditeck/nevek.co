@@ -1,9 +1,9 @@
-import {StateProvider} from '../state'
-import DomLibsSetup from "./DomLibsSetup";
-import Footer from "../layouts/Footer";
-import Head from 'next/head'
+import Head from 'next/head';
+import { DomLibsSetup } from '.';
+import { Footer } from '../layouts';
+import { StateProvider } from '../state';
 
-const App = props => {
+export const App = props => {
     const initialState = {
         mainNavItem: null
     }

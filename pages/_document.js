@@ -1,14 +1,14 @@
-import Document, {Head, Main, NextScript} from 'next/document'
+import Document, {Head, Html, Main, NextScript} from 'next/document'
 import { GA_TRACKING_ID } from '../lib/gtag'
 
-export default class MyDocument extends Document {
+export class MyDocument extends Document {
     static async getInitialProps(ctx) {
         const initialProps = await Document.getInitialProps(ctx)
         return {...initialProps}
     }
 
     render() {
-        return <html lang="fr">
+        return <Html lang="fr">
         <Head>
             <meta content="text/html; charset=utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,13 +16,13 @@ export default class MyDocument extends Document {
             <meta property="og:title" content="Keven Lefebvre | Stratège numérique à Chicoutimi, Saguenay (Québec)" />
             <meta property="og:type" content="website" />
             <meta property="og:url" content="https://nevek.co/" />
-            <meta property="og:image" content="/static/images/og_image.jpg" />
+            <meta property="og:image" content="/images/og_image.jpg" />
             <meta property="og:description" content="Expert en accompagnement, consultation et développement Web. Porteur numérique de votre vision d'entreprise." />
             <meta property="fb:admins" content="10216200435020466" />
-            <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon.png" />
-            <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/favicon-32x32.png" />
-            <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.png" />
-            <link rel="shortcut icon" href="/static/icons/favicon.ico" type="image/x-icon" />
+            <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+            <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+            <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+            <link rel="shortcut icon" href="/icons/favicon.ico" type="image/x-icon" />
             <meta name="theme-color" content="#FFE066" />
             <script
                 async
@@ -42,6 +42,8 @@ export default class MyDocument extends Document {
             <Main/>
             <NextScript/>
         </body>
-        </html>
+        </Html>
     }
 }
+
+export default MyDocument

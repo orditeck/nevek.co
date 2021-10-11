@@ -1,23 +1,25 @@
 import React from "react";
-import {Hi, Menu, WhatIDo, LogoSlider, Services, Engagement, StrategeNumerique, Faq, Testimonies} from "../layouts";
+import { Engagement, FAQ, Hi, LogoSlider, Menu, Services, StrategeNumerique, Testimonies, WhatIDo } from "../layouts";
 
-export default () =>
+export const Index = () =>
     <section className="homepage">
-        <Hi/>
-        <Menu/>
-        <WhatIDo/>
-        <LogoSlider/>
-        <Services/>
-        <Engagement/>
-        <StrategeNumerique/>
+        <Hi />
+        <Menu />
+        <WhatIDo />
+        <LogoSlider />
+        <Services />
+        <Engagement />
+        <StrategeNumerique />
         <section id="faq" className="with-bg white faq-testimonies">
             <div className="container">
                 <section>
-                    <Faq/>
+                    <FAQ />
                 </section>
                 <section>
-                    <Testimonies/>
+                    <Testimonies />
                 </section>
             </div>
         </section>
     </section>
+
+export default Index

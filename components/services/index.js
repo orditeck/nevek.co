@@ -1,3 +1,3 @@
-export { default as Accompagnement, Summary as AccompagnementSummary } from './Accompagnement';
-export { default as Consultation, Summary as ConsultationSummary } from './Consultation';
-export { default as Developpement, Summary as DeveloppementSummary } from './Developpement';
+export { Accompagnement, Summary as AccompagnementSummary } from './Accompagnement';
+export { Consultation, Summary as ConsultationSummary } from './Consultation';
+export { Developpement, Summary as DeveloppementSummary } from './Developpement';

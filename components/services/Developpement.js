@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import ServiceSummary from "./ServiceSummary";
+import React from 'react';
+import { ServiceSummary } from './ServiceSummary';
 
-export default () => <article className="developpement">
-    <img src="/static/images/developpement.gif" alt="Développement" />
+export const Developpement = () => <article className="developpement">
+    <img src="/images/developpement.gif" alt="Développement" />
 
     <p>
         Développeur Web passionné et ayant plus de 10 années d'expérience, je mets mes compétences à votre service.
@@ -20,8 +20,8 @@ export default () => <article className="developpement">
     </p>
 
     <p>
-        J'ai de solides références en développement Web, <
-        a href="tel://18444487602" onClick={(e) => e.stopPropagation()}>communiquez avec moi</a> pour
+        J'ai de solides références en développement Web, 
+        <a href="tel://18444487602" onClick={(e) => e.stopPropagation()}>communiquez avec moi</a> pour
         obtenir des exemples concrets.
     </p>
 
@@ -38,15 +38,13 @@ export default () => <article className="developpement">
     </p>
 </article>
 
-export class Summary extends Component {
-    render = () =>
-        <ServiceSummary service="developpement" {...this.props}>
-            <h1>Développement</h1>
-            <p>
-                Je suis un développeur Web senior qui offre un service haut de gamme aux entreprises soucieuses de leurs
-                conversions et de l'expérience Web de leurs utilisateurs. Je m'assure que votre projet réponde le mieux
-                qu'il soit aux besoins de vos clients.
-            </p>
-        </ServiceSummary>
-}
+export const Summary = (props) =>
+    <ServiceSummary service="developpement" {...props}>
+        <h1>Développement</h1>
+        <p>
+            Je suis un développeur Web senior qui offre un service haut de gamme aux entreprises soucieuses de leurs
+            conversions et de l'expérience Web de leurs utilisateurs. Je m'assure que votre projet réponde le mieux
+            qu'il soit aux besoins de vos clients.
+        </p>
+    </ServiceSummary>
 

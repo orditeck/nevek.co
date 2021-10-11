@@ -197,14 +197,26 @@ section.services {
           }
           25%   {
             opacity: 1;
-          }
-          50%   {
-            opacity: 1;
             max-height: 1500px;
           }
           100% {
             opacity: 1;
             max-height: 1500px;
+          }
+        }
+  
+        @keyframes switching {
+          0%   {
+            opacity: 1;
+            max-height: 1500px;
+          }
+          15% {
+            opacity: 0;
+            max-height: 0;
+          }
+          100% {
+            opacity: 0;
+            max-height: 0;
           }
         }
 

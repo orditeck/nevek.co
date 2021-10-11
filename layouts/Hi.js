@@ -1,18 +1,19 @@
-import withLaxElement from "../components/withLaxElement";
+import React, { forwardRef } from "react";
+import { withLaxElement } from "../components/withLaxElement";
 
-export default withLaxElement(
-    React.forwardRef(
+export const Hi = withLaxElement(
+    forwardRef(
         (props, ref) => <section
             {...props}
             ref={ref}
             className="fullscreen hi"
             id="hi"
         >
-            <div className="bg1"/>
+            <div className="bg1" />
             <div className="bg2">
                 <div></div>
             </div>
-            <div className="bg3"/>
+            <div className="bg3" />
             <div className="container">
                 <div className="content">
                     <article

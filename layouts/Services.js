@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 
 import {
@@ -10,89 +10,97 @@ import {
     DeveloppementSummary
 } from '../components/services';
 
-const services = {
+const AllServices = {
     accompagnement: Accompagnement,
     consultation: Consultation,
     developpement: Developpement
 };
 
-export default class extends Component {
-    state = {
+export const Services = () => {
+    const [state, setState] = useState({
         currentService: null,
         title: 'Services en bref',
         closingCallback: null
-    };
+    });
 
-    onServiceClick = async (service) => {
-        const {currentService: previousServiceState} = this.state;
+    const onServiceClick = service => {
+        const { currentService: previousServiceState } = state;
         const opening = previousServiceState === null;
         const closing = previousServiceState === service;
 
-        await this.setState({
-            currentService: service,
-            title: 'Services'
-        });
-
         if (!opening && !closing) {
             document.querySelectorAll('section.service article').forEach(
-                el => el.style.animationName = "article-after"
+                el => el.style.animationName = "switching"
             );
-        }
-
-        if (closing) {
-
+            setTimeout(() => {
+                setState({
+                    ...state,
+                    currentService: service,
+                    title: 'Services'
+                });
+                document.querySelectorAll('section.service article').forEach(
+                    el => el.style.animationName = "article-after"
+                );
+            }, 400)
+        } else if (closing) {
             document.querySelector('section.service').classList.add('closing');
 
-            this.setState({
+            setState({
+                ...state,
                 closingCallback: setTimeout(() => {
-                    this.setState({
+                    setState({
                         currentService: null,
                         title: 'Services en bref'
                     });
                 }, 750)
             })
+        } else {
+            setState({
+                ...state,
+                currentService: service,
+                title: 'Services'
+            });
         }
     };
 
-    render() {
-        const Service = this.state.currentService ? services[this.state.currentService] : React.Fragment;
 
-        return <section
-            className={classNames('services', {
-                "is-single": !!this.state.currentService
-            })}>
-            <div className="container">
-                <header>
-                    <div>
-                        <h1>{this.state.title}</h1>
-                    </div>
-                    <div className="bg-title">
-                        <h1>Services</h1>
-                    </div>
-                </header>
-                <section>
-                    <AccompagnementSummary
-                        currentService={this.state.currentService}
-                        onClickHandler={this.onServiceClick}
-                    />
-                    <ConsultationSummary
-                        currentService={this.state.currentService}
-                        onClickHandler={this.onServiceClick}
-                    />
-                    <DeveloppementSummary
-                        currentService={this.state.currentService}
-                        onClickHandler={this.onServiceClick}
-                    />
-                </section>
-                <section
-                    className={classNames({
-                        service: true,
-                        active: !!this.state.currentService
-                    })}>
+    const ServiceToRender = state.currentService ? AllServices[state.currentService] : React.Fragment;
 
-                    <Service/>
-                </section>
-            </div>
-        </section>
-    }
+    return <section
+        className={classNames('services', {
+            "is-single": !!state.currentService
+        })}>
+        <div className="container">
+            <header>
+                <div>
+                    <h1>{state.title}</h1>
+                </div>
+                <div className="bg-title">
+                    <h1>Services</h1>
+                </div>
+            </header>
+            <section>
+                <AccompagnementSummary
+                    currentService={state.currentService}
+                    onClickHandler={onServiceClick}
+                />
+                <ConsultationSummary
+                    currentService={state.currentService}
+                    onClickHandler={onServiceClick}
+                />
+                <DeveloppementSummary
+                    currentService={state.currentService}
+                    onClickHandler={onServiceClick}
+                />
+            </section>
+            <section
+                className={classNames({
+                    service: true,
+                    active: !!state.currentService
+                })}>
+
+                <ServiceToRender />
+            </section>
+        </div>
+    </section>
 }
