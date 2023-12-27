@@ -7,7 +7,7 @@ rm -rf previous_out
 rm -rf out
 
 echo "Clone current gh-pages branch to out directory"
-git clone git@github.com:orditeck/nevek.co.git --branch gh-pages previous_out
+git clone https://github.com/orditeck/nevek.co.git --branch gh-pages previous_out
 
 echo "Build"
 npm run build
