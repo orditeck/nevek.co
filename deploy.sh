@@ -12,9 +12,6 @@ git clone git@github.com:orditeck/nevek.co.git --branch gh-pages previous_out
 echo "Build"
 npm run build
 
-echo "Export"
-npm run export
-
 echo "Prepare git in new export's folder"
 mkdir out/.git
 cp -R previous_out/.git out

@@ -1,10 +1,8 @@
-/*const withPlugins = require('next-compose-plugins');
-const offline = require('next-offline');
+const path = require('path')
 
-module.exports = withPlugins(
-    [
-        offline
-    ], {
-        distDir: 'build'
-    });
-*/
+module.exports = {
+  output: 'export',
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  },
+}
