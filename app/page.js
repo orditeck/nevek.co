@@ -2,10 +2,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import TextTransition, { presets } from "react-text-transition";
-import Image from "next/image";
+import classNames from "classnames";
 
 import styles from "./page.module.scss";
-import classNames from "classnames";
 
 const qualifiers = [
   "an excellent",
@@ -29,6 +28,7 @@ const titles = [
   "senior software dev",
   "experienced dev",
   "senior solution dev",
+  "solution architect",
 ];
 
 export default function Home() {
@@ -122,7 +122,7 @@ export default function Home() {
           </span>
         </li>
       </ul>
-      <a href="maito:keven@nevek.co">
+      <a href="mailto:keven@nevek.co">
         Let&apos;s chat
         <img
           src="/Mouse-cursor-hand-pointer.svg"
