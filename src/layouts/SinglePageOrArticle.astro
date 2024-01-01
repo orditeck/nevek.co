@@ -1,0 +1,64 @@
+---
+import { type CollectionEntry } from "astro:content";
+
+interface Props {
+  entry: CollectionEntry<"articles" | "pages">;
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<main class="container">
+  <article>
+    <header>
+      <hgroup>
+        <h1>{entry.data.title}</h1>
+        <h2>{entry.data.subtitle}</h2>
+      </hgroup>
+    </header>
+    <Content frontmatter={entry.data} />
+    {
+      entry.data.contactFormInFooter && (
+        <footer>
+          <div class="grid" style="gap: var(--block-spacing-horizontal)">
+            <a
+              href="mailto:keven@nevek.co"
+              role="button"
+              class="contrast outline"
+            >
+              Contact me by email
+            </a>
+            <p style="margin:0; text-align: center; align-self: center;">
+              or give me a call:{" "}
+              <a href="tel://18444487602">1-844-448-7602</a>
+            </p>
+          </div>
+        </footer>
+      )
+    }
+  </article>
+</main>
+
+<style is:inline>
+@media (min-width: 1200px) {
+  body > footer,
+  body > header,
+  body > main,
+  section {
+    --block-spacing-vertical: calc(var(--spacing) * 2);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: calc(var(--typography-spacing-vertical) * 0.5);
+}
+
+.headings>*, hgroup>* {
+  margin-bottom: 0;
+}
+
+article > header > hgroup {
+  margin-bottom: 0;
+}
+</style>

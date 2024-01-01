@@ -1,0 +1,241 @@
+---
+import TextTransition from "../components/TextTransition/TextTransition";
+import Layout from "../layouts/Layout.astro";
+
+import "@fontsource/noto-sans/300.css";
+import "@fontsource/noto-sans/400.css";
+import "@fontsource/noto-sans/500.css";
+import "@fontsource/space-mono";
+import "@fontsource/kalam";
+
+import kevGif from "./images/kev.gif";
+import shopifyIcon from "./images/shopify.svg";
+import turbulentIcon from "./images/turbulent.png";
+import arsenalwebIcon from "./images/arsenalweb.png";
+import kevIcon from "./images/kev.png";
+import mouseAndPointer from "./images/mouse-cursor-hand-pointer.svg";
+---
+
+<Layout title="Welcome!">
+  <main>
+    <section class="hi">
+      <img src={kevGif.src} alt="Keven" width={80} height={80} />
+      <p>
+        <em>Bonjour, I&apos;m Keven!</em>
+         With 15+ years in software development, I excel in delivering
+        outstanding results for high-stakes projects.
+      </p>
+    </section>
+
+    <section class="animatedText">
+      <div>
+        <span>I&apos;ve heard that</span>
+        <span>you&apos;re in need of</span>
+      </div>
+
+      <TextTransition client:only />
+    </section>
+
+    <ul class="quicklook">
+      <li>
+        <div>Senior Software Developer</div>
+        <div>
+          @ <img src={shopifyIcon.src} alt="Shopify" width={16} height={16} />
+           Shopify
+        </div>
+        <div>2021 - Now</div>
+      </li>
+      <li>
+        <div>Senior Tech & Dev Lead</div>
+        <div>
+          @ <img
+            src={turbulentIcon.src}
+            alt="Turbulent"
+            width={16}
+            height={16}
+          /> Turbulent
+        </div>
+        <div>2020 - 2021</div>
+      </li>
+      <li>
+        <div>Director of Technology</div>
+        <div>
+          @ <img
+            src={arsenalwebIcon.src}
+            alt="Arsenal Web"
+            width={16}
+            height={16}
+          /> Arsenal Web
+        </div>
+        <div>2018 - 2020</div>
+      </li>
+      <li>
+        <div>...</div>
+      </li>
+      <li class="lessPaddingBottom">
+        <div>Consultant / Web Developer</div>
+        <div>
+          @ <img src={kevIcon.src} alt="Self-Employed" width={16} height={16} />
+           Self-Employed
+        </div>
+        <div>2008 - Now</div>
+      </li>
+      <li>
+        <div></div>
+        <div class="colspan padded">for Garda, GHD, Lavo, ...</div>
+      </li>
+    </ul>
+
+    <div class="links">
+      <a href="mailto:keven@nevek.co" role="button" class="contrast">
+        <span>Let&apos;s chat</span>
+        <img src={mouseAndPointer.src} alt="Hand pointer" /></a
+      >
+      <a href="/hire-me" role="button" class="secondary">Learn more</a>
+    </div>
+  </main>
+</Layout>
+
+<style lang="scss">
+  [data-theme="light"],
+  :root:not([data-theme="dark"]) {
+    --color: hsl(205, 20%, 23%);
+  }
+
+  @media only screen and (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+      --color: hsl(205, 16%, 90%);
+    }
+  }
+
+  main {
+    font-family: "Noto Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+    gap: 5rem;
+    min-height: 100vh;
+
+    section {
+      margin-bottom: 0;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    .hi {
+      display: flex;
+      gap: 0.8rem;
+      max-width: 20.9rem;
+      align-items: center;
+
+      p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        font-weight: 300;
+        margin: 0;
+      }
+
+      em {
+        display: block;
+        font-family: "Kalam", sans-serif;
+        font-style: normal;
+      }
+    }
+
+    .animatedText {
+      font-size: 2rem;
+      font-weight: 500;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    ul.quicklook {
+      font-family: "Space Mono", monospace;
+      list-style: none;
+      font-size: 0.7rem;
+      margin: 0;
+      padding: 0;
+
+      li {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 3.3fr 2.2fr 1fr;
+        margin: 0;
+        white-space: nowrap;
+
+        .colspan {
+          font-size: 0.6rem;
+          grid-column: span 2;
+        }
+
+        .padded {
+          padding-left: 39px;
+        }
+      }
+    }
+
+    .links {
+      display: flex;
+      gap: 1rem;
+
+      a {
+        display: flex;
+        align-items: center;
+
+        span {
+          align-self: center;
+        }
+
+        img {
+          width: 2rem;
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 700px) {
+    main {
+      padding: 10%;
+      gap: 4rem;
+
+      .hi {
+        max-width: 15rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+
+        p {
+          line-height: 1.5;
+        }
+
+        em {
+          text-align: center;
+        }
+      }
+
+      .animatedText span {
+        display: block;
+      }
+
+      ul.quicklook {
+        li {
+          grid-template-columns: auto;
+          padding-bottom: 1rem;
+
+          &.lessPaddingBottom {
+            padding-bottom: 0.25rem;
+          }
+
+          .padded {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+</style>

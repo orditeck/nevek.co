@@ -1,23 +1,29 @@
 {
-  "name": "kevenlefebvre",
-  "version": "0.1.0",
-  "private": true,
+  "name": "new-nevek.co",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "classnames": "^2.4.0",
-    "next": "14.0.4",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-text-transition": "^3.1.0"
-  },
-  "devDependencies": {
-    "eslint": "^8",
-    "eslint-config-next": "14.0.4",
-    "sass": "^1.69.5"
+    "@astrojs/check": "^0.3.4",
+    "@astrojs/markdoc": "^0.8.2",
+    "@astrojs/react": "^3.0.9",
+    "@fontsource/kalam": "^5.0.8",
+    "@fontsource/noto-sans": "^5.0.18",
+    "@fontsource/space-mono": "^5.0.18",
+    "@picocss/pico": "^1.5.11",
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18",
+    "astro": "^4.0.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-text-transition": "^3.1.0",
+    "sass": "^1.69.6",
+    "typescript": "^5.3.3"
   }
 }

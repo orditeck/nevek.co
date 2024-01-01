@@ -1,0 +1,28 @@
+.textTransition {
+  margin-bottom: 0;
+}
+
+.mobileOnly {
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .mobileOnly {
+    display: block;
+  }
+
+  .exceptMobile {
+    display: none;
+  }
+
+  .textTransition {
+    > div > span {
+      display: block;
+    }
+
+    > div > div {
+      justify-content: center;
+    }
+  }
+}

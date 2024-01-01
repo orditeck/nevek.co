@@ -2,29 +2,23 @@
 
 source .env
 
-echo "Delete old export/clone if it exists"
-rm -rf previous_out
-rm -rf out
+echo "Delete old build if it exists"
+rm -rf dist previous_build
 
-echo "Clone current gh-pages branch to out directory"
-git clone https://github.com/orditeck/nevek.co.git --branch gh-pages previous_out
+echo "Clone gh-pages inside previous_build"
+git clone https://github.com/orditeck/nevek.co.git --branch gh-pages previous_build
+
+echo "Only keep .git, move it inside build, remove previous_build"
+mkdir dist/.git
+cp -R previous_build/.git dist
+rm -rf previous_build
 
 echo "Build"
-npm run build
-
-echo "Prepare git in new export's folder"
-mkdir out/.git
-cp -R previous_out/.git out
-
-echo "Remove previously cloned gh-pages, we're done with it"
-rm -rf previous_out
-
-echo "Start preparing with the new export"
-cd out
+yarn build
+cd dist
 
 echo "Add GitHub related stuff"
-touch .nojekyll
-touch CNAME
+touch .nojekyll CNAME
 echo "${GITHUB_CNAME}" >> CNAME
 cp index.html 404.html
 
@@ -33,16 +27,6 @@ git add --all
 git commit -m "Release at $(date)"
 git push
 
-echo "Delete export"
+echo "Clean up"
 cd ..
-rm -rf out
-
-echo "Delete build"
-rm -rf build
-
-echo "Purge Cloudflare cache"
-curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${CLOUDFLARE_ZONE}/purge_cache" \
-     -H "X-Auth-Email: ${CLOUDFLARE_AUTH_EMAIL}" \
-     -H "X-Auth-Key: ${CLOUDFLARE_AUTH_KEY}" \
-     -H "Content-Type: application/json" \
-     --data '{"purge_everything":true}'
+rm -rf dist
