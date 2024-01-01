@@ -1,5 +1,6 @@
 # build output
 dist/
+prev_dist/
 
 # generated types
 .astro/

@@ -3,19 +3,20 @@
 source .env
 
 echo "Delete old build if it exists"
-rm -rf dist previous_build
+rm -rf dist prev_dist
 
-echo "Clone gh-pages inside previous_build"
-git clone https://github.com/orditeck/nevek.co.git --branch gh-pages previous_build
-
-echo "Only keep .git, move it inside build, remove previous_build"
-mkdir dist/.git
-cp -R previous_build/.git dist
-rm -rf previous_build
+echo "Clone gh-pages"
+git clone https://github.com/orditeck/nevek.co.git --branch gh-pages prev_dist
+cd prev_dist
+git rm -rf .
+git clean -fxd
+cd ..
 
 echo "Build"
 yarn build
-cd dist
+mv dist/* prev_dist
+rm -rf dist
+cd prev_dist
 
 echo "Add GitHub related stuff"
 touch .nojekyll CNAME
@@ -29,4 +30,4 @@ git push
 
 echo "Clean up"
 cd ..
-rm -rf dist
+rm -rf prev_dist
