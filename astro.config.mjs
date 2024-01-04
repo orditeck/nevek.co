@@ -6,6 +6,10 @@ import markdoc from "@astrojs/markdoc";
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), markdoc({ allowHTML: true })],
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "fr"],
+  },
   build: {
     assets: "_assets",
   },

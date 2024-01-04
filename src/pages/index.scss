@@ -1,0 +1,141 @@
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --color: hsl(205, 20%, 23%);
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --color: hsl(205, 16%, 90%);
+  }
+}
+
+main {
+  font-family: "Noto Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+  gap: 5rem;
+  min-height: 100vh;
+
+  section {
+    margin-bottom: 0;
+  }
+
+  img {
+    vertical-align: middle;
+  }
+
+  .hi {
+    display: flex;
+    gap: 0.8rem;
+    max-width: 20.9rem;
+    align-items: center;
+
+    p {
+      font-size: 0.85rem;
+      line-height: 1.4;
+      font-weight: 300;
+      margin: 0;
+    }
+
+    em {
+      display: block;
+      font-family: "Kalam", sans-serif;
+      font-style: normal;
+    }
+  }
+
+  .animatedText {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  ul.quicklook {
+    font-family: "Space Mono", monospace;
+    list-style: none;
+    font-size: 0.7rem;
+    margin: 0;
+    padding: 0;
+
+    li {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 3.3fr 2.2fr 1fr;
+      margin: 0;
+      white-space: nowrap;
+
+      .colspan {
+        font-size: 0.6rem;
+        grid-column: span 2;
+      }
+
+      .padded {
+        padding-left: 39px;
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      display: flex;
+      align-items: center;
+
+      span {
+        align-self: center;
+      }
+
+      img {
+        width: 2rem;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  main {
+    padding: 10%;
+    gap: 4rem;
+
+    .hi {
+      max-width: 15rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+
+      p {
+        line-height: 1.5;
+      }
+
+      em {
+        text-align: center;
+      }
+    }
+
+    .animatedText span {
+      display: block;
+    }
+
+    ul.quicklook {
+      li {
+        grid-template-columns: auto;
+        padding-bottom: 1rem;
+
+        &.lessPaddingBottom {
+          padding-bottom: 0.25rem;
+        }
+
+        .padded {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

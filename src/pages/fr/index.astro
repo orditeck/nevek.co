@@ -1,7 +1,7 @@
 ---
-import TextTransition from "../components/TextTransition/TextTransition";
-import Layout from "../layouts/Layout.astro";
-import "./index.scss";
+import TextTransition from "../../components/TextTransition/TextTransition";
+import Layout from "../../layouts/Layout.astro";
+import "../index.scss";
 
 import "@fontsource/noto-sans/300.css";
 import "@fontsource/noto-sans/400.css";
@@ -9,42 +9,42 @@ import "@fontsource/noto-sans/500.css";
 import "@fontsource/space-mono";
 import "@fontsource/kalam";
 
-import kevGif from "./images/kev.gif";
-import shopifyIcon from "./images/shopify.svg";
-import turbulentIcon from "./images/turbulent.png";
-import arsenalwebIcon from "./images/arsenalweb.png";
-import kevIcon from "./images/kev.png";
-import mouseAndPointer from "./images/mouse-cursor-hand-pointer.svg";
+import kevGif from "../images/kev.gif";
+import shopifyIcon from "../images/shopify.svg";
+import turbulentIcon from "../images/turbulent.png";
+import arsenalwebIcon from "../images/arsenalweb.png";
+import kevIcon from "../images/kev.png";
+import mouseAndPointer from "../images/mouse-cursor-hand-pointer.svg";
 ---
 
-<Layout title="Welcome!">
+<Layout title="Bienvenue!">
   <main>
     <section class="hi">
       <img src={kevGif.src} alt="Keven" width={80} height={80} />
       <p>
-        <em>Bonjour, I&apos;m Keven!</em>
-         With 15+ years in software development, I excel in delivering
-        outstanding results for high-stakes projects.
+        <em>Bonjour, je suis Keven!</em>
+         Avec plus de 15 ans d'expérience en développement logiciel, j'excelle à
+        livrer des résultats exceptionnels pour des projets à hauts enjeux.
       </p>
     </section>
 
     <section class="animatedText">
       <div>
-        <span>I&apos;ve heard that</span>
-        <span>you&apos;re in need of</span>
+        <span>J'ai entendu dire que</span>
+        <span>vous avez besoin d'un</span>
       </div>
 
-      <TextTransition client:only lang="en" />
+      <TextTransition client:only lang="fr" />
     </section>
 
     <ul class="quicklook">
       <li>
-        <div>Senior Software Developer</div>
+        <div>Développeur logiciel senior</div>
         <div>
           @ <img src={shopifyIcon.src} alt="Shopify" width={16} height={16} />
            Shopify
         </div>
-        <div>2021 - Now</div>
+        <div>2021 - Ajd</div>
       </li>
       <li>
         <div>Tech & Dev Lead</div>
@@ -59,7 +59,7 @@ import mouseAndPointer from "./images/mouse-cursor-hand-pointer.svg";
         <div>2020 - 2021</div>
       </li>
       <li>
-        <div>Director of Technology</div>
+        <div>Directeur des technologies</div>
         <div>
           @ <img
             src={arsenalwebIcon.src}
@@ -74,25 +74,25 @@ import mouseAndPointer from "./images/mouse-cursor-hand-pointer.svg";
         <div>...</div>
       </li>
       <li class="lessPaddingBottom">
-        <div>Consultant / Web Developer</div>
+        <div>Consultant / Développeur Web</div>
         <div>
           @ <img src={kevIcon.src} alt="Self-Employed" width={16} height={16} />
-           Self-Employed
+          Pigiste
         </div>
-        <div>2008 - Now</div>
+        <div>2008 - Ajd</div>
       </li>
       <li>
         <div></div>
-        <div class="colspan padded">for Garda, GHD, Lavo, ...</div>
+        <div class="colspan padded">pour Garda, GHD, Lavo, ...</div>
       </li>
     </ul>
 
     <div class="links">
       <a href="mailto:keven@nevek.co" role="button" class="contrast">
-        <span>Let&apos;s chat</span>
+        <span>Discutons</span>
         <img src={mouseAndPointer.src} alt="Hand pointer" /></a
       >
-      <a href="/hire-me" role="button" class="secondary">Learn more</a>
+      <a href="/fr/collaborer-ensemble" role="button" class="secondary">En apprendre davantage</a>
     </div>
   </main>
 </Layout>
