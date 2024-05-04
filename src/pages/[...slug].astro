@@ -1,7 +1,13 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 import Layout from "../layouts/Layout.astro";
-import SinglePageOrArticle from "../layouts/SinglePageOrArticle.astro";
+import MainNav from "../layouts/MainNav.astro";
+import MainContent from "../layouts/MainContent.astro";
+
+interface Props {
+  entry: CollectionEntry<"pages">;
+  lang: "fr" | "en";
+}
 
 export async function getStaticPaths() {
   const pages = await getCollection("pages");
@@ -20,9 +26,12 @@ export async function getStaticPaths() {
   });
 }
 
-const { entry, lang } = Astro.props;
+const { entry, lang = "fr" } = Astro.props;
+const { title, toc = true, sidebar = true } = entry.data;
+const width = toc || sidebar ? "largeAdaptive" : "narrow";
 ---
 
-<Layout title={entry.data.title}>
-  <SinglePageOrArticle entry={entry} lang={lang} />
+<Layout title={title} width={width}>
+  <MainNav />
+  <MainContent entry={entry} lang={lang} toc={toc} sidebar={sidebar} />
 </Layout>

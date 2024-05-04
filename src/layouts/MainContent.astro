@@ -1,0 +1,162 @@
+---
+import { type CollectionEntry } from "astro:content";
+import TableOfContents from "./TableOfContents.astro";
+import Testimonials from "../components/Testimonials.astro";
+import CalEmbed from "../components/CalEmbed/CalEmbed";
+
+interface Props {
+  entry: CollectionEntry<"articles" | "pages" | "services">;
+  lang: "fr" | "en";
+  toc?: boolean;
+  sidebar?: boolean;
+}
+
+const { entry, lang = "en", toc = true, sidebar = true } = Astro.props;
+const testimonialsType = entry.collection === "services" ? entry.slug : null;
+
+const text = {
+  en: {
+    contactByEmail: "Contact me by email",
+    giveMeAcall: "Give me a call:",
+  },
+  fr: {
+    contactByEmail: "Communiquer avec moi par courriel",
+    giveMeAcall: "Par téléphone :",
+  },
+};
+
+const { Content, headings } = await entry.render();
+---
+
+<main
+  class:list={[
+    "container",
+    {
+      toc,
+      sidebar,
+    },
+  ]}
+>
+  <header class="header">
+    <hgroup>
+      <h1>{entry.data.title}</h1>
+      <h2>{entry.data.subtitle}</h2>
+    </hgroup>
+  </header>
+  <div id="content" role="document" class="body">
+    <Content frontmatter={entry.data} />
+  </div>
+  {
+    toc && (
+      <aside class="toc">
+        <TableOfContents headings={headings} />
+      </aside>
+    )
+  }
+  {
+    sidebar && (
+      <aside class="sidebar">
+        <article>
+          <header>
+            <strong>Schedule a Virtual Call</strong>
+          </header>
+          <p>Book a 15-minute call to discuss how I can help you succeed.</p>
+          <CalEmbed client:only />
+          <hr />
+          <p>or, you can also:</p>
+          <div class="grid">
+            <a
+              href="mailto:keven@nevek.co"
+              role="button"
+              class="outline contrast"
+            >
+              {text[lang].contactByEmail}
+            </a>
+            <a href="tel://18444487602" role="button" class="outline contrast">
+              {text[lang].giveMeAcall} <br />
+              1-844-448-7602
+            </a>
+          </div>
+        </article>
+
+        {testimonialsType && <Testimonials service={testimonialsType} />}
+      </aside>
+    )
+  }
+</main>
+
+<style lang="scss">
+  @use "sass:map";
+  @use "@picocss/pico/scss/settings" as *;
+
+  body > main.container {
+    display: grid;
+    grid-template-columns: 1fr 22rem;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "header header"
+      "body body";
+    column-gap: 2rem;
+
+    &.toc.sidebar {
+      grid-template-areas:
+        "header header"
+        "body toc"
+        "body sidebar";
+    }
+
+    &.toc {
+      grid-template-areas:
+        "header header"
+        "body toc";
+    }
+
+    &.sidebar {
+      grid-template-areas:
+        "header header"
+        "body sidebar";
+    }
+
+    .header {
+      grid-area: header;
+      margin-bottom: 2rem;
+    }
+
+    .body {
+      grid-area: body;
+    }
+
+    .toc {
+      grid-area: toc;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+    }
+
+    @media (max-width: map.get($breakpoints, xl, breakpoint)) {
+      grid-template-columns: 1fr 20rem;
+    }
+
+    @media (max-width: map.get($breakpoints, lg, breakpoint)) {
+      &,
+      &.toc,
+      &.sidebar,
+      &.toc.sidebar {
+        grid-template-areas:
+          "header"
+          "toc"
+          "body"
+          "sidebar";
+      }
+
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+
+      .toc,
+      .body {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+</style>

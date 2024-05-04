@@ -1,0 +1,103 @@
+---
+import "@fontsource/jersey-15";
+import "@fontsource/kalam";
+
+const { transparent = false, hideHome = false } = Astro.props;
+---
+
+<nav class:list={[{ transparent: transparent }]}>
+  <div class="container">
+    <a href="/">
+      <span>k11e</span>
+      <small>
+        <p>/ Keven Lefebvre</p>
+        <p>Tech Mæstro</p>
+      </small>
+    </a>
+    <ul>
+      {
+        !hideHome && (
+          <li>
+            <a href="/" class="contrast">
+              Home
+            </a>
+          </li>
+        )
+      }
+      <li><a href="/services" class="contrast">Services</a></li>
+      <li><a href="/about-me" class="contrast">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<style lang="scss">
+  nav {
+    background: hsl(220 10% 95% / 1);
+    @media only screen and (prefers-color-scheme: dark) {
+      background: hsl(220 24% 14% / 1);
+    }
+
+    margin-bottom: 2rem;
+
+    &.transparent {
+      background: none;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      justify-items: stretch;
+      align-items: center;
+      justify-content: space-between;
+
+      > a {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        text-decoration: none;
+        color: var(--pico-contrast);
+
+        span {
+          font-size: 250%;
+          font-family: "Jersey 15", sans-serif;
+        }
+
+        small {
+          font-family: "Kalam", sans-serif;
+          font-size: 80%;
+          padding-left: 0.5rem;
+          line-height: 100%;
+          padding-top: 0.2rem;
+
+          p {
+            margin: 0;
+            color: var(--pico-contrast);
+
+            &:last-of-type {
+              padding-left: 0.55rem;
+              font-size: 80%;
+            }
+          }
+        }
+      }
+
+      ul,
+      li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: end;
+        gap: 0.5rem;
+
+        li {
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+</style>

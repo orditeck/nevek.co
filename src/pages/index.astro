@@ -15,16 +15,18 @@ import turbulentIcon from "./images/turbulent.png";
 import arsenalwebIcon from "./images/arsenalweb.png";
 import kevIcon from "./images/kev.png";
 import mouseAndPointer from "./images/mouse-cursor-hand-pointer.svg";
+import MainNav from "../layouts/MainNav.astro";
 ---
 
-<Layout title="Welcome!">
+<Layout title="Welcome!" width="veryNarrow">
+  <MainNav transparent hideHome />
   <main>
     <section class="hi">
       <img src={kevGif.src} alt="Keven" width={80} height={80} />
       <p>
         <em>Bonjour, I&apos;m Keven!</em>
-         With 15+ years in software development, I excel in delivering
-        outstanding results for high-stakes projects.
+        With 15+ years in the tech industry, I excel in delivering outstanding
+        results for high-stakes projects.
       </p>
     </section>
 
@@ -42,7 +44,7 @@ import mouseAndPointer from "./images/mouse-cursor-hand-pointer.svg";
         <div>Senior Software Developer</div>
         <div>
           @ <img src={shopifyIcon.src} alt="Shopify" width={16} height={16} />
-           Shopify
+          Shopify
         </div>
         <div>2021 - Now</div>
       </li>
@@ -77,7 +79,7 @@ import mouseAndPointer from "./images/mouse-cursor-hand-pointer.svg";
         <div>Consultant / Web Developer</div>
         <div>
           @ <img src={kevIcon.src} alt="Self-Employed" width={16} height={16} />
-           Self-Employed
+          Self-Employed
         </div>
         <div>2008 - Now</div>
       </li>
@@ -92,7 +94,7 @@ import mouseAndPointer from "./images/mouse-cursor-hand-pointer.svg";
         <span>Let&apos;s chat</span>
         <img src={mouseAndPointer.src} alt="Hand pointer" /></a
       >
-      <a href="/hire-me" role="button" class="secondary">Learn more</a>
+      <a href="/services" role="button" class="secondary">Learn more</a>
     </div>
   </main>
 </Layout>

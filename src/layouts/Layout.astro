@@ -1,11 +1,12 @@
 ---
-import "@picocss/pico";
+import "./Layout.scss";
 
 interface Props {
   title: string;
+  width?: "veryNarrow" | "narrow" | "largeAdaptive" | "normal";
 }
 
-const { title } = Astro.props;
+const { title, width = "normal" } = Astro.props;
 ---
 
 <!doctype html>
@@ -20,7 +21,7 @@ const { title } = Astro.props;
     <link rel="icon" type="image/icon" href="/favicon.ico" />
     <title>{title} | Keven Lefebvre, Senior Software Developer</title>
   </head>
-  <body>
+  <body class={`width-${width}`}>
     <slot />
   </body>
 </html>

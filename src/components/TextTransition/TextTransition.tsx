@@ -35,20 +35,20 @@ export default function TextTransition({ lang }: { lang: "fr" | "en" }) {
 
   const titles = {
     en: [
-      "senior developer",
-      "lead developer",
-      "senior software dev",
-      "experienced dev",
-      "senior solution dev",
       "solution architect",
+      "technical architect",
+      "technology analyst",
+      "senior solution dev",
+      "senior team lead",
+      "senior developer",
     ],
     fr: [
-      "développeur senior",
-      "chef développeur",
-      "développeur logiciel senior",
-      "développeur expérimenté",
-      "développeur de solutions senior",
       "architecte de solutions",
+      "architecte technique",
+      "analyste technologique",
+      "développeur de solutions",
+      "responsable d'équipe senior",
+      "développeur senior",
     ],
   };
 
