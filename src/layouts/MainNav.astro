@@ -18,7 +18,7 @@ const { transparent = false, hideHome = false } = Astro.props;
       {
         !hideHome && (
           <li>
-            <a href="/" class="contrast">
+            <a href="/" class="contrast home">
               Home
             </a>
           </li>
@@ -31,6 +31,9 @@ const { transparent = false, hideHome = false } = Astro.props;
 </nav>
 
 <style lang="scss">
+  @use "sass:map";
+  @use "@picocss/pico/scss/settings" as *;
+
   nav {
     background: hsl(220 10% 95% / 1);
     @media only screen and (prefers-color-scheme: dark) {
@@ -38,6 +41,12 @@ const { transparent = false, hideHome = false } = Astro.props;
     }
 
     margin-bottom: 2rem;
+
+    .home {
+      @media (max-width: map.get($breakpoints, md, breakpoint)) {
+        display: none;
+      }
+    }
 
     &.transparent {
       background: none;
