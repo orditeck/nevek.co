@@ -53,17 +53,25 @@ export default function TextTransition({ lang }: { lang: "fr" | "en" }) {
   };
 
   useEffect(() => {
-    const qualifierInterval = setInterval(
-      () => setQualifierIndex((index) => index + 1),
-      3000
-    );
-    const titleInterval = setTimeout(
-      () => setInterval(() => setTitleIndex((index) => index + 1), 5500),
-      2500
-    );
+    const qualifierInterval = setInterval(() => {
+      setQualifierIndex(
+        (prevIndex) => (prevIndex + 1) % qualifiers[lang].length
+      );
+    }, 3000);
+
+    const titleTimer = setTimeout(() => {
+      const interval = setInterval(() => {
+        setTitleIndex((prevIndex) => (prevIndex + 1) % titles[lang].length);
+      }, 5500);
+
+      return () => {
+        clearInterval(interval);
+      };
+    }, 2500);
+
     return () => {
-      clearTimeout(qualifierInterval);
-      clearTimeout(titleInterval);
+      clearInterval(qualifierInterval);
+      clearTimeout(titleTimer);
     };
   }, []);
 

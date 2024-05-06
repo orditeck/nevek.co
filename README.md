@@ -1,6 +1,6 @@
-# nevek.co's website
+# k11e.com's website
 
-These are the sources of my profesionnal website, [nevek.co](https://nevek.co).
+These are the sources of my profesionnal website, [k11e.com](https://k11e.com).
 
 Tech used:
 - [Astro](https://github.com/withastro/astro): web framework to build fast content sites, powerful web applications, dynamic server APIs, and everything in-between
