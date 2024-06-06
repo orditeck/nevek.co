@@ -1,5 +1,4 @@
 import Cal, { getCalApi } from "@calcom/embed-react";
-import type { EmbedThemeConfig } from "@calcom/embed-core";
 import { useEffect, useState } from "react";
 import { getThemePreference } from "../ThemeToggle/get-theme-preference";
 
@@ -50,7 +49,7 @@ export default function CalEmbed() {
     }
   }, [cal]);
 
-  const theme = getThemePreference() satisfies EmbedThemeConfig;
+  const theme = getThemePreference() as 'dark' | 'light';
 
   return (
     <Cal
