@@ -59,13 +59,8 @@ body > main {
       margin: 0;
       white-space: nowrap;
 
-      .colspan {
-        font-size: 0.6rem;
-        grid-column: span 2;
-      }
-
-      .padded {
-        padding-left: 39px;
+      &.strong {
+        font-weight: 700;
       }
     }
   }
