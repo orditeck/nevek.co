@@ -6,7 +6,7 @@ echo "Delete old build if it exists"
 rm -rf dist prev_dist
 
 echo "Clone gh-pages"
-git clone https://github.com/orditeck/nevek.co.git --branch gh-pages prev_dist
+git clone https://github.com/orditeck/k11e.git --branch gh-pages prev_dist
 cd prev_dist
 git rm -rf .
 git clean -fxd
