@@ -16,6 +16,7 @@
     "@calcom/embed-react": "^1.4.0",
     "@fontsource/jersey-15": "^5.0.2",
     "@fontsource/kalam": "^5.0.8",
+    "@fontsource/noto-emoji": "^5.0.19",
     "@fontsource/noto-sans": "^5.0.18",
     "@fontsource/space-mono": "^5.0.18",
     "@markdoc/markdoc": "^0.4.0",

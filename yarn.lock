@@ -513,6 +513,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/kalam/-/kalam-5.0.8.tgz#3013ba9571083c9da179aed2c863cd3cd38c238f"
   integrity sha512-Iy4rj43aSm41LOlkCSsEvdKuJ3RWoiRX2bpDv/OZ2hivhFiaWQGMXYCglF2cgwnOu4JlugKxsEOK7InWOI5eMg==
 
+"@fontsource/noto-emoji@^5.0.19":
+  version "5.0.19"
+  resolved "https://registry.yarnpkg.com/@fontsource/noto-emoji/-/noto-emoji-5.0.19.tgz#e6f5bd370b8d6322fd03c46df564e4561fa1903a"
+  integrity sha512-a2n0XlYXZi0Q2J763C/mvFsqx6X7k9I12U111EtNhzrCK+A5VaGhH49hGli880YokM8txDE3i3zF39qrEvljIw==
+
 "@fontsource/noto-sans@^5.0.18":
   version "5.0.18"
   resolved "https://registry.yarnpkg.com/@fontsource/noto-sans/-/noto-sans-5.0.18.tgz#810600bc614b7a89eb7ef097c3cf608246c96edb"
