@@ -1,5 +1,7 @@
 import Cal, { getCalApi } from "@calcom/embed-react";
+import type { EmbedThemeConfig } from "@calcom/embed-core";
 import { useEffect, useState } from "react";
+import { getThemePreference } from "../ThemeToggle/get-theme-preference";
 
 export default function CalEmbed() {
   const [cal, setCal] = useState<
@@ -48,11 +50,13 @@ export default function CalEmbed() {
     }
   }, [cal]);
 
+  const theme = getThemePreference() satisfies EmbedThemeConfig;
+
   return (
     <Cal
       calLink="kevenlefebvre/15min"
       style={{ width: "100%", height: "100%", overflow: "visible" }}
-      config={{ layout: "month_view" }}
+      config={{ layout: "month_view", theme: theme }}
     />
   );
 }
