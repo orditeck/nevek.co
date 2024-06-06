@@ -38,7 +38,7 @@ const { transparent = false, hideHome = false } = Astro.props;
 
   nav {
     background: hsl(220 10% 95% / 1);
-    @at-root html[data-theme="dark"] & {
+    @at-root html[data-theme="dark"] &:not(.transparent) {
       background: hsl(220 24% 14% / 1);
     }
 
