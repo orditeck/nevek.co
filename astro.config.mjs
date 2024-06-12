@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, passthroughImageService  } from "astro/config";
 import react from "@astrojs/react";
 
 import markdoc from "@astrojs/markdoc";
@@ -12,5 +12,8 @@ export default defineConfig({
   },
   build: {
     assets: "_assets",
+  },
+  image: {
+    service: passthroughImageService(),
   },
 });

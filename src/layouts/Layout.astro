@@ -1,4 +1,6 @@
 ---
+import { getThemePreference } from "../components/ThemeToggle/get-theme-preference";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import "./Layout.scss";
 
 interface Props {
@@ -6,6 +8,8 @@ interface Props {
   width?: "veryNarrow" | "narrow" | "largeAdaptive" | "normal";
 }
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const { title, width = "normal" } = Astro.props;
 ---
 
@@ -15,11 +19,11 @@ const { title, width = "normal" } = Astro.props;
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="Keven Lefebvre | Senior Software Developer"
+      content={t("site.meta.description")}
     />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/icon" href="/favicon.ico" />
-    <title>{title} | Keven Lefebvre, Senior Software Developer</title>
+    <title>{title} | {t("site.html.title")}</title>
   </head>
   <body class={`width-${width}`}>
     <slot />

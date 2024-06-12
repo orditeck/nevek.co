@@ -1,0 +1,25 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+import MainNav from "../../../layouts/MainNav.astro";
+import MainContent from "../../../layouts/MainContent.astro";
+
+export async function getStaticPaths() {
+  return (await getCollection("services"))
+    .filter(({ slug }) => slug.includes("/"))
+    .map((page) => {
+      const [lang, ...slug] = page.slug.split("/");
+      return {
+        params: { lang, slug: slug.join("/") || undefined },
+        props: page,
+      };
+    });
+}
+
+const page = Astro.props;
+---
+
+<Layout title={page.data.title} width="largeAdaptive">
+  <MainNav />
+  <MainContent entry={page} />
+</Layout>

@@ -3,91 +3,83 @@ import TextTransition from "../components/TextTransition/TextTransition";
 import Layout from "../layouts/Layout.astro";
 import "./index.scss";
 
+import "@fontsource/kalam";
 import "@fontsource/noto-sans/300.css";
 import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/space-mono";
-import "@fontsource/kalam";
 
-import kevGif from "./images/kev.gif";
-import shopifyIcon from "./images/shopify.svg";
-import turbulentIcon from "./images/turbulent.png";
-import arsenalwebIcon from "./images/arsenalweb.png";
-import kevIcon from "./images/kev.png";
-import mouseAndPointer from "./images/mouse-cursor-hand-pointer.svg";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import classNames from "classnames";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import MainNav from "../layouts/MainNav.astro";
+import kevGif from "./images/kev.gif";
+import mouseAndPointer from "./images/mouse-cursor-hand-pointer.svg";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const experiences = (await getCollection("experiences"))
+  .filter(({ slug }) => !slug.includes("/") === (lang === "en"))
+  .sort((a, b) => a.data.sortOrder - b.data.sortOrder);
 ---
 
-<Layout title="Welcome!" width="veryNarrow">
+<Layout title={t("home.documentTitle")} width="veryNarrow">
   <MainNav transparent hideHome />
   <main>
     <section class="hi">
       <img src={kevGif.src} alt="Keven" width={80} height={80} />
       <p>
-        <em>Bonjour, I&apos;m Keven!</em>
-        With 15+ years in the tech industry, I excel in delivering outstanding
-        results for high-stakes projects.
+        <em>{t("home.welcome.p1")}</em>
+        {t("home.welcome.p2")}
       </p>
     </section>
 
     <section class="animatedText">
       <div>
-        <span>I&apos;ve heard that</span>
-        <span>you&apos;re in need of</span>
+        <span>{t("home.animatedText.p1")}</span>
+        <span>{t("home.animatedText.p2")}</span>
       </div>
 
-      <TextTransition client:only lang="en" />
+      <TextTransition client:only lang={lang} />
     </section>
 
     <ul class="quicklook">
-      <li class="strong">
-        <div>Consultant / Web Developer</div>
-        <div>
-          @ <img src={kevIcon.src} alt="Self-Employed" width={16} height={16} />
-          Self-Employed
-        </div>
-        <div>2008 - Now</div>
-      </li>
-      <li>
-        <div>Senior Software Developer</div>
-        <div>
-          @ <img src={shopifyIcon.src} alt="Shopify" width={16} height={16} />
-          Shopify
-        </div>
-        <div>2021 - Now</div>
-      </li>
-      <li>
-        <div>Tech & Dev Lead</div>
-        <div>
-          @ <img
-            src={turbulentIcon.src}
-            alt="Turbulent"
-            width={16}
-            height={16}
-          /> Turbulent
-        </div>
-        <div>2020 - 2021</div>
-      </li>
-      <li class="lessPaddingBottom">
-        <div>Director of Technology</div>
-        <div>
-          @ <img
-            src={arsenalwebIcon.src}
-            alt="Arsenal Web"
-            width={16}
-            height={16}
-          /> Arsenal Web
-        </div>
-        <div>2018 - 2020</div>
-      </li>
+      {
+        experiences.map((experience, i) => (
+          <li
+            class={classNames({
+              strong: experience.data.strong,
+              lessPaddingBottom: i === experiences.length - 1,
+            })}
+          >
+            <div>{experience.data.title}</div>
+            <div>
+              {experience.data.icon && (
+                <>
+                  @{" "}
+                  <Image
+                    src={experience.data.icon}
+                    alt={experience.data.title}
+                    width={16}
+                  />
+                </>
+              )}
+              {experience.data.company}
+            </div>
+            <div>{experience.data.duration}</div>
+          </li>
+        ))
+      }
     </ul>
 
     <div class="links">
       <a href="mailto:kev@k11e.com" role="button" class="contrast">
-        <span>Let&apos;s chat</span>
+        <span>{t("home.links.letsChat")}</span>
         <img src={mouseAndPointer.src} alt="Hand pointer" /></a
       >
-      <a href="/services" role="button" class="secondary">Learn more</a>
+      <a href="/services" role="button" class="secondary">{t("home.links.learnMore")}</a>
     </div>
   </main>
 </Layout>
