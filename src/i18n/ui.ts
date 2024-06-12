@@ -1,3 +1,4 @@
+export type Language = keyof typeof languages
 export const languages = {
   en: "English",
   fr: "Français",
@@ -20,7 +21,6 @@ export const ui = {
     "home.links.letsChat": "Let's chat",
     "home.links.learnMore": "Learn more",
 
-    "sidebar.": "Schedule a Virtual Call",
     "sidebar.scheduleVirtualCall.title": "Schedule a Virtual Call",
     "sidebar.scheduleVirtualCall.content": "Book a 15-minute call to discuss how I can help you succeed.",
     "sidebar.contact.or": "or, you can also:",

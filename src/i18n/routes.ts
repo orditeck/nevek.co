@@ -1,4 +1,12 @@
-export const routes = {
+import type { Language } from "./ui";
+
+export type Route = {
+  [key: string]: {
+    [route: string]: string;
+  };
+};
+
+export const routes: Route = {
   fr: {
     "about-me": "a-propos",
     services: "services",
