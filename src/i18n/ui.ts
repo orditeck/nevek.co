@@ -8,6 +8,10 @@ export const defaultLang = "en";
 
 export const ui = {
   en: {
+    "site.html.title": "Keven Lefebvre: Consultant / Solutions Architect / Strategist / Dev",
+    "site.meta.description": "Keven Lefebvre: Consultant / Solutions Architect / Strategist / Dev",
+
+    "nav.title": "Solutions Architect",
     "nav.home": "Home",
     "nav.services": "Services",
     "nav.about": "About",
@@ -30,6 +34,10 @@ export const ui = {
     "toc.onThisPage": "On this page",
   },
   fr: {
+    "site.html.title": "Keven Lefebvre: Consultant / Architecte de solutions / Stratège Numérique / Développeur",
+    "site.meta.description": "Keven Lefebvre: Consultant / Architecte de solutions / Stratège Numérique / Développeur",
+
+    "nav.title": "Architecte de solutions",
     "nav.home": "Accueil",
     "nav.services": "Services",
     "nav.about": "À propos",
