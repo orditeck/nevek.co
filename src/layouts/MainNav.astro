@@ -2,13 +2,25 @@
 import "@fontsource/jersey-15";
 import "@fontsource/kalam";
 import ThemeToggle from "../components/ThemeToggle/ThemeToggle";
+import {
+  getLangFromUrl,
+  getRouteFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "../i18n/utils";
 
 const { transparent = false, hideHome = false } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+const route = getRouteFromUrl(Astro.url);
+const otherLang = lang === "fr" ? "en" : "fr";
 ---
 
 <nav class:list={[{ transparent: transparent }]}>
   <div class="container">
-    <a href="/">
+    <a href={translatePath("")}>
       <span>k11e</span>
       <small>
         <p>/ Keven Lefebvre</p>
@@ -19,14 +31,27 @@ const { transparent = false, hideHome = false } = Astro.props;
       {
         !hideHome && (
           <li>
-            <a href="/" class="contrast home">
-              Home
+            <a href={translatePath("")} class="contrast home">
+              {t("nav.home")}
             </a>
           </li>
         )
       }
-      <li><a href="/services" class="contrast">Services</a></li>
-      <li><a href="/about-me" class="contrast">About</a></li>
+      <li>
+        <a href={translatePath("services")} class="contrast"
+          >{t("nav.services")}</a
+        >
+      </li>
+      <li>
+        <a href={translatePath("about-me")} class="contrast">{t("nav.about")}</a
+        >
+      </li>
+      <li>
+        <a
+          href={translatePath(`/${route ? route : ""}`, otherLang)}
+          class="contrast">{lang === "fr" ? "EN" : "FR"}</a
+        >
+      </li>
       <li><ThemeToggle client:only /></li>
     </ul>
   </div>

@@ -1,6 +1,7 @@
 ---
 import type { MarkdownHeading } from "astro";
 import TableOfContentsHeading from "./TableOfContentsHeading.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const { headings } = Astro.props;
 
@@ -27,11 +28,13 @@ function buildToc(headings: MarkdownHeading[]) {
 }
 
 const toc = buildToc(headings);
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <article>
   <header>
-    <strong>On this page</strong>
+    <strong>{t("toc.onThisPage")}</strong>
   </header>
   <nav class="toc">
     <ul>
