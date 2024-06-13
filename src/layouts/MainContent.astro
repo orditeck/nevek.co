@@ -53,7 +53,7 @@ const { Content, headings } = await entry.render();
             <strong>{t("sidebar.scheduleVirtualCall.title")}</strong>
           </header>
           <p>{t("sidebar.scheduleVirtualCall.content")}</p>
-          <CalEmbed client:only />
+          <CalEmbed client:only="react" />
           <hr />
           <p>{t("sidebar.contact.or")}</p>
           <div class="grid">

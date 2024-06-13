@@ -16,11 +16,12 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 const route = getRouteFromUrl(Astro.url);
 const otherLang = lang === "fr" ? "en" : "fr";
+const homeUrl = lang === 'fr' ? `/${lang}` : '';
 ---
 
 <nav class:list={[{ transparent: transparent }]}>
   <div class="container">
-    <a href={translatePath("")}>
+    <a href={homeUrl}>
       <span>k11e</span>
       <small>
         <p>/ Keven Lefebvre</p>
@@ -31,7 +32,7 @@ const otherLang = lang === "fr" ? "en" : "fr";
       {
         !hideHome && (
           <li>
-            <a href={translatePath("")} class="contrast home">
+            <a href={homeUrl} class="contrast home">
               {t("nav.home")}
             </a>
           </li>

@@ -1,5 +1,3 @@
-import type { Language } from "./ui";
-
 export type Route = {
   [key: string]: {
     [route: string]: string;
