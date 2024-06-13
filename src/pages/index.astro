@@ -42,7 +42,7 @@ const experiences = (await getCollection("experiences"))
         <span>{t("home.animatedText.p2")}</span>
       </div>
 
-      <TextTransition client:only lang={lang} />
+      <TextTransition client:only="react" lang={lang} />
     </section>
 
     <ul class="quicklook">
