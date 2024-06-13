@@ -5,6 +5,13 @@ export type Route = {
 };
 
 export const routes: Route = {
+  en: {
+    "about-me": "about-me",
+    services: "services",
+    "services/for-entrepreneurs": "services/for-entrepreneurs",
+    "services/for-developers": "services/for-developers",
+    "services/for-organizations": "services/for-organizations",
+  },
   fr: {
     "about-me": "a-propos",
     services: "services",

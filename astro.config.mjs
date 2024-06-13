@@ -5,6 +5,7 @@ import markdoc from "@astrojs/markdoc";
 
 // https://astro.build/config
 export default defineConfig({
+  trailingSlash: "never",
   integrations: [react(), markdoc({ allowHTML: true })],
   i18n: {
     defaultLocale: "en",

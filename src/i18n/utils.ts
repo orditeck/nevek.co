@@ -15,12 +15,12 @@ export function useTranslations(lang: Language) {
 
 export function useTranslatedPath(lang: Language) {
   return function translatePath(path: string, l: Language = lang) {
-    const pathName = path.replaceAll("/", "");
+    const pathName = path;
     const hasTranslation =
       defaultLang !== l &&
       routes[l] !== undefined &&
       routes[l][pathName] !== undefined;
-    const translatedPath = hasTranslation ? "/" + routes[l]![pathName] : path;
+    const translatedPath = hasTranslation ? "/" + routes[l]![pathName] : `/${path}`;
 
     return l === defaultLang ? translatedPath : `/${l}${translatedPath}`;
   };
