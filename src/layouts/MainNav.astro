@@ -16,7 +16,7 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 const route = getRouteFromUrl(Astro.url);
 const otherLang = lang === "fr" ? "en" : "fr";
-const homeUrl = lang === 'fr' ? `/${lang}` : '';
+const homeUrl = lang === 'fr' ? `/${lang}` : '/';
 ---
 
 <nav class:list={[{ transparent: transparent }]}>
